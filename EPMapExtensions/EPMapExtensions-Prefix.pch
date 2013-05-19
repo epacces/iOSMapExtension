@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'EPMapExtensions' target in the 'EPMapExtensions' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <MapKit/MapKit.h>
+#endif
