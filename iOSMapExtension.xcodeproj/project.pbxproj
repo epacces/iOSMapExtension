@@ -6,7 +6,23 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		848EB05317468765009639D0 /* documentation */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 848EB05417468765009639D0 /* Build configuration list for PBXAggregateTarget "documentation" */;
+			buildPhases = (
+				848EB0571746876C009639D0 /* ShellScript */,
+			);
+			dependencies = (
+				848EB05917468771009639D0 /* PBXTargetDependency */,
+			);
+			name = documentation;
+			productName = documentation;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
+		848EB05217464444009639D0 /* YAAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 848EB05117464444009639D0 /* YAAnnotationView.m */; };
 		84BE5F8C1738005E0067CC40 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5F8B1738005E0067CC40 /* UIKit.framework */; };
 		84BE5F8E1738005E0067CC40 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5F8D1738005E0067CC40 /* Foundation.framework */; };
 		84BE5F901738005E0067CC40 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5F8F1738005E0067CC40 /* CoreGraphics.framework */; };
@@ -18,24 +34,59 @@
 		84BE5FA21738005E0067CC40 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84BE5FA11738005E0067CC40 /* Default-568h@2x.png */; };
 		84BE5FA51738005E0067CC40 /* EPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BE5FA41738005E0067CC40 /* EPViewController.m */; };
 		84BE5FA81738005E0067CC40 /* EPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84BE5FA61738005E0067CC40 /* EPViewController.xib */; };
-		84BE5FB01738005E0067CC40 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5FAF1738005E0067CC40 /* SenTestingKit.framework */; };
-		84BE5FB11738005E0067CC40 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5F8B1738005E0067CC40 /* UIKit.framework */; };
-		84BE5FB21738005E0067CC40 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5F8D1738005E0067CC40 /* Foundation.framework */; };
-		84BE5FBA1738005E0067CC40 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84BE5FB81738005E0067CC40 /* InfoPlist.strings */; };
-		84BE5FBD1738005E0067CC40 /* iOSMapExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BE5FBC1738005E0067CC40 /* iOSMapExtensionTests.m */; };
+		84BE5FC8173800E90067CC40 /* EPMapViewDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BE5FC7173800E90067CC40 /* EPMapViewDecorator.m */; };
+		84BE5FCE1738018E0067CC40 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5F8D1738005E0067CC40 /* Foundation.framework */; };
+		84BE5FD31738018E0067CC40 /* EPMapExtensions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84BE5FD21738018E0067CC40 /* EPMapExtensions.h */; };
+		84BE5FDC1738018F0067CC40 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5FAF1738005E0067CC40 /* SenTestingKit.framework */; };
+		84BE5FDD1738018F0067CC40 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5F8B1738005E0067CC40 /* UIKit.framework */; };
+		84BE5FDE1738018F0067CC40 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5F8D1738005E0067CC40 /* Foundation.framework */; };
+		84BE5FE71738018F0067CC40 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84BE5FE51738018F0067CC40 /* InfoPlist.strings */; };
+		84BE5FF3173801D90067CC40 /* EPUserPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BE5FF2173801D80067CC40 /* EPUserPosition.m */; };
+		84BE5FF6173802B00067CC40 /* EPMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BE5FF5173802AF0067CC40 /* EPMapView.m */; };
+		84BE5FF9173806CA0067CC40 /* EPAnnotationArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BE5FF8173806C80067CC40 /* EPAnnotationArray.m */; };
+		84BE5FFC173809250067CC40 /* EPMapViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BE5FFB173809230067CC40 /* EPMapViewDelegate.m */; };
+		84BE5FFF17380C7B0067CC40 /* EPMapViewDecoratorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BE5FFE17380C7B0067CC40 /* EPMapViewDecoratorTest.m */; };
+		84BE6001173817150067CC40 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE6000173817140067CC40 /* MapKit.framework */; };
+		84BE60021738172F0067CC40 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE6000173817140067CC40 /* MapKit.framework */; };
+		84BE60031738F7920067CC40 /* libEPMapExtensions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5FCD1738018E0067CC40 /* libEPMapExtensions.a */; };
+		84BE60051738F7EE0067CC40 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE60041738F7ED0067CC40 /* CoreLocation.framework */; };
+		84BE60061738F8420067CC40 /* EPMapViewDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BE5FC7173800E90067CC40 /* EPMapViewDecorator.m */; };
+		84BE600917393C110067CC40 /* EPPointOfInterest.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BE600817393C100067CC40 /* EPPointOfInterest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		84BE5FB31738005E0067CC40 /* PBXContainerItemProxy */ = {
+		848EB05817468771009639D0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 84BE5F801738005E0067CC40 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 84BE5F871738005E0067CC40;
-			remoteInfo = iOSMapExtension;
+			remoteGlobalIDString = 84BE5FCC1738018E0067CC40;
+			remoteInfo = EPMapExtensions;
+		};
+		84BE5FDF1738018F0067CC40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84BE5F801738005E0067CC40 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84BE5FCC1738018E0067CC40;
+			remoteInfo = EPMapExtensions;
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		84BE5FCB1738018E0067CC40 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				84BE5FD31738018E0067CC40 /* EPMapExtensions.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		848EB05017464444009639D0 /* YAAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAAnnotationView.h; sourceTree = "<group>"; };
+		848EB05117464444009639D0 /* YAAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YAAnnotationView.m; sourceTree = "<group>"; };
 		84BE5F881738005E0067CC40 /* iOSMapExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSMapExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BE5F8B1738005E0067CC40 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		84BE5F8D1738005E0067CC40 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -52,12 +103,29 @@
 		84BE5FA31738005E0067CC40 /* EPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPViewController.h; sourceTree = "<group>"; };
 		84BE5FA41738005E0067CC40 /* EPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPViewController.m; sourceTree = "<group>"; };
 		84BE5FA71738005E0067CC40 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EPViewController.xib; sourceTree = "<group>"; };
-		84BE5FAE1738005E0067CC40 /* iOSMapExtensionTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSMapExtensionTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BE5FAF1738005E0067CC40 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		84BE5FB71738005E0067CC40 /* iOSMapExtensionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSMapExtensionTests-Info.plist"; sourceTree = "<group>"; };
-		84BE5FB91738005E0067CC40 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		84BE5FBB1738005E0067CC40 /* iOSMapExtensionTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSMapExtensionTests.h; sourceTree = "<group>"; };
-		84BE5FBC1738005E0067CC40 /* iOSMapExtensionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSMapExtensionTests.m; sourceTree = "<group>"; };
+		84BE5FC6173800E90067CC40 /* EPMapViewDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EPMapViewDecorator.h; path = ../iOSMapExtension/EPMapViewDecorator.h; sourceTree = "<group>"; };
+		84BE5FC7173800E90067CC40 /* EPMapViewDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EPMapViewDecorator.m; path = ../iOSMapExtension/EPMapViewDecorator.m; sourceTree = "<group>"; };
+		84BE5FCD1738018E0067CC40 /* libEPMapExtensions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEPMapExtensions.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		84BE5FD11738018E0067CC40 /* EPMapExtensions-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EPMapExtensions-Prefix.pch"; sourceTree = "<group>"; };
+		84BE5FD21738018E0067CC40 /* EPMapExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPMapExtensions.h; sourceTree = "<group>"; };
+		84BE5FDB1738018F0067CC40 /* EPMapExtensionsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EPMapExtensionsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84BE5FE41738018F0067CC40 /* EPMapExtensionsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EPMapExtensionsTests-Info.plist"; sourceTree = "<group>"; };
+		84BE5FE61738018F0067CC40 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		84BE5FF1173801D70067CC40 /* EPUserPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPUserPosition.h; sourceTree = "<group>"; };
+		84BE5FF2173801D80067CC40 /* EPUserPosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPUserPosition.m; sourceTree = "<group>"; };
+		84BE5FF4173802AE0067CC40 /* EPMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPMapView.h; sourceTree = "<group>"; };
+		84BE5FF5173802AF0067CC40 /* EPMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPMapView.m; sourceTree = "<group>"; };
+		84BE5FF7173806C80067CC40 /* EPAnnotationArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPAnnotationArray.h; sourceTree = "<group>"; };
+		84BE5FF8173806C80067CC40 /* EPAnnotationArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPAnnotationArray.m; sourceTree = "<group>"; };
+		84BE5FFA173809220067CC40 /* EPMapViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPMapViewDelegate.h; sourceTree = "<group>"; };
+		84BE5FFB173809230067CC40 /* EPMapViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPMapViewDelegate.m; sourceTree = "<group>"; };
+		84BE5FFD17380C7B0067CC40 /* EPMapViewDecoratorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPMapViewDecoratorTest.h; sourceTree = "<group>"; };
+		84BE5FFE17380C7B0067CC40 /* EPMapViewDecoratorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPMapViewDecoratorTest.m; sourceTree = "<group>"; };
+		84BE6000173817140067CC40 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		84BE60041738F7ED0067CC40 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		84BE600717393C0F0067CC40 /* EPPointOfInterest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPPointOfInterest.h; sourceTree = "<group>"; };
+		84BE600817393C100067CC40 /* EPPointOfInterest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPPointOfInterest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,13 +139,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		84BE5FAA1738005E0067CC40 /* Frameworks */ = {
+		84BE5FCA1738018E0067CC40 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84BE5FB01738005E0067CC40 /* SenTestingKit.framework in Frameworks */,
-				84BE5FB11738005E0067CC40 /* UIKit.framework in Frameworks */,
-				84BE5FB21738005E0067CC40 /* Foundation.framework in Frameworks */,
+				84BE6001173817150067CC40 /* MapKit.framework in Frameworks */,
+				84BE5FCE1738018E0067CC40 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84BE5FD71738018F0067CC40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84BE60051738F7EE0067CC40 /* CoreLocation.framework in Frameworks */,
+				84BE60031738F7920067CC40 /* libEPMapExtensions.a in Frameworks */,
+				84BE60021738172F0067CC40 /* MapKit.framework in Frameworks */,
+				84BE5FDC1738018F0067CC40 /* SenTestingKit.framework in Frameworks */,
+				84BE5FDD1738018F0067CC40 /* UIKit.framework in Frameworks */,
+				84BE5FDE1738018F0067CC40 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				84BE5F911738005E0067CC40 /* iOSMapExtension */,
-				84BE5FB51738005E0067CC40 /* iOSMapExtensionTests */,
+				84BE5FCF1738018E0067CC40 /* EPMapExtensions */,
+				84BE5FE21738018F0067CC40 /* EPMapExtensionsTests */,
 				84BE5F8A1738005E0067CC40 /* Frameworks */,
 				84BE5F891738005E0067CC40 /* Products */,
 			);
@@ -98,7 +179,8 @@
 			isa = PBXGroup;
 			children = (
 				84BE5F881738005E0067CC40 /* iOSMapExtension.app */,
-				84BE5FAE1738005E0067CC40 /* iOSMapExtensionTests.octest */,
+				84BE5FCD1738018E0067CC40 /* libEPMapExtensions.a */,
+				84BE5FDB1738018F0067CC40 /* EPMapExtensionsTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,6 +188,8 @@
 		84BE5F8A1738005E0067CC40 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84BE60041738F7ED0067CC40 /* CoreLocation.framework */,
+				84BE6000173817140067CC40 /* MapKit.framework */,
 				84BE5F8B1738005E0067CC40 /* UIKit.framework */,
 				84BE5F8D1738005E0067CC40 /* Foundation.framework */,
 				84BE5F8F1738005E0067CC40 /* CoreGraphics.framework */,
@@ -141,21 +225,52 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		84BE5FB51738005E0067CC40 /* iOSMapExtensionTests */ = {
+		84BE5FCF1738018E0067CC40 /* EPMapExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				84BE5FBB1738005E0067CC40 /* iOSMapExtensionTests.h */,
-				84BE5FBC1738005E0067CC40 /* iOSMapExtensionTests.m */,
-				84BE5FB61738005E0067CC40 /* Supporting Files */,
+				84BE5FC6173800E90067CC40 /* EPMapViewDecorator.h */,
+				84BE5FC7173800E90067CC40 /* EPMapViewDecorator.m */,
+				84BE5FF4173802AE0067CC40 /* EPMapView.h */,
+				84BE5FF5173802AF0067CC40 /* EPMapView.m */,
+				84BE600717393C0F0067CC40 /* EPPointOfInterest.h */,
+				84BE600817393C100067CC40 /* EPPointOfInterest.m */,
+				84BE5FF1173801D70067CC40 /* EPUserPosition.h */,
+				84BE5FF2173801D80067CC40 /* EPUserPosition.m */,
+				84BE5FF7173806C80067CC40 /* EPAnnotationArray.h */,
+				84BE5FF8173806C80067CC40 /* EPAnnotationArray.m */,
+				84BE5FFA173809220067CC40 /* EPMapViewDelegate.h */,
+				84BE5FFB173809230067CC40 /* EPMapViewDelegate.m */,
+				84BE5FD21738018E0067CC40 /* EPMapExtensions.h */,
+				84BE5FD01738018E0067CC40 /* Supporting Files */,
 			);
-			path = iOSMapExtensionTests;
+			path = EPMapExtensions;
 			sourceTree = "<group>";
 		};
-		84BE5FB61738005E0067CC40 /* Supporting Files */ = {
+		84BE5FD01738018E0067CC40 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				84BE5FB71738005E0067CC40 /* iOSMapExtensionTests-Info.plist */,
-				84BE5FB81738005E0067CC40 /* InfoPlist.strings */,
+				84BE5FD11738018E0067CC40 /* EPMapExtensions-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84BE5FE21738018F0067CC40 /* EPMapExtensionsTests */ = {
+			isa = PBXGroup;
+			children = (
+				84BE5FE31738018F0067CC40 /* Supporting Files */,
+				84BE5FFD17380C7B0067CC40 /* EPMapViewDecoratorTest.h */,
+				84BE5FFE17380C7B0067CC40 /* EPMapViewDecoratorTest.m */,
+				848EB05017464444009639D0 /* YAAnnotationView.h */,
+				848EB05117464444009639D0 /* YAAnnotationView.m */,
+			);
+			path = EPMapExtensionsTests;
+			sourceTree = "<group>";
+		};
+		84BE5FE31738018F0067CC40 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				84BE5FE41738018F0067CC40 /* EPMapExtensionsTests-Info.plist */,
+				84BE5FE51738018F0067CC40 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -180,23 +295,40 @@
 			productReference = 84BE5F881738005E0067CC40 /* iOSMapExtension.app */;
 			productType = "com.apple.product-type.application";
 		};
-		84BE5FAD1738005E0067CC40 /* iOSMapExtensionTests */ = {
+		84BE5FCC1738018E0067CC40 /* EPMapExtensions */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 84BE5FC31738005E0067CC40 /* Build configuration list for PBXNativeTarget "iOSMapExtensionTests" */;
+			buildConfigurationList = 84BE5FEB1738018F0067CC40 /* Build configuration list for PBXNativeTarget "EPMapExtensions" */;
 			buildPhases = (
-				84BE5FA91738005E0067CC40 /* Sources */,
-				84BE5FAA1738005E0067CC40 /* Frameworks */,
-				84BE5FAB1738005E0067CC40 /* Resources */,
-				84BE5FAC1738005E0067CC40 /* ShellScript */,
+				84BE5FC91738018E0067CC40 /* Sources */,
+				84BE5FCA1738018E0067CC40 /* Frameworks */,
+				84BE5FCB1738018E0067CC40 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				84BE5FB41738005E0067CC40 /* PBXTargetDependency */,
 			);
-			name = iOSMapExtensionTests;
-			productName = iOSMapExtensionTests;
-			productReference = 84BE5FAE1738005E0067CC40 /* iOSMapExtensionTests.octest */;
+			name = EPMapExtensions;
+			productName = EPMapExtensions;
+			productReference = 84BE5FCD1738018E0067CC40 /* libEPMapExtensions.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		84BE5FDA1738018F0067CC40 /* EPMapExtensionsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84BE5FEE1738018F0067CC40 /* Build configuration list for PBXNativeTarget "EPMapExtensionsTests" */;
+			buildPhases = (
+				84BE5FD61738018F0067CC40 /* Sources */,
+				84BE5FD71738018F0067CC40 /* Frameworks */,
+				84BE5FD81738018F0067CC40 /* Resources */,
+				84BE5FD91738018F0067CC40 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84BE5FE01738018F0067CC40 /* PBXTargetDependency */,
+			);
+			name = EPMapExtensionsTests;
+			productName = EPMapExtensionsTests;
+			productReference = 84BE5FDB1738018F0067CC40 /* EPMapExtensionsTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -222,7 +354,9 @@
 			projectRoot = "";
 			targets = (
 				84BE5F871738005E0067CC40 /* iOSMapExtension */,
-				84BE5FAD1738005E0067CC40 /* iOSMapExtensionTests */,
+				84BE5FCC1738018E0067CC40 /* EPMapExtensions */,
+				84BE5FDA1738018F0067CC40 /* EPMapExtensionsTests */,
+				848EB05317468765009639D0 /* documentation */,
 			);
 		};
 /* End PBXProject section */
@@ -240,18 +374,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		84BE5FAB1738005E0067CC40 /* Resources */ = {
+		84BE5FD81738018F0067CC40 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84BE5FBA1738005E0067CC40 /* InfoPlist.strings in Resources */,
+				84BE5FE71738018F0067CC40 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		84BE5FAC1738005E0067CC40 /* ShellScript */ = {
+		848EB0571746876C009639D0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/appledoc \\\n--project-name \"${PROJECT_NAME}\" \\\n--project-company \"Pacces\" \\\n--company-id \"com.pacces\" \\\n--docset-atom-filename \"${PROJECT_NAME}.atom\" \\\n--docset-feed-url \"${PROJECT_DIR}/%DOCSETATOMFILENAME\" \\\n--docset-package-url \"${PROJECT_DIR}/%DOCSETPACKAGEFILENAME\" \\\n--docset-fallback-url \"\" \\\n--output \"~/help\" \\\n--publish-docset \\\n--logformat xcode \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--verbose 6 \\\n--ignore \"*.m\" \\\n--ignore \"LoadableCategory.h\" \\\n--index-desc \"${PROJECT_DIR}/readme.markdown\" \\\n\"${PROJECT_DIR}\"";
+		};
+		84BE5FD91738018F0067CC40 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -274,24 +421,44 @@
 				84BE5F981738005E0067CC40 /* main.m in Sources */,
 				84BE5F9C1738005E0067CC40 /* EPAppDelegate.m in Sources */,
 				84BE5FA51738005E0067CC40 /* EPViewController.m in Sources */,
+				84BE5FC8173800E90067CC40 /* EPMapViewDecorator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		84BE5FA91738005E0067CC40 /* Sources */ = {
+		84BE5FC91738018E0067CC40 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84BE5FBD1738005E0067CC40 /* iOSMapExtensionTests.m in Sources */,
+				84BE5FF3173801D90067CC40 /* EPUserPosition.m in Sources */,
+				84BE5FF6173802B00067CC40 /* EPMapView.m in Sources */,
+				84BE5FF9173806CA0067CC40 /* EPAnnotationArray.m in Sources */,
+				84BE5FFC173809250067CC40 /* EPMapViewDelegate.m in Sources */,
+				84BE600917393C110067CC40 /* EPPointOfInterest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84BE5FD61738018F0067CC40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84BE60061738F8420067CC40 /* EPMapViewDecorator.m in Sources */,
+				84BE5FFF17380C7B0067CC40 /* EPMapViewDecoratorTest.m in Sources */,
+				848EB05217464444009639D0 /* YAAnnotationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		84BE5FB41738005E0067CC40 /* PBXTargetDependency */ = {
+		848EB05917468771009639D0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 84BE5F871738005E0067CC40 /* iOSMapExtension */;
-			targetProxy = 84BE5FB31738005E0067CC40 /* PBXContainerItemProxy */;
+			target = 84BE5FCC1738018E0067CC40 /* EPMapExtensions */;
+			targetProxy = 848EB05817468771009639D0 /* PBXContainerItemProxy */;
+		};
+		84BE5FE01738018F0067CC40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84BE5FCC1738018E0067CC40 /* EPMapExtensions */;
+			targetProxy = 84BE5FDF1738018F0067CC40 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -312,10 +479,10 @@
 			name = EPViewController.xib;
 			sourceTree = "<group>";
 		};
-		84BE5FB81738005E0067CC40 /* InfoPlist.strings */ = {
+		84BE5FE51738018F0067CC40 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				84BE5FB91738005E0067CC40 /* en */,
+				84BE5FE61738018F0067CC40 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -323,6 +490,20 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		848EB05517468765009639D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		848EB05617468765009639D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		84BE5FBE1738005E0067CC40 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -348,7 +529,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -372,7 +553,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -385,6 +566,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOSMapExtension/iOSMapExtension-Prefix.pch";
 				INFOPLIST_FILE = "iOSMapExtension/iOSMapExtension-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -396,41 +578,64 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOSMapExtension/iOSMapExtension-Prefix.pch";
 				INFOPLIST_FILE = "iOSMapExtension/iOSMapExtension-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
-		84BE5FC41738005E0067CC40 /* Debug */ = {
+		84BE5FEC1738018F0067CC40 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iOSMapExtension.app/iOSMapExtension";
+				DSTROOT = /tmp/EPMapExtensions.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EPMapExtensions/EPMapExtensions-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		84BE5FED1738018F0067CC40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/EPMapExtensions.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EPMapExtensions/EPMapExtensions-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		84BE5FEF1738018F0067CC40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "iOSMapExtension/iOSMapExtension-Prefix.pch";
-				INFOPLIST_FILE = "iOSMapExtensionTests/iOSMapExtensionTests-Info.plist";
+				GCC_PREFIX_HEADER = "EPMapExtensions/EPMapExtensions-Prefix.pch";
+				INFOPLIST_FILE = "EPMapExtensionsTests/EPMapExtensionsTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
-		84BE5FC51738005E0067CC40 /* Release */ = {
+		84BE5FF01738018F0067CC40 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iOSMapExtension.app/iOSMapExtension";
+				BUNDLE_LOADER = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "iOSMapExtension/iOSMapExtension-Prefix.pch";
-				INFOPLIST_FILE = "iOSMapExtensionTests/iOSMapExtensionTests-Info.plist";
+				GCC_PREFIX_HEADER = "EPMapExtensions/EPMapExtensions-Prefix.pch";
+				INFOPLIST_FILE = "EPMapExtensionsTests/EPMapExtensionsTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
@@ -438,6 +643,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		848EB05417468765009639D0 /* Build configuration list for PBXAggregateTarget "documentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				848EB05517468765009639D0 /* Debug */,
+				848EB05617468765009639D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		84BE5F831738005E0067CC40 /* Build configuration list for PBXProject "iOSMapExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -454,14 +668,25 @@
 				84BE5FC21738005E0067CC40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		84BE5FC31738005E0067CC40 /* Build configuration list for PBXNativeTarget "iOSMapExtensionTests" */ = {
+		84BE5FEB1738018F0067CC40 /* Build configuration list for PBXNativeTarget "EPMapExtensions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				84BE5FC41738005E0067CC40 /* Debug */,
-				84BE5FC51738005E0067CC40 /* Release */,
+				84BE5FEC1738018F0067CC40 /* Debug */,
+				84BE5FED1738018F0067CC40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84BE5FEE1738018F0067CC40 /* Build configuration list for PBXNativeTarget "EPMapExtensionsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84BE5FEF1738018F0067CC40 /* Debug */,
+				84BE5FF01738018F0067CC40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
