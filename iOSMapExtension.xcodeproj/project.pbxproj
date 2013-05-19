@@ -22,6 +22,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		845619711749748F00CC2D0D /* EPMapViewDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 845619701749748F00CC2D0D /* EPMapViewDecorator.m */; };
 		848EB05217464444009639D0 /* YAAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 848EB05117464444009639D0 /* YAAnnotationView.m */; };
 		84BE5F8C1738005E0067CC40 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5F8B1738005E0067CC40 /* UIKit.framework */; };
 		84BE5F8E1738005E0067CC40 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5F8D1738005E0067CC40 /* Foundation.framework */; };
@@ -34,7 +35,6 @@
 		84BE5FA21738005E0067CC40 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84BE5FA11738005E0067CC40 /* Default-568h@2x.png */; };
 		84BE5FA51738005E0067CC40 /* EPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BE5FA41738005E0067CC40 /* EPViewController.m */; };
 		84BE5FA81738005E0067CC40 /* EPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84BE5FA61738005E0067CC40 /* EPViewController.xib */; };
-		84BE5FC8173800E90067CC40 /* EPMapViewDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BE5FC7173800E90067CC40 /* EPMapViewDecorator.m */; };
 		84BE5FCE1738018E0067CC40 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5F8D1738005E0067CC40 /* Foundation.framework */; };
 		84BE5FD31738018E0067CC40 /* EPMapExtensions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84BE5FD21738018E0067CC40 /* EPMapExtensions.h */; };
 		84BE5FDC1738018F0067CC40 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5FAF1738005E0067CC40 /* SenTestingKit.framework */; };
@@ -50,7 +50,6 @@
 		84BE60021738172F0067CC40 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE6000173817140067CC40 /* MapKit.framework */; };
 		84BE60031738F7920067CC40 /* libEPMapExtensions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5FCD1738018E0067CC40 /* libEPMapExtensions.a */; };
 		84BE60051738F7EE0067CC40 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE60041738F7ED0067CC40 /* CoreLocation.framework */; };
-		84BE60061738F8420067CC40 /* EPMapViewDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BE5FC7173800E90067CC40 /* EPMapViewDecorator.m */; };
 		84BE600917393C110067CC40 /* EPPointOfInterest.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BE600817393C100067CC40 /* EPPointOfInterest.m */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +84,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8456196F1749748F00CC2D0D /* EPMapViewDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPMapViewDecorator.h; sourceTree = "<group>"; };
+		845619701749748F00CC2D0D /* EPMapViewDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPMapViewDecorator.m; sourceTree = "<group>"; };
 		848EB05017464444009639D0 /* YAAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAAnnotationView.h; sourceTree = "<group>"; };
 		848EB05117464444009639D0 /* YAAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YAAnnotationView.m; sourceTree = "<group>"; };
 		84BE5F881738005E0067CC40 /* iOSMapExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSMapExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,8 +105,6 @@
 		84BE5FA41738005E0067CC40 /* EPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPViewController.m; sourceTree = "<group>"; };
 		84BE5FA71738005E0067CC40 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EPViewController.xib; sourceTree = "<group>"; };
 		84BE5FAF1738005E0067CC40 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		84BE5FC6173800E90067CC40 /* EPMapViewDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EPMapViewDecorator.h; path = ../iOSMapExtension/EPMapViewDecorator.h; sourceTree = "<group>"; };
-		84BE5FC7173800E90067CC40 /* EPMapViewDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EPMapViewDecorator.m; path = ../iOSMapExtension/EPMapViewDecorator.m; sourceTree = "<group>"; };
 		84BE5FCD1738018E0067CC40 /* libEPMapExtensions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEPMapExtensions.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BE5FD11738018E0067CC40 /* EPMapExtensions-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EPMapExtensions-Prefix.pch"; sourceTree = "<group>"; };
 		84BE5FD21738018E0067CC40 /* EPMapExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPMapExtensions.h; sourceTree = "<group>"; };
@@ -228,8 +227,8 @@
 		84BE5FCF1738018E0067CC40 /* EPMapExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				84BE5FC6173800E90067CC40 /* EPMapViewDecorator.h */,
-				84BE5FC7173800E90067CC40 /* EPMapViewDecorator.m */,
+				8456196F1749748F00CC2D0D /* EPMapViewDecorator.h */,
+				845619701749748F00CC2D0D /* EPMapViewDecorator.m */,
 				84BE5FF4173802AE0067CC40 /* EPMapView.h */,
 				84BE5FF5173802AF0067CC40 /* EPMapView.m */,
 				84BE600717393C0F0067CC40 /* EPPointOfInterest.h */,
@@ -421,7 +420,6 @@
 				84BE5F981738005E0067CC40 /* main.m in Sources */,
 				84BE5F9C1738005E0067CC40 /* EPAppDelegate.m in Sources */,
 				84BE5FA51738005E0067CC40 /* EPViewController.m in Sources */,
-				84BE5FC8173800E90067CC40 /* EPMapViewDecorator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +432,7 @@
 				84BE5FF9173806CA0067CC40 /* EPAnnotationArray.m in Sources */,
 				84BE5FFC173809250067CC40 /* EPMapViewDelegate.m in Sources */,
 				84BE600917393C110067CC40 /* EPPointOfInterest.m in Sources */,
+				845619711749748F00CC2D0D /* EPMapViewDecorator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,7 +440,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84BE60061738F8420067CC40 /* EPMapViewDecorator.m in Sources */,
 				84BE5FFF17380C7B0067CC40 /* EPMapViewDecoratorTest.m in Sources */,
 				848EB05217464444009639D0 /* YAAnnotationView.m in Sources */,
 			);
