@@ -37,7 +37,7 @@
 
 - (NSArray *)allAnnotations
 {
-    return [_annotationArray copy];
+    return [[NSArray alloc] initWithArray:_annotationArray copyItems:YES];
 }
 
 - (void)removeAllAnnotations

@@ -50,6 +50,10 @@
 
 - (MKCoordinateRegion)centeredRegionForAnnotationConformingToProtocols:(NSArray *)protocols;
 
+- (MKCoordinateRegion)centeredRegionForAnnotationOfKindOfClass:(Class)cls;
+
+- (MKCoordinateRegion)centeredRegionForAnnotationOfKindOfClasses:(NSArray *)classes;
+
 ///---------------------------------------------
 /// @name Getting visible annotations
 ///---------------------------------------------
@@ -73,6 +77,12 @@
  */
 
 - (NSUInteger)visibleAnnotationsConformingToProtocols:(NSArray *)protocols;
+
+
+- (NSUInteger)visibleAnnotationsOfKindOfClass:(Class)cls;
+
+- (NSUInteger)visibleAnnotationOfKindOfClasses:(NSArray *)classes;
+
 
 ///---------------------------------------------
 /// @name Resetting annotation

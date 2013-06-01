@@ -22,6 +22,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		48DBE5AC1749856C0014BE48 /* EPAnnotationArrayTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 48DBE5AB1749856C0014BE48 /* EPAnnotationArrayTest.m */; };
 		845619711749748F00CC2D0D /* EPMapViewDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 845619701749748F00CC2D0D /* EPMapViewDecorator.m */; };
 		848EB05217464444009639D0 /* YAAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 848EB05117464444009639D0 /* YAAnnotationView.m */; };
 		84BE5F8C1738005E0067CC40 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5F8B1738005E0067CC40 /* UIKit.framework */; };
@@ -84,6 +85,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		48DBE5AA1749856C0014BE48 /* EPAnnotationArrayTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPAnnotationArrayTest.h; sourceTree = "<group>"; };
+		48DBE5AB1749856C0014BE48 /* EPAnnotationArrayTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPAnnotationArrayTest.m; sourceTree = "<group>"; };
 		8456196F1749748F00CC2D0D /* EPMapViewDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPMapViewDecorator.h; sourceTree = "<group>"; };
 		845619701749748F00CC2D0D /* EPMapViewDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPMapViewDecorator.m; sourceTree = "<group>"; };
 		848EB05017464444009639D0 /* YAAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAAnnotationView.h; sourceTree = "<group>"; };
@@ -261,6 +264,8 @@
 				84BE5FFE17380C7B0067CC40 /* EPMapViewDecoratorTest.m */,
 				848EB05017464444009639D0 /* YAAnnotationView.h */,
 				848EB05117464444009639D0 /* YAAnnotationView.m */,
+				48DBE5AA1749856C0014BE48 /* EPAnnotationArrayTest.h */,
+				48DBE5AB1749856C0014BE48 /* EPAnnotationArrayTest.m */,
 			);
 			path = EPMapExtensionsTests;
 			sourceTree = "<group>";
@@ -442,6 +447,7 @@
 			files = (
 				84BE5FFF17380C7B0067CC40 /* EPMapViewDecoratorTest.m in Sources */,
 				848EB05217464444009639D0 /* YAAnnotationView.m in Sources */,
+				48DBE5AC1749856C0014BE48 /* EPAnnotationArrayTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,13 @@
 //
 
 #import "EPMapViewDelegate.h"
+#import "EPMapViewDecorator.h"
 
 @implementation EPMapViewDelegate
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
+    return [_mapViewDecorator mapView:mapView viewForAnnotation:annotation];
+}
 
 @end

@@ -18,4 +18,20 @@
     return self;
 }
 
+- (id)copyWithZone:(NSZone *)zone
+{
+    EPPointOfInterest *newPOI = [[[self class] allocWithZone:zone] init];
+    newPOI->_coordinate = _coordinate;
+    return newPOI;
+}
+
+@end
+
+@implementation EPPointOfInterest (EPDraggablePointOfInterest)
+
+- (void)setCoordinate:(CLLocationCoordinate2D)newCoordinate
+{
+    _coordinate = newCoordinate;
+}
+
 @end
