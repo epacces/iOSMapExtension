@@ -101,9 +101,9 @@
     return [self regionThatFits:MKCoordinateRegionMake(baricentrum, span)];
 }
 
-- (MKCoordinateRegion)centeredRegionForAnnotationConformingToProtocol:(Protocol *)protocol
+- (MKCoordinateRegion)centeredRegionForAnnotations:(NSArray *)annotationArray
 {
-    if (![[_annotationArray annotationsConformsToProtocol:protocol] count]) {
+    if (![annotationArray count]) {
         NSLog(@"warning: annotation set is empty, returning the current visible map region");
         return [self region];
     }
@@ -118,7 +118,7 @@
     sum_y = 0;
     NSUInteger ncoord = [_annotationArray count];
     
-    for (id <MKAnnotation> p in [_annotationArray annotationsConformsToProtocol:protocol]) { //compute the mean together with min and max
+    for (id <MKAnnotation> p in annotationArray) { //compute the mean together with min and max
         
         CLLocationDegrees lat = p.coordinate.latitude;
         CLLocationDegrees lon = p.coordinate.longitude;
@@ -138,50 +138,22 @@
     lonDelta = fabs(max_lon - min_lon) * (1 + .08) ;
     MKCoordinateSpan span = MKCoordinateSpanMake(latDelta, lonDelta);
     return [self regionThatFits:MKCoordinateRegionMake(baricentrum, span)];
+    
+}
+
+- (MKCoordinateRegion)centeredRegionForAnnotationConformingToProtocol:(Protocol *)protocol
+{
+    return [self centeredRegionForAnnotations:[_annotationArray annotationsConformsToProtocol:protocol]];
 }
 
 - (MKCoordinateRegion)centeredRegionForAnnotationConformingToProtocols:(NSArray *)protocols
 {
-    if (![[_annotationArray annotationsConformsToProtocols:protocols] count]) {
-        NSLog(@"warning: annotation set is empty, returning the current visible map region");
-        return [self region];
-    }
-    
-    CLLocationDegrees min_lat = MAXFLOAT,
-    max_lat = 0,
-    min_lon = MAXFLOAT,
-    max_lon = 0,
-    latDelta = 0,
-    lonDelta = 0,
-    sum_x = 0,
-    sum_y = 0;
-    NSUInteger ncoord = [_annotationArray count];
-    
-    for (id <MKAnnotation> p in [_annotationArray annotationsConformsToProtocols:protocols]) { //compute the mean together with min and max
-        
-        CLLocationDegrees lat = p.coordinate.latitude;
-        CLLocationDegrees lon = p.coordinate.longitude;
-        sum_x += p.coordinate.longitude;
-        sum_y += p.coordinate.latitude;
-        
-        
-        SET_MIN(min_lat, lat);
-        SET_MAX(max_lat, lat);
-        
-        SET_MIN(min_lon, lon);
-        SET_MAX(max_lon, lon);
-        
-    }
-    CLLocationCoordinate2D baricentrum = CLLocationCoordinate2DMake((sum_y/ncoord), (sum_x/ncoord));
-    latDelta = fabs(max_lat - min_lat) * (1 + .08) ;
-    lonDelta = fabs(max_lon - min_lon) * (1 + .08) ;
-    MKCoordinateSpan span = MKCoordinateSpanMake(latDelta, lonDelta);
-    return [self regionThatFits:MKCoordinateRegionMake(baricentrum, span)];
+    return [self centeredRegionForAnnotations:[_annotationArray annotationsConformsToProtocols:protocols]];
 }
 
 - (NSUInteger)visibleAnnotations
 {
-    return [self annotationsInMapRect:[self visibleMapRect]];
+    return [[self annotationsInMapRect:[self visibleMapRect]] count];
 }
 
 - (NSUInteger)visibleAnnotationsConformingToProtocol:(Protocol *)protocol
