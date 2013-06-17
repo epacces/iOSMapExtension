@@ -56,51 +56,6 @@
     [_annotationArray removeAllAnnotations];
 }
 
-
-- (MKCoordinateRegion)centeredRegion
-{
-    if (![_annotationArray count]) {
-        NSLog(@"warning: annotation set is empty, returning the current visible map region");
-        return [self region];
-    }
-    
-    CLLocationDegrees min_lat = MAXFLOAT,
-    max_lat = 0,
-    min_lon = MAXFLOAT,
-    max_lon = 0,
-    latDelta = 0,
-    lonDelta = 0,
-    sum_x = 0,
-    sum_y = 0;
-    NSUInteger ncoord = [_annotationArray count];
-    
-    for (id <MKAnnotation> p in _annotationArray) { //compute the mean together with min and max
-        
-        CLLocationDegrees lat = p.coordinate.latitude;
-        CLLocationDegrees lon = p.coordinate.longitude;
-        sum_x += p.coordinate.longitude;
-        sum_y += p.coordinate.latitude;
-        
-        
-        SET_MIN(min_lat, lat);
-        SET_MAX(max_lat, lat);
-        
-        SET_MIN(min_lon, lon);
-        SET_MAX(max_lon, lon);
-        
-    }
-    CLLocationCoordinate2D baricentrum = CLLocationCoordinate2DMake((sum_y/ncoord), (sum_x/ncoord));
-    if ([_annotationArray count] > 1) {
-        latDelta = fabs(max_lat - min_lat) * (1 + .08);
-        lonDelta = fabs(max_lon - min_lon) * (1 + .08);
-    } else {
-        latDelta = [self region].span.latitudeDelta;
-        lonDelta = [self region].span.longitudeDelta;
-    }
-    MKCoordinateSpan span = MKCoordinateSpanMake(latDelta, lonDelta);
-    return [self regionThatFits:MKCoordinateRegionMake(baricentrum, span)];
-}
-
 - (MKCoordinateRegion)centeredRegionForAnnotations:(NSArray *)annotationArray
 {
     if (![annotationArray count]) {
@@ -139,6 +94,11 @@
     MKCoordinateSpan span = MKCoordinateSpanMake(latDelta, lonDelta);
     return [self regionThatFits:MKCoordinateRegionMake(baricentrum, span)];
     
+}
+
+- (MKCoordinateRegion)centeredRegion
+{
+    return [self centeredRegionForAnnotations:[_annotationArray allAnnotations]];
 }
 
 - (MKCoordinateRegion)centeredRegionForAnnotationConformingToProtocol:(Protocol *)protocol

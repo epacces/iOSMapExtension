@@ -18,6 +18,14 @@
     return self;
 }
 
+- (id)initWithAnnotationArray:(NSArray *)annotations
+{
+    if (self = [super init]) {
+        _annotationArray = [[NSMutableArray alloc] initWithArray:annotations];
+    }
+    return self;
+}
+
 - (void)addAnnotations:(NSArray *)annotations
 {
     for (id annotation in annotations)
@@ -48,7 +56,7 @@
 - (void)removeAnnotationsConformsToProtocol:(Protocol *)protocol
 {
     NSPredicate *predicate = [NSPredicate predicateWithBlock: ^BOOL(id evaluatedObject, NSDictionary *bindings ) {
-        return [evaluatedObject conformsToProtocol:protocol];
+        return ![evaluatedObject conformsToProtocol:protocol];
     }];
     [_annotationArray filterUsingPredicate:predicate];
 }
@@ -64,7 +72,7 @@
 - (NSArray *)annotationsConformsToProtocol:(Protocol *)protocol
 {
     NSPredicate *predicate = [NSPredicate predicateWithBlock: ^BOOL(id evaluatedObject, NSDictionary *bindings ) {
-        return ![evaluatedObject conformsToProtocol:protocol];
+        return [evaluatedObject conformsToProtocol:protocol];
     }];
     return [_annotationArray filteredArrayUsingPredicate:predicate];
 }
@@ -76,6 +84,38 @@
         [filteredArray addObjectsFromArray:[self annotationsConformsToProtocol:p]];
     }
     return filteredArray;
+}
+
+- (NSArray *)annotationsOfKindOfClasses:(NSArray *)classes
+{
+    NSMutableArray *filteredArray = [@[] mutableCopy];
+    for (Class cls in classes) {
+        [filteredArray addObjectsFromArray:[self annotationsOfKindOfClass:cls]];
+    }
+    return filteredArray;
+}
+
+- (NSArray *)annotationsOfKindOfClass:(Class<MKAnnotation> )cls
+{
+    NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(id evaluatedObject, NSDictionary *bindings ) {
+        return [evaluatedObject isKindOfClass:cls];
+    }];
+    return [_annotationArray filteredArrayUsingPredicate:predicate];
+}
+
+- (void)removeAnnotationsOfKindOfClass:(Class<MKAnnotation>)cls
+{
+    NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(id evaluatedObject, NSDictionary *bindings) {
+        return ![evaluatedObject isKindOfClass:cls];
+    }];
+    [_annotationArray filterUsingPredicate:predicate];
+}
+
+- (void)removeAnnotationsOfKindOfClasses:(NSArray *)classes
+{
+    for (Class<MKAnnotation> cls in classes) {
+        [self removeAnnotationsOfKindOfClass:cls];
+    }
 }
 
 - (NSArray *)annotationsWithinRange:(CLLocationDistance)radius center:(CLLocationCoordinate2D)center
@@ -91,11 +131,16 @@
 
 - (void)removeAnnotation:(id<MKAnnotation>)annotation
 {
+    if ( ! [annotation conformsToProtocol:@protocol(MKAnnotation)] )
+        [NSException raise:NSInternalInconsistencyException format:@"annotation should respond to MKAnnotation protocol"];
     [_annotationArray removeObject:annotation];
 }
 
 - (void)removeAnnotations:(NSArray *)annotations
 {
+    for (id annotation in annotations)
+        if (! [annotation conformsToProtocol:@protocol(MKAnnotation)])
+            [NSException raise:NSInternalInconsistencyException format:@"annotations should contains only objs conforms to MKAnnotation protocol"];
     [_annotationArray removeObjectsInArray:annotations];
 }
 
