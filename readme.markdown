@@ -3,3 +3,22 @@ EPMapExtension is an extension library built on the top of [MKMapKit](http://dev
 ## How To Get Started
 
 - [Download EPMapExtension]() and try out the included Mac and iPhone example apps
+
+## Overview
+
+The library architecture is based on the 
+
+## MapViewDecorator
+
+
+### Registration of Annotations into MapDecorator
+
+    EPMapViewDecorator *decorator = [[EPMapViewDecorator alloc] init];
+    [decorator registerAnnotationViewForClass:[AnnotationClass class] annotationView:@"MKPinAnnotationView"];
+
+### Advanced Configurations
+
+
+###
+
+  
