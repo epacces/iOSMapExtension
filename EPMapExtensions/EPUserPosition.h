@@ -52,10 +52,14 @@
 @property (nonatomic, readonly) NSDate              *lastValidPositionDate;
 
 /**
- 
+ Minimum threshold to get the user position updated
  */
 
 @property (nonatomic)           CLLocationDistance  minThresholdToUpdatePosition; //meters
+
+/**
+ Latitude and longitude relevant to the user position
+ */
 
 @property (nonatomic, readonly) CLLocationCoordinate2D  coordinate;
 

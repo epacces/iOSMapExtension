@@ -266,9 +266,9 @@
 				84BE5FFD17380C7B0067CC40 /* EPMapViewDecoratorTest.h */,
 				84BE5FFE17380C7B0067CC40 /* EPMapViewDecoratorTest.m */,
 				848EB05017464444009639D0 /* YAAnnotationView.h */,
+				848EB05117464444009639D0 /* YAAnnotationView.m */,
 				4882F2CE176FAEC700E9F1A7 /* EPTestAnnotation.h */,
 				4882F2CF176FAEC700E9F1A7 /* EPTestAnnotation.m */,
-				848EB05117464444009639D0 /* YAAnnotationView.m */,
 				48DBE5AA1749856C0014BE48 /* EPAnnotationArrayTest.h */,
 				48DBE5AB1749856C0014BE48 /* EPAnnotationArrayTest.m */,
 			);

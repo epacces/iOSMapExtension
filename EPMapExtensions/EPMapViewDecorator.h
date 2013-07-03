@@ -15,7 +15,7 @@
  `EPMapViewDecoratorProtocol` is a subset of `MKMapViewDelegate`. 
  */
 
-@protocol EPMapViewDecoratorProtocol
+@protocol EPMapViewDecoratorProtocol <NSObject>
   @required
 /**
  @param mapView The map view on which annotations are displayed

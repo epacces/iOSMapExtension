@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4AE6E52B-C8BE-45E4-A6D3-174202C6F9E2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>iOSMapExtension</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C72F3E41-4B75-4DD7-8B0D-331819FC045A</key>
+		<string>https://bitbucket.org/epacces/iosmapextension.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iOSMapExtension.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C72F3E41-4B75-4DD7-8B0D-331819FC045A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/epacces/iosmapextension.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C72F3E41-4B75-4DD7-8B0D-331819FC045A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C72F3E41-4B75-4DD7-8B0D-331819FC045A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOSMapExtensions</string>
+		</dict>
+	</array>
+</dict>
+</plist>
