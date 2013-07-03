@@ -1,6 +1,5 @@
+EPMapExtension is an extension library built on the top of [MKMapKit](http://developer.apple.com/library/ios/#documentation/MapKit/Reference/MapKit_Framework_Reference/_index.html) framework.
 
-## iOS Map Extension Library 
+## How To Get Started
 
-This is an extension library built on the top of `MKMapKit` framework. 
-
-### 
+- [Download EPMapExtension]() and try out the included Mac and iPhone example apps
