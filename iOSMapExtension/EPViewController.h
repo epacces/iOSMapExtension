@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class EPMapViewDelegate;
+@class MKMapView;
+@class EPAnnotationArray;
+
 @interface EPViewController : UIViewController
+
+- (id)initWithMapView:(MKMapView *)mapView;
+- (id)initWithAnnotations:(EPAnnotationArray *)annotation;
+
+@property (nonatomic, strong) EPMapViewDelegate *mapViewDelegate;
 
 @end

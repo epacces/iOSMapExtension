@@ -105,8 +105,45 @@ static inline CLLocationCoordinate2D EPRandomLocationCoordinateMake(void) {
     
     [_annotation setName:@"Jesus"];
     STAssertEquals([[_mapDecorator mapView:_mapView viewForAnnotation:_annotation] class], [YAJesusAnnotationView class],
+                   @"Annotation class should be YAJesusAnnotationView");
+    
+}
+
+- (void)testRegisterAnnotationViewForClassWithBadTraslationBlock
+{
+    [_mapView addAnnotation:_annotation];
+    [_mapDecorator registerAnnotationViewForClass:[AnnotationClass class]
+                                 translationBlock:^NSString * (id<MKAnnotation> annotation) {
+                                     if (![[(AnnotationClass *)annotation name] isEqualToString:@"Jesus"])
+                                         return @"YAAnnotationView";
+                                     else
+                                         return @"YZ";
+                                 }];
+    STAssertEquals([[_mapDecorator mapView:_mapView viewForAnnotation:_annotation] class], [YAAnnotationView class],
                    @"Annotation class should be YAAnotationView");
     
+    [_annotation setName:@"Jesus"];
+    STAssertThrows([_mapDecorator mapView:_mapView viewForAnnotation:_annotation], @"should raise exception");
+
+}
+
+- (void)testRegisterAnnotationViewForClassWithTranslationBlockWithInheritance
+{
+    [_mapView addAnnotation:_annotation];
+    [_mapDecorator setDefaultAnnotationView:[[MKPinAnnotationView alloc] init]];
+    [_mapDecorator registerAnnotationViewForClass:[AnnotationClass class]
+                                 translationBlock:^NSString * (id<MKAnnotation> annotation) {
+                                     if (![[(AnnotationClass *)annotation name] isEqualToString:@"Jesus"])
+                                         return @"YAAnnotationView";
+                                     else
+                                         return nil;
+                                         }];
+    STAssertEquals([[_mapDecorator mapView:_mapView viewForAnnotation:_annotation] class], [YAAnnotationView class],
+                   @"Annotation class should be YAAnotationView");
+    
+    [_annotation setName:@"Jesus"];
+    STAssertEquals([[_mapDecorator mapView:_mapView viewForAnnotation:_annotation] class], [MKPinAnnotationView class],
+                   @"Annotation class should be MKPinAnnotationView");
 }
 
 
@@ -171,7 +208,6 @@ static inline CLLocationCoordinate2D EPRandomLocationCoordinateMake(void) {
                    @"Annotation class should be YAAnotationView");
     YAJesusAnnotationView *jav = (YAJesusAnnotationView *)[_mapDecorator mapView:_mapView viewForAnnotation:_annotation];
     STAssertFalse([jav canShowCallout], @"annotation view should not show callout");
-    
 }
 
 

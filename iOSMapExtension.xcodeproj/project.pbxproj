@@ -25,9 +25,14 @@
 		4882F2D0176FB00000E9F1A7 /* EPTestAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4882F2CF176FAEC700E9F1A7 /* EPTestAnnotation.m */; };
 		48DBE5AC1749856C0014BE48 /* EPAnnotationArrayTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 48DBE5AB1749856C0014BE48 /* EPAnnotationArrayTest.m */; };
 		845619711749748F00CC2D0D /* EPMapViewDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 845619701749748F00CC2D0D /* EPMapViewDecorator.m */; };
+		845E3576178732A800A647B7 /* EPUserPositionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 845E3575178732A800A647B7 /* EPUserPositionTest.m */; };
 		848EB05217464444009639D0 /* YAAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 848EB05117464444009639D0 /* YAAnnotationView.m */; };
+		84A876DE17856E120045C756 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE60041738F7ED0067CC40 /* CoreLocation.framework */; };
+		84A876E117856F160045C756 /* libEPMapExtensions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5FCD1738018E0067CC40 /* libEPMapExtensions.a */; };
+		84A876E217856F440045C756 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE6000173817140067CC40 /* MapKit.framework */; };
+		84A876E317856F4C0045C756 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE60041738F7ED0067CC40 /* CoreLocation.framework */; };
+		84A876E61785D47D0045C756 /* EPViewControllerRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A876E51785D47D0045C756 /* EPViewControllerRouter.m */; };
 		84BE5F8C1738005E0067CC40 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5F8B1738005E0067CC40 /* UIKit.framework */; };
-		84BE5F8E1738005E0067CC40 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5F8D1738005E0067CC40 /* Foundation.framework */; };
 		84BE5F901738005E0067CC40 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5F8F1738005E0067CC40 /* CoreGraphics.framework */; };
 		84BE5F961738005E0067CC40 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84BE5F941738005E0067CC40 /* InfoPlist.strings */; };
 		84BE5F981738005E0067CC40 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BE5F971738005E0067CC40 /* main.m */; };
@@ -63,6 +68,13 @@
 			remoteGlobalIDString = 84BE5FCC1738018E0067CC40;
 			remoteInfo = EPMapExtensions;
 		};
+		84A876DF17856E980045C756 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84BE5F801738005E0067CC40 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84BE5FCC1738018E0067CC40;
+			remoteInfo = EPMapExtensions;
+		};
 		84BE5FDF1738018F0067CC40 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 84BE5F801738005E0067CC40 /* Project object */;
@@ -92,8 +104,12 @@
 		48DBE5AB1749856C0014BE48 /* EPAnnotationArrayTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPAnnotationArrayTest.m; sourceTree = "<group>"; };
 		8456196F1749748F00CC2D0D /* EPMapViewDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPMapViewDecorator.h; sourceTree = "<group>"; };
 		845619701749748F00CC2D0D /* EPMapViewDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPMapViewDecorator.m; sourceTree = "<group>"; };
+		845E3574178732A800A647B7 /* EPUserPositionTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPUserPositionTest.h; sourceTree = "<group>"; };
+		845E3575178732A800A647B7 /* EPUserPositionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPUserPositionTest.m; sourceTree = "<group>"; };
 		848EB05017464444009639D0 /* YAAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAAnnotationView.h; sourceTree = "<group>"; };
 		848EB05117464444009639D0 /* YAAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YAAnnotationView.m; sourceTree = "<group>"; };
+		84A876E41785D47C0045C756 /* EPViewControllerRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPViewControllerRouter.h; sourceTree = "<group>"; };
+		84A876E51785D47D0045C756 /* EPViewControllerRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPViewControllerRouter.m; sourceTree = "<group>"; };
 		84BE5F881738005E0067CC40 /* iOSMapExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSMapExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BE5F8B1738005E0067CC40 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		84BE5F8D1738005E0067CC40 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -138,8 +154,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A876E317856F4C0045C756 /* CoreLocation.framework in Frameworks */,
+				84A876E217856F440045C756 /* MapKit.framework in Frameworks */,
+				84A876E117856F160045C756 /* libEPMapExtensions.a in Frameworks */,
 				84BE5F8C1738005E0067CC40 /* UIKit.framework in Frameworks */,
-				84BE5F8E1738005E0067CC40 /* Foundation.framework in Frameworks */,
 				84BE5F901738005E0067CC40 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,6 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A876DE17856E120045C756 /* CoreLocation.framework in Frameworks */,
 				84BE6001173817150067CC40 /* MapKit.framework in Frameworks */,
 				84BE5FCE1738018E0067CC40 /* Foundation.framework in Frameworks */,
 			);
@@ -245,6 +264,8 @@
 				84BE5FF8173806C80067CC40 /* EPAnnotationArray.m */,
 				84BE5FFA173809220067CC40 /* EPMapViewDelegate.h */,
 				84BE5FFB173809230067CC40 /* EPMapViewDelegate.m */,
+				84A876E41785D47C0045C756 /* EPViewControllerRouter.h */,
+				84A876E51785D47D0045C756 /* EPViewControllerRouter.m */,
 				84BE5FD21738018E0067CC40 /* EPMapExtensions.h */,
 				84BE5FD01738018E0067CC40 /* Supporting Files */,
 			);
@@ -271,6 +292,8 @@
 				4882F2CF176FAEC700E9F1A7 /* EPTestAnnotation.m */,
 				48DBE5AA1749856C0014BE48 /* EPAnnotationArrayTest.h */,
 				48DBE5AB1749856C0014BE48 /* EPAnnotationArrayTest.m */,
+				845E3574178732A800A647B7 /* EPUserPositionTest.h */,
+				845E3575178732A800A647B7 /* EPUserPositionTest.m */,
 			);
 			path = EPMapExtensionsTests;
 			sourceTree = "<group>";
@@ -298,6 +321,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				84A876E017856E980045C756 /* PBXTargetDependency */,
 			);
 			name = iOSMapExtension;
 			productName = iOSMapExtension;
@@ -443,6 +467,7 @@
 				84BE5FFC173809250067CC40 /* EPMapViewDelegate.m in Sources */,
 				84BE600917393C110067CC40 /* EPPointOfInterest.m in Sources */,
 				845619711749748F00CC2D0D /* EPMapViewDecorator.m in Sources */,
+				84A876E61785D47D0045C756 /* EPViewControllerRouter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +479,7 @@
 				4882F2D0176FB00000E9F1A7 /* EPTestAnnotation.m in Sources */,
 				848EB05217464444009639D0 /* YAAnnotationView.m in Sources */,
 				48DBE5AC1749856C0014BE48 /* EPAnnotationArrayTest.m in Sources */,
+				845E3576178732A800A647B7 /* EPUserPositionTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +490,11 @@
 			isa = PBXTargetDependency;
 			target = 84BE5FCC1738018E0067CC40 /* EPMapExtensions */;
 			targetProxy = 848EB05817468771009639D0 /* PBXContainerItemProxy */;
+		};
+		84A876E017856E980045C756 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84BE5FCC1738018E0067CC40 /* EPMapExtensions */;
+			targetProxy = 84A876DF17856E980045C756 /* PBXContainerItemProxy */;
 		};
 		84BE5FE01738018F0067CC40 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

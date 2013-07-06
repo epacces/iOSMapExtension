@@ -17,17 +17,52 @@
     NSMutableArray        *_annotationArray;
 }
 
+/**
+ Annotation Collection class which wraps up a mutable a `NSMutableArray` and contains `MKAnnotation` protocol conform objects
+ */
+
 - (id)initWithAnnotationArray:(NSArray *)annotations;
+
+/**
+ Annotation Collection class which wraps up a mutable a `NSMutableArray` and contains `MKAnnotation` protocol conform objects
+ */
 
 - (NSArray *)allAnnotations;
 
+/**
+ Annotation Collection class which wraps up a mutable a `NSMutableArray` and contains `MKAnnotation` protocol conform objects
+ */
+
 - (NSArray *)annotationsConformsToProtocol:(Protocol *)protocol;
+
+/**
+ Annotation Collection class which wraps up a mutable a `NSMutableArray` and contains `MKAnnotation` protocol conform objects
+ */
+
 - (NSArray *)annotationsConformsToProtocols:(NSArray *)protocols;
 
+/**
+ Annotation Collection class which wraps up a mutable a `NSMutableArray` and contains `MKAnnotation` protocol conform objects
+ */
+
 - (NSArray *)annotationsOfKindOfClass:(Class<MKAnnotation>)cls;
+
+/**
+ Annotation Collection class which wraps up a mutable a `NSMutableArray` and contains `MKAnnotation` protocol conform objects
+ */
+
 - (NSArray *)annotationsOfKindOfClasses:(NSArray *)classes;
 
+/**
+ Annotation Collection class which wraps up a mutable a `NSMutableArray` and contains `MKAnnotation` protocol conform objects
+ */
+
 - (NSArray *)annotationsWithinRange:(CLLocationDistance)radius center:(CLLocationCoordinate2D)center;
+
+/**
+ Annotation Collection class which wraps up a mutable a `NSMutableArray` and contains `MKAnnotation` protocol conform objects
+ */
+
 
 - (NSUInteger)count;
 

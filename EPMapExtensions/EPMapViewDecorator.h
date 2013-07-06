@@ -12,7 +12,7 @@
 
 
 /**
- `EPMapViewDecoratorProtocol` is a subset of `MKMapViewDelegate`. 
+ `EPMapViewDecoratorProtocol` encompasses a subset of `MKMapViewDelegate` MKMapKit protocol.
  */
 
 @protocol EPMapViewDecoratorProtocol <NSObject>
@@ -98,7 +98,7 @@
  Registers annotation view associated to any annotation point class responding to `MKAnnotation` protocol.
  
  @param cls Any class responding to `MKAnnotation` protocol.
- @param annotationToAnnotationView A block that given an annotation returns the name of annotaitionView class associated with it.
+ @param annotationToAnnotationView A block that given an annotation returns the name of annotationView class associated with it.
  
  @exception NSInvalidArgumentException It is thrown when the annotation param is not matching any `MKAnnotationView` class or its subclass
  */
@@ -113,7 +113,7 @@
 /**
  Sets the mapping between the annotation and the correspondent annotation view.
  
- @param translationBlock A block that given an annotation returns the name of annotaitionView class associated with it.
+ @param translationBlock A block that given an annotation returns the name of annotationView class associated with it.
  
  */
 

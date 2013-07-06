@@ -39,7 +39,8 @@ typedef  void (^ConfigurationBlockType)(MKAnnotationView *, id<MKAnnotation>);
     if ([NSClassFromString(annotation) isSubclassOfClass:[MKAnnotationView class]])
         _annotationViewForClass[NSStringFromClass(cls)] = NSClassFromString(annotation);
     else
-        [[NSException exceptionWithName:NSInvalidArgumentException reason:@"Annotation should be any subclass of the MKAnnotationView"
+        [[NSException exceptionWithName:NSInvalidArgumentException
+                                 reason:[NSString stringWithFormat:@"Annotation %@ should be any subclass of the MKAnnotationView", annotation]
                                userInfo:nil] raise];
 }
 
@@ -86,10 +87,11 @@ typedef  void (^ConfigurationBlockType)(MKAnnotationView *, id<MKAnnotation>);
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {
+   
+    if ([annotation class] == [MKUserLocation class]) return _userLocationAnnotationView;
+    
     if ([self EP_isNoneRegistered])
         return _defaultAnnotationView;
-    
-    if ([annotation class] == [MKUserLocation class]) return _userLocationAnnotationView; 
     
     MKAnnotationView* annotationView;
     NSString *reuseIdentifier = [self EP_reuseIdentifierForAnnotation:annotation];
@@ -127,7 +129,8 @@ typedef  void (^ConfigurationBlockType)(MKAnnotationView *, id<MKAnnotation>);
     Class annotationViewClass = NSClassFromString([self EP_reuseIdentifierForAnnotation:annotation]);
     
     if (! [annotationViewClass isSubclassOfClass:[MKAnnotationView class]] )
-        [[NSException exceptionWithName:NSInvalidArgumentException reason:[NSString stringWithFormat:@"%@ should be any subclass of the MKAnnotationView", annotationViewClass]
+        [[NSException exceptionWithName:NSInvalidArgumentException
+                                 reason:[NSString stringWithFormat:@"%@ should be any subclass of the MKAnnotationView", annotationViewClass]
                                userInfo:nil] raise];
     
     return annotationViewClass;

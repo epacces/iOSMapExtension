@@ -50,7 +50,17 @@
 
 - (MKCoordinateRegion)centeredRegionForAnnotationConformingToProtocols:(NSArray *)protocols;
 
+/**
+ Computes the centered region with respect to all annotations belonging to a given kind of class
+ @param cls The kind of class used to filter annotations
+ */
+
 - (MKCoordinateRegion)centeredRegionForAnnotationOfKindOfClass:(Class)cls;
+
+/**
+ Computes the centered region with respect to all annotations belonging to a given pool of classes
+ @param classes Array of classes used to filter the annotations
+ */
 
 - (MKCoordinateRegion)centeredRegionForAnnotationOfKindOfClasses:(NSArray *)classes;
 
@@ -78,10 +88,19 @@
 
 - (NSUInteger)visibleAnnotationsConformingToProtocols:(NSArray *)protocols;
 
+/**
+ Computes the number of visible annotations displayed over the visible region of the map conforming to a given type of class
+ @param cls The class used to filter annotations
+ */
 
 - (NSUInteger)visibleAnnotationsOfKindOfClass:(Class)cls;
 
-- (NSUInteger)visibleAnnotationOfKindOfClasses:(NSArray *)classes;
+/**
+ Computes the number of visible annotations displayed over the visible region of the map conforming to a given pool of classes
+ @param classes The array of classes to filter annotations
+ */
+
+- (NSUInteger)visibleAnnotationsOfKindOfClasses:(NSArray *)classes;
 
 
 ///---------------------------------------------

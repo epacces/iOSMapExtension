@@ -11,8 +11,14 @@
 
 @protocol EPMapViewDecoratorProtocol;
 
+@class EPUserPosition;
+
 @interface EPMapViewDelegate : NSObject <MKMapViewDelegate>
 
-@property (nonatomic, weak)  id<EPMapViewDecoratorProtocol> mapViewDecorator;
+@property (nonatomic, strong)  id<EPMapViewDecoratorProtocol> mapViewDecorator;
+
+- (void)registerNavigationBlock:(void(^)(UIView *sender))block annotationView:(MKAnnotationView *)annotationView;
+
+@property (nonatomic, copy)  void(^positionUpdated)(EPUserPosition *userPosition);
 
 @end

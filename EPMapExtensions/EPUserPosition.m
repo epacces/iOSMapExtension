@@ -8,9 +8,14 @@
 
 #import "EPUserPosition.h"
 
-@implementation EPUserPosition
-
 const CLLocationDistance TSMinimumDefaultThresholdToUpdateUserPosition = 100.f;
+
+static inline BOOL isHorizontalAccuracyWithinARange(CLLocation *location, CLLocationDistance range)
+{
+    return location.horizontalAccuracy >= 0 && location.horizontalAccuracy <= range;
+}
+
+@implementation EPUserPosition
 
 - (id)initWithUserPosition:(CLLocation *)userLocation
 {
@@ -24,7 +29,7 @@ const CLLocationDistance TSMinimumDefaultThresholdToUpdateUserPosition = 100.f;
 - (void)updatePosition:(CLLocation *)newUserPosition
 {
     if (!newUserPosition) return;
-    if([newUserPosition horizontalAccuracy] > 0 && [newUserPosition horizontalAccuracy] < _minThresholdToUpdatePosition) {
+    if(isHorizontalAccuracyWithinARange(newUserPosition, _minThresholdToUpdatePosition)) {
         if ([newUserPosition distanceFromLocation:_userPosition] > _minThresholdToUpdatePosition)
             _userPosition = newUserPosition;
     }
@@ -43,6 +48,14 @@ const CLLocationDistance TSMinimumDefaultThresholdToUpdateUserPosition = 100.f;
 - (CLLocationCoordinate2D)coordinate
 {
     return [_userPosition coordinate];
+}
+
+- (BOOL)locationNeedsUpdate:(CLLocation *)newLocation
+{
+    return (isHorizontalAccuracyWithinARange(newLocation, _minThresholdToUpdatePosition) &&
+            [newLocation distanceFromLocation:_userPosition] >= _minThresholdToUpdatePosition &&
+            YES
+            );
 }
 
 @end
