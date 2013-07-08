@@ -18,31 +18,38 @@
 }
 
 /**
- Annotation Collection class which wraps up a mutable a `NSMutableArray` and contains `MKAnnotation` protocol conform objects
+ Designed initializer
+ 
+ @param annotations Annotation array which contains objects conforming to `MKAnnotation` protocol
  */
 
 - (id)initWithAnnotationArray:(NSArray *)annotations;
 
 /**
- Annotation Collection class which wraps up a mutable a `NSMutableArray` and contains `MKAnnotation` protocol conform objects
+ It returns all the annotations in the collection
  */
 
 - (NSArray *)allAnnotations;
 
 /**
- Annotation Collection class which wraps up a mutable a `NSMutableArray` and contains `MKAnnotation` protocol conform objects
+ @param protocol It's the protocol whose retrieved annotations must adhere to 
+
+ @note all the annotations are conforming to `MKAnnotation` protocol by definition
+ 
  */
 
 - (NSArray *)annotationsConformsToProtocol:(Protocol *)protocol;
 
 /**
- Annotation Collection class which wraps up a mutable a `NSMutableArray` and contains `MKAnnotation` protocol conform objects
+ @param protocols Array of protocols retrieved annotations must adhere to 
+ 
+ @note all the annotations are conforming to `MKAnnotation` protocol by definition
  */
 
 - (NSArray *)annotationsConformsToProtocols:(NSArray *)protocols;
 
 /**
- Annotation Collection class which wraps up a mutable a `NSMutableArray` and contains `MKAnnotation` protocol conform objects
+ 
  */
 
 - (NSArray *)annotationsOfKindOfClass:(Class<MKAnnotation>)cls;

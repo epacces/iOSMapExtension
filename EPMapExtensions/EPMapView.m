@@ -86,7 +86,7 @@
     lonDelta = 0,
     sum_x = 0,
     sum_y = 0;
-    NSUInteger ncoord = [_annotationArray count];
+    NSUInteger ncoord = [annotationArray count];
     
     for (id <MKAnnotation> p in annotationArray) { //compute the mean together with min and max
         
@@ -107,7 +107,7 @@
     latDelta = fabs(max_lat - min_lat);
     lonDelta = fabs(max_lon - min_lon);
     MKCoordinateSpan span = MKCoordinateSpanMake(latDelta, lonDelta);
-    return [self regionThatFits:MKCoordinateRegionMake(baricentrum, span)];
+    return MKCoordinateRegionMake(baricentrum, span);
     
 }
 

@@ -11,17 +11,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "EPPointOfInterest.h"
 #import "YAAnnotationView.h"
-
-
-#define ARC4RANDOM_MAX      0x100000000
-
-static inline double RAND_IN_RANGE(double min, double max) {
-    return min + ((double) arc4random() / ARC4RANDOM_MAX) * (max - min) ;
-}
-
-static inline CLLocationCoordinate2D EPRandomLocationCoordinateMake(void) {
-    return CLLocationCoordinate2DMake(RAND_IN_RANGE(-90, 90), RAND_IN_RANGE(-180, 180));
-}
+#import "utils.h"
 
 @interface AnnotationClass : EPPointOfInterest
 

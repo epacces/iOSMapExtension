@@ -26,6 +26,9 @@
 		48DBE5AC1749856C0014BE48 /* EPAnnotationArrayTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 48DBE5AB1749856C0014BE48 /* EPAnnotationArrayTest.m */; };
 		845619711749748F00CC2D0D /* EPMapViewDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 845619701749748F00CC2D0D /* EPMapViewDecorator.m */; };
 		845E3576178732A800A647B7 /* EPUserPositionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 845E3575178732A800A647B7 /* EPUserPositionTest.m */; };
+		845E3579178AE37D00A647B7 /* EPMapViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 845E3578178AE37D00A647B7 /* EPMapViewTest.m */; };
+		845E357B178AEB7E00A647B7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845E357A178AEB7E00A647B7 /* QuartzCore.framework */; };
+		845E357C178AEBFD00A647B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5F8F1738005E0067CC40 /* CoreGraphics.framework */; };
 		848EB05217464444009639D0 /* YAAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 848EB05117464444009639D0 /* YAAnnotationView.m */; };
 		84A876DE17856E120045C756 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE60041738F7ED0067CC40 /* CoreLocation.framework */; };
 		84A876E117856F160045C756 /* libEPMapExtensions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5FCD1738018E0067CC40 /* libEPMapExtensions.a */; };
@@ -106,6 +109,10 @@
 		845619701749748F00CC2D0D /* EPMapViewDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPMapViewDecorator.m; sourceTree = "<group>"; };
 		845E3574178732A800A647B7 /* EPUserPositionTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPUserPositionTest.h; sourceTree = "<group>"; };
 		845E3575178732A800A647B7 /* EPUserPositionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPUserPositionTest.m; sourceTree = "<group>"; };
+		845E3577178AE37D00A647B7 /* EPMapViewTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPMapViewTest.h; sourceTree = "<group>"; };
+		845E3578178AE37D00A647B7 /* EPMapViewTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPMapViewTest.m; sourceTree = "<group>"; };
+		845E357A178AEB7E00A647B7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		845E357F178AEEDF00A647B7 /* utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
 		848EB05017464444009639D0 /* YAAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAAnnotationView.h; sourceTree = "<group>"; };
 		848EB05117464444009639D0 /* YAAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YAAnnotationView.m; sourceTree = "<group>"; };
 		84A876E41785D47C0045C756 /* EPViewControllerRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPViewControllerRouter.h; sourceTree = "<group>"; };
@@ -176,6 +183,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845E357C178AEBFD00A647B7 /* CoreGraphics.framework in Frameworks */,
+				845E357B178AEB7E00A647B7 /* QuartzCore.framework in Frameworks */,
 				84BE60051738F7EE0067CC40 /* CoreLocation.framework in Frameworks */,
 				84BE60031738F7920067CC40 /* libEPMapExtensions.a in Frameworks */,
 				84BE60021738172F0067CC40 /* MapKit.framework in Frameworks */,
@@ -188,6 +197,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		845E357D178AEE4900A647B7 /* FakeAnnotations */ = {
+			isa = PBXGroup;
+			children = (
+				4882F2CE176FAEC700E9F1A7 /* EPTestAnnotation.h */,
+				4882F2CF176FAEC700E9F1A7 /* EPTestAnnotation.m */,
+				848EB05017464444009639D0 /* YAAnnotationView.h */,
+				848EB05117464444009639D0 /* YAAnnotationView.m */,
+			);
+			name = FakeAnnotations;
+			sourceTree = "<group>";
+		};
+		845E357E178AEEAC00A647B7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				845E357F178AEEDF00A647B7 /* utils.h */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 		84BE5F7F1738005E0067CC40 = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +240,7 @@
 		84BE5F8A1738005E0067CC40 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				845E357A178AEB7E00A647B7 /* QuartzCore.framework */,
 				84BE60041738F7ED0067CC40 /* CoreLocation.framework */,
 				84BE6000173817140067CC40 /* MapKit.framework */,
 				84BE5F8B1738005E0067CC40 /* UIKit.framework */,
@@ -283,17 +312,17 @@
 		84BE5FE21738018F0067CC40 /* EPMapExtensionsTests */ = {
 			isa = PBXGroup;
 			children = (
+				845E357E178AEEAC00A647B7 /* Utilities */,
 				84BE5FE31738018F0067CC40 /* Supporting Files */,
+				845E357D178AEE4900A647B7 /* FakeAnnotations */,
+				48DBE5AA1749856C0014BE48 /* EPAnnotationArrayTest.h */,
 				84BE5FFD17380C7B0067CC40 /* EPMapViewDecoratorTest.h */,
 				84BE5FFE17380C7B0067CC40 /* EPMapViewDecoratorTest.m */,
-				848EB05017464444009639D0 /* YAAnnotationView.h */,
-				848EB05117464444009639D0 /* YAAnnotationView.m */,
-				4882F2CE176FAEC700E9F1A7 /* EPTestAnnotation.h */,
-				4882F2CF176FAEC700E9F1A7 /* EPTestAnnotation.m */,
-				48DBE5AA1749856C0014BE48 /* EPAnnotationArrayTest.h */,
 				48DBE5AB1749856C0014BE48 /* EPAnnotationArrayTest.m */,
 				845E3574178732A800A647B7 /* EPUserPositionTest.h */,
 				845E3575178732A800A647B7 /* EPUserPositionTest.m */,
+				845E3577178AE37D00A647B7 /* EPMapViewTest.h */,
+				845E3578178AE37D00A647B7 /* EPMapViewTest.m */,
 			);
 			path = EPMapExtensionsTests;
 			sourceTree = "<group>";
@@ -480,6 +509,7 @@
 				848EB05217464444009639D0 /* YAAnnotationView.m in Sources */,
 				48DBE5AC1749856C0014BE48 /* EPAnnotationArrayTest.m in Sources */,
 				845E3576178732A800A647B7 /* EPUserPositionTest.m in Sources */,
+				845E3579178AE37D00A647B7 /* EPMapViewTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
