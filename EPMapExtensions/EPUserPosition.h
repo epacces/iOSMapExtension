@@ -19,25 +19,46 @@
 
 
 ///-------------------------------------------------
-///  Creating object
+/// @name  Creating object
 ///-------------------------------------------------
 
 /**
- @param userLocation Takes the user location
+ Initialize the object with the specified user location
+ 
+ @param userLocation Takes a valid user location
+ 
  */
 
 - (id)initWithUserPosition:(CLLocation *)userLocation;
 
 ///-------------------------------------------------
-///  Updating user position
+/// @name Updating user position
 ///-------------------------------------------------
 
 /**
- Takes the fresh user position
+ Updates the user location with a new valid one provided that it is a valid location far away at least `minThresholdToUpdatePosition` meters from the old position
+ 
  @param newUserLocation New acquired user location
  */
 
 - (void)updatePosition:(CLLocation *)newUserLocation;
+
+
+///-------------------------------------------------
+/// @name Position updating property
+///-------------------------------------------------
+
+/**
+ Minimum threshold to get the user position updated
+ */
+
+@property (nonatomic)           CLLocationDistance  minThresholdToUpdatePosition; //meters
+
+
+///-------------------------------------------------
+/// @name User position properties
+///-------------------------------------------------
+
 
 /**
  Contains the last valid user position
@@ -51,11 +72,6 @@
 
 @property (nonatomic, readonly) NSDate              *lastValidPositionDate;
 
-/**
- Minimum threshold to get the user position updated
- */
-
-@property (nonatomic)           CLLocationDistance  minThresholdToUpdatePosition; //meters
 
 /**
  Latitude and longitude relevant to the user position
@@ -65,4 +81,12 @@
 
 @end
 
-extern const CLLocationDistance TSMinimumDefaultThresholdToUpdateUserPosition;
+///-------------------------------------------------
+/// @name Default constants
+///-------------------------------------------------
+
+/**
+ Default threshold
+ */
+
+extern const CLLocationDistance TSMinimumDefaultThresholdToUpdateUserPosition; // 100m

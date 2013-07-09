@@ -458,7 +458,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/appledoc \\\n--project-name \"${PROJECT_NAME}\" \\\n--project-company \"Pacces\" \\\n--company-id \"com.pacces\" \\\n--docset-atom-filename \"${PROJECT_NAME}.atom\" \\\n--docset-feed-url \"${PROJECT_DIR}/%DOCSETATOMFILENAME\" \\\n--docset-package-url \"${PROJECT_DIR}/%DOCSETPACKAGEFILENAME\" \\\n--docset-fallback-url \"\" \\\n--output \"~/help\" \\\n--publish-docset \\\n--logformat xcode \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--verbose 6 \\\n--ignore \"*.m\" \\\n--ignore \"LoadableCategory.h\" \\\n--index-desc \"${PROJECT_DIR}/readme.markdown\" \\\n\"${PROJECT_DIR}\"";
+			shellScript = "/usr/local/bin/appledoc \\\n--project-name \"${PROJECT_NAME}\" \\\n--project-company \"Pacces\" \\\n--company-id \"com.pacces\" \\\n--docset-feed-url \"http://prova.com/%DOCSETATOMFILENAME\" \\\n--docset-package-url \"http://prova.com/%DOCSETPACKAGEFILENAME\" \\\n--output \"~/help\" \\\n--logformat xcode \\\n--search-undocumented-doc \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--publish-docset \\\n--no-warn-invalid-crossref \\\n--verbose 3 \\\n--ignore \"*.m\" \\\n--ignore \"LoadableCategory.h\" \\\n--index-desc \"${PROJECT_DIR}/readme.markdown\" \\\n\"${PROJECT_DIR}/EPMapExtensions\" || echo \"Failed -- ignoring\"\n";
 		};
 		84BE5FD91738018F0067CC40 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;

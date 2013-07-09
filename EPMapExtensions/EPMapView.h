@@ -35,7 +35,8 @@
  Computes the centered region with respect to all annotations presented in the map
  
  @return The centered region 
- @note If no one annotation is contained in the map it returns the current visible map region
+ @warning If no one annotation is found in the map it returns the current visible map region
+
  */
 
 - (MKCoordinateRegion)centeredRegion;
@@ -44,7 +45,7 @@
  Computes the centered region with respect to all annotations presented in the map conforming to a given protocol
  @param protocol The protocol used to filter annotations
  
- @note If no one annotation is found in the map it returns the current visible map region
+ @warning If no one annotation is found in the map it returns the current visible map region
  */
 
 - (MKCoordinateRegion)centeredRegionForAnnotationConformingToProtocol:(Protocol *)protocol;
@@ -53,7 +54,7 @@
  Computes the centered region with respect to all annotations presented in the map conforming to an array of protocols
  @param protocols The array of protocols to filter annotations
  
- @note If no one annotation is found in the map it returns the current visible map region
+ @warning If no one annotation is found in the map it returns the current visible map region
  */
 
 - (MKCoordinateRegion)centeredRegionForAnnotationConformingToProtocols:(NSArray *)protocols;
@@ -62,7 +63,7 @@
  Computes the centered region with respect to all annotations belonging to a given kind of class
  @param cls The kind of class used to filter annotations
  
- @note If no one annotation is found in the map it returns the current visible map region
+ @warning If no one annotation is found in the map it returns the current visible map region
  */
 
 - (MKCoordinateRegion)centeredRegionForAnnotationOfKindOfClass:(Class)cls;
@@ -71,7 +72,7 @@
  Computes the centered region with respect to all annotations belonging to a given pool of classes
  @param classes Array of classes used to filter the annotations
  
- @note If no one annotation is found in the map it returns the current visible map region
+ @warning If no one annotation is found in the EPMapView it returns the **current visible** map region
  */
 
 - (MKCoordinateRegion)centeredRegionForAnnotationOfKindOfClasses:(NSArray *)classes;

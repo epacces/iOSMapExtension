@@ -20,7 +20,7 @@
 /**
  @param mapView The map view on which annotations are displayed
  @param annotation The annotation to be displayed
- @return annotation view corresponding to the current annotation
+ @result annotation view corresponding to the current annotation
  */
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation;
 @end
@@ -28,7 +28,6 @@
 
 /**
  `EPMapViewDecorator` deals with the graphical representation of the map annotations. Basically it's designed to map annotation points over `MKMapView` to a set of customized annotation views.
- 
  */
 
 @interface EPMapViewDecorator : NSObject <EPMapViewDecoratorProtocol> {
@@ -48,7 +47,7 @@
 /**
  The user location annotation view.
  
- @note default value is `nil`
+ @warning The default value is `nil`
  */
 
 @property (nonatomic, strong)     MKAnnotationView      *userLocationAnnotationView;
@@ -57,7 +56,7 @@
 /**
  The default annotation view which is drown when no one annotation is registered.
  
- @note default value is `nil`
+ @warning The default value is `nil`
  */
 
 @property (nonatomic, strong)     MKAnnotationView      *defaultAnnotationView;
