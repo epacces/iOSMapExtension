@@ -17,12 +17,23 @@
 @implementation EPMapViewTest {
     EPMapView *_mapView;
     MKMapView *_innerMapView;
+    NSArray *_testAnnotations;
+    NSArray *_poiAnnotations;
 }
 
 - (void)setUp
 {
     _mapView = [[EPMapView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
     _innerMapView = [[MKMapView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
+    _testAnnotations = @[
+                         [[EPTestAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(45.11, 7.67)
+                                                    addressDictionary:nil],
+                         [[EPTestAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(45.08, 7.67)
+                                                    addressDictionary:nil],
+                         ];
+    _poiAnnotations = @[
+                        [[EPPointOfInterest alloc] initWithCoordinate:CLLocationCoordinate2DMake(46.12, 8.98)],
+                        ];
 }
 
 - (void)testMapViewInitializationWithFrame
@@ -47,15 +58,10 @@
 - (void)testMapViewGetCenteredRegionForAllAnnotations
 {
 
-    EPTestAnnotation *firstAnnotation = [[EPTestAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(45.11, 7.67)
-                                                                   addressDictionary:nil];
-    EPTestAnnotation *secondAnnotation = [[EPTestAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(45.08, 7.67)
-                                                                    addressDictionary:nil];
+    [_mapView addAnnotation:_testAnnotations[0]];
+    [_mapView addAnnotation:_testAnnotations[1]];
     
-    [_mapView addAnnotation:firstAnnotation];
-    [_mapView addAnnotation:secondAnnotation];
-    
-    MKCoordinateRegion expectedCenteredRegion = MKCoordinateRegionMake(CLLocationCoordinate2DMake((45.11 + 45.08)/2, 7.67),
+    MKCoordinateRegion expectedCenteredRegion = MKCoordinateRegionMake(CLLocationCoordinate2DMake((45.11 + 45.08) / 2, 7.67),
                                                                        MKCoordinateSpanMake(45.11 - 45.08, 0));
     MKCoordinateRegion centeredRegion = [_mapView centeredRegion];
     
@@ -64,17 +70,11 @@
 
 - (void)testMapViewGetCenteredRegionForAnnotationConformingToProtocol
 {
-    EPTestAnnotation *firstAnnotation = [[EPTestAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(45.11, 7.67)
-                                                                   addressDictionary:nil];
-    EPTestAnnotation *secondAnnotation = [[EPTestAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(45.08, 7.67)
-                                                                    addressDictionary:nil];
-    EPPointOfInterest *thirdAnnotation = [[EPPointOfInterest alloc] initWithCoordinate:CLLocationCoordinate2DMake(46.12, 8.98)];
+    [_mapView addAnnotation:_testAnnotations[0]];
+    [_mapView addAnnotation:_testAnnotations[1]];
+    [_mapView addAnnotation:_poiAnnotations[0]];
     
-    [_mapView addAnnotation:firstAnnotation];
-    [_mapView addAnnotation:secondAnnotation];
-    [_mapView addAnnotation:thirdAnnotation];
-    
-    MKCoordinateRegion expectedCenteredRegion = MKCoordinateRegionMake(CLLocationCoordinate2DMake((45.11 + 45.08)/2, 7.67),
+    MKCoordinateRegion expectedCenteredRegion = MKCoordinateRegionMake(CLLocationCoordinate2DMake((45.11 + 45.08) / 2, 7.67),
                                                                        MKCoordinateSpanMake(45.11 - 45.08, 0));
     MKCoordinateRegion centeredRegion = [_mapView centeredRegionForAnnotationConformingToProtocol:@protocol(EPAnnotation)];
     
@@ -83,15 +83,9 @@
 
 - (void)testMapViewGetCenteredRegionForAnnotationConformingProtocolReturningAnEmptyArray
 {
-    EPTestAnnotation *firstAnnotation = [[EPTestAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(45.11, 7.67)
-                                                                   addressDictionary:nil];
-    EPTestAnnotation *secondAnnotation = [[EPTestAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(45.08, 7.67)
-                                                                    addressDictionary:nil];
-    EPPointOfInterest *thirdAnnotation = [[EPPointOfInterest alloc] initWithCoordinate:CLLocationCoordinate2DMake(46.12, 8.98)];
-    
-    [_mapView addAnnotation:firstAnnotation];
-    [_mapView addAnnotation:secondAnnotation];
-    [_mapView addAnnotation:thirdAnnotation];
+    [_mapView addAnnotation:_testAnnotations[0]];
+    [_mapView addAnnotation:_testAnnotations[1]];
+    [_mapView addAnnotation:_poiAnnotations[0]];
     
     MKCoordinateRegion expectedCenteredRegion = [_mapView region];
     MKCoordinateRegion centeredRegion = [_mapView centeredRegionForAnnotationConformingToProtocol:nil];
@@ -100,18 +94,12 @@
 }
 
 - (void)testMapViewGetCenteredRegionForAnnotationOfKindOfClass
-{
-    EPTestAnnotation *firstAnnotation = [[EPTestAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(45.11, 7.67)
-                                                                   addressDictionary:nil];
-    EPTestAnnotation *secondAnnotation = [[EPTestAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(45.08, 7.67)
-                                                                    addressDictionary:nil];
-    EPPointOfInterest *thirdAnnotation = [[EPPointOfInterest alloc] initWithCoordinate:CLLocationCoordinate2DMake(46.12, 8.98)];
+{    
+    [_mapView addAnnotation:_testAnnotations[0]];
+    [_mapView addAnnotation:_testAnnotations[1]];
+    [_mapView addAnnotation:_poiAnnotations[0]];
     
-    [_mapView addAnnotation:firstAnnotation];
-    [_mapView addAnnotation:secondAnnotation];
-    [_mapView addAnnotation:thirdAnnotation];
-    
-    MKCoordinateRegion expectedCenteredRegion = MKCoordinateRegionMake(CLLocationCoordinate2DMake((45.11 + 45.08)/2, 7.67),
+    MKCoordinateRegion expectedCenteredRegion = MKCoordinateRegionMake(CLLocationCoordinate2DMake((45.11 + 45.08) / 2, 7.67),
                                                                        MKCoordinateSpanMake(45.11 - 45.08, 0));
     MKCoordinateRegion centeredRegion = [_mapView centeredRegionForAnnotationOfKindOfClass:[EPTestAnnotation class]];
     
@@ -120,15 +108,9 @@
 
 - (void)testMapViewGetCenteredRegionForAnnotationOfKindOfClassReturningAnEmptyArray
 {
-    EPTestAnnotation *firstAnnotation = [[EPTestAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(45.11, 7.67)
-                                                                   addressDictionary:nil];
-    EPTestAnnotation *secondAnnotation = [[EPTestAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(45.08, 7.67)
-                                                                    addressDictionary:nil];
-    EPPointOfInterest *thirdAnnotation = [[EPPointOfInterest alloc] initWithCoordinate:CLLocationCoordinate2DMake(46.12, 8.98)];
-    
-    [_mapView addAnnotation:firstAnnotation];
-    [_mapView addAnnotation:secondAnnotation];
-    [_mapView addAnnotation:thirdAnnotation];
+    [_mapView addAnnotation:_testAnnotations[0]];
+    [_mapView addAnnotation:_testAnnotations[1]];
+    [_mapView addAnnotation:_poiAnnotations[0]];
     
     MKCoordinateRegion expectedCenteredRegion = [_mapView region];
     MKCoordinateRegion centeredRegion = [_mapView centeredRegionForAnnotationOfKindOfClass:nil];
@@ -136,5 +118,51 @@
     STAssertTrue(EPCoordinateRegionIsEqual(centeredRegion, expectedCenteredRegion), @"centered region should be centered around expectedCenteredRegion");
 }
 
+- (void)testMapViewGetVisibleAnnotation
+{
+    [_mapView addAnnotation:_testAnnotations[0]];
+    [_mapView addAnnotation:_testAnnotations[1]];
+    [_mapView addAnnotation:_poiAnnotations[0]];
+    
+    [_mapView setRegion:[_mapView centeredRegion]];
+    
+    STAssertTrue([_mapView visibleAnnotations] == 3, @"the visibleAnnotation within the visible mapView region should be 3");
+}
+
+- (void)testMapViewGetVisibleAnnotationConformingToProtocol
+{
+    [_mapView addAnnotation:_testAnnotations[0]];
+    [_mapView addAnnotation:_testAnnotations[1]];
+    [_mapView addAnnotation:_poiAnnotations[0]];
+    
+    [_mapView setRegion:[_mapView centeredRegion]];
+    
+    STAssertTrue([_mapView visibleAnnotationsConformingToProtocol:@protocol(EPAnnotation)] == 2,
+                 @"the visibleAnnotation within the visible mapView region should be 2");
+}
+
+- (void)testMapViewGetVisibleAnnotationConformingToProtocolReturningAnEmptySet
+{
+    [_mapView addAnnotation:_testAnnotations[0]];
+    [_mapView addAnnotation:_testAnnotations[1]];
+    [_mapView addAnnotation:_poiAnnotations[0]];
+    
+    [_mapView setRegion:[_mapView centeredRegion]];
+    
+    STAssertTrue([_mapView visibleAnnotationsConformingToProtocol:nil] == 0,
+                 @"the visibleAnnotation within the visible mapView region should be 0");
+}
+
+- (void)testMapViewGetVisibleAnnotationConformingToRootProtocol
+{
+    [_mapView addAnnotation:_testAnnotations[0]];
+    [_mapView addAnnotation:_testAnnotations[1]];
+    [_mapView addAnnotation:_poiAnnotations[0]];
+    
+    [_mapView setRegion:[_mapView centeredRegion]];
+    
+    STAssertTrue([_mapView visibleAnnotationsConformingToProtocol:@protocol(MKAnnotation)] == 3,
+                 @"the visibleAnnotation within the visible mapView region should be 3");
+}
 
 @end
