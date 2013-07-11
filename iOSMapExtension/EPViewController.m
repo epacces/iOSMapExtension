@@ -9,7 +9,7 @@
 #import "EPViewController.h"
 #import <MapKit/MapKit.h>
 #import "EPMapExtensions.h"
-
+#import "CustomAnnotationView.h"
 
 @interface EPViewController () <MKMapViewDelegate>
 
@@ -34,13 +34,12 @@
         if ([annotation isKindOfClass:[MKUserLocation class]]) {
             return nil;
         } else {
-            return @"MKPinAnnotationView";
+            return @"CustomAnnotationView";
         }
     }];
     
     [_mapDecorator setConfigBlockForAllClasses:^(MKAnnotationView *annotationView, id<MKAnnotation> annotation ) {
-        [annotationView setCanShowCallout:NO];
-        [(MKPinAnnotationView *)annotationView setPinColor:MKPinAnnotationColorGreen];
+        [annotationView setCanShowCallout:YES];
     }];
     
     MKPlacemark *pl = [[MKPlacemark alloc] initWithCoordinate:CLLocationCoordinate2DMake(45.1132827, 7.6782737)
@@ -51,7 +50,6 @@
     [_mapView addAnnotations:@[pl, pl1]];
     _mapViewDelegate = [[EPMapViewDelegate alloc] init];
     [_mapViewDelegate setMapViewDecorator:_mapDecorator];
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated

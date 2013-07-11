@@ -29,6 +29,11 @@
 		845E3579178AE37D00A647B7 /* EPMapViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 845E3578178AE37D00A647B7 /* EPMapViewTest.m */; };
 		845E357B178AEB7E00A647B7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845E357A178AEB7E00A647B7 /* QuartzCore.framework */; };
 		845E357C178AEBFD00A647B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5F8F1738005E0067CC40 /* CoreGraphics.framework */; };
+		845EC3A0178D96040020A2B1 /* CustomAnnotationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845EC39F178D96040020A2B1 /* CustomAnnotationView.xib */; };
+		845EC3A3178D9D500020A2B1 /* CustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 845EC3A2178D9D500020A2B1 /* CustomAnnotationView.m */; };
+		845EC3A6178EFCD10020A2B1 /* EPAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 845EC3A5178EFCD10020A2B1 /* EPAnnotationView.m */; };
+		845EC3AC178F06880020A2B1 /* 1373574474_map-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 845EC3AB178F06870020A2B1 /* 1373574474_map-marker.png */; };
+		845EC3AE178F07950020A2B1 /* 1373574738_Flag_of_Italy.png in Resources */ = {isa = PBXBuildFile; fileRef = 845EC3AD178F07950020A2B1 /* 1373574738_Flag_of_Italy.png */; };
 		848EB05217464444009639D0 /* YAAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 848EB05117464444009639D0 /* YAAnnotationView.m */; };
 		84A876DE17856E120045C756 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE60041738F7ED0067CC40 /* CoreLocation.framework */; };
 		84A876E117856F160045C756 /* libEPMapExtensions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5FCD1738018E0067CC40 /* libEPMapExtensions.a */; };
@@ -113,6 +118,13 @@
 		845E3578178AE37D00A647B7 /* EPMapViewTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPMapViewTest.m; sourceTree = "<group>"; };
 		845E357A178AEB7E00A647B7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		845E357F178AEEDF00A647B7 /* utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
+		845EC39F178D96040020A2B1 /* CustomAnnotationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomAnnotationView.xib; sourceTree = "<group>"; };
+		845EC3A1178D9D500020A2B1 /* CustomAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotationView.h; sourceTree = "<group>"; };
+		845EC3A2178D9D500020A2B1 /* CustomAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotationView.m; sourceTree = "<group>"; };
+		845EC3A4178EFCD00020A2B1 /* EPAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPAnnotationView.h; sourceTree = "<group>"; };
+		845EC3A5178EFCD10020A2B1 /* EPAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPAnnotationView.m; sourceTree = "<group>"; };
+		845EC3AB178F06870020A2B1 /* 1373574474_map-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1373574474_map-marker.png"; sourceTree = "<group>"; };
+		845EC3AD178F07950020A2B1 /* 1373574738_Flag_of_Italy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1373574738_Flag_of_Italy.png; sourceTree = "<group>"; };
 		848EB05017464444009639D0 /* YAAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAAnnotationView.h; sourceTree = "<group>"; };
 		848EB05117464444009639D0 /* YAAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YAAnnotationView.m; sourceTree = "<group>"; };
 		84A876E41785D47C0045C756 /* EPViewControllerRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPViewControllerRouter.h; sourceTree = "<group>"; };
@@ -254,7 +266,12 @@
 		84BE5F911738005E0067CC40 /* iOSMapExtension */ = {
 			isa = PBXGroup;
 			children = (
+				845EC3A1178D9D500020A2B1 /* CustomAnnotationView.h */,
+				845EC3A2178D9D500020A2B1 /* CustomAnnotationView.m */,
+				845EC39F178D96040020A2B1 /* CustomAnnotationView.xib */,
+				845EC3AD178F07950020A2B1 /* 1373574738_Flag_of_Italy.png */,
 				84BE5F9A1738005E0067CC40 /* EPAppDelegate.h */,
+				845EC3AB178F06870020A2B1 /* 1373574474_map-marker.png */,
 				84BE5F9B1738005E0067CC40 /* EPAppDelegate.m */,
 				84BE5FA31738005E0067CC40 /* EPViewController.h */,
 				84BE5FA41738005E0067CC40 /* EPViewController.m */,
@@ -285,6 +302,8 @@
 				845619701749748F00CC2D0D /* EPMapViewDecorator.m */,
 				84BE5FF4173802AE0067CC40 /* EPMapView.h */,
 				84BE5FF5173802AF0067CC40 /* EPMapView.m */,
+				845EC3A4178EFCD00020A2B1 /* EPAnnotationView.h */,
+				845EC3A5178EFCD10020A2B1 /* EPAnnotationView.m */,
 				84BE600717393C0F0067CC40 /* EPPointOfInterest.h */,
 				84BE600817393C100067CC40 /* EPPointOfInterest.m */,
 				84BE5FF1173801D70067CC40 /* EPUserPosition.h */,
@@ -433,6 +452,9 @@
 				84BE5FA01738005E0067CC40 /* Default@2x.png in Resources */,
 				84BE5FA21738005E0067CC40 /* Default-568h@2x.png in Resources */,
 				84BE5FA81738005E0067CC40 /* EPViewController.xib in Resources */,
+				845EC3A0178D96040020A2B1 /* CustomAnnotationView.xib in Resources */,
+				845EC3AC178F06880020A2B1 /* 1373574474_map-marker.png in Resources */,
+				845EC3AE178F07950020A2B1 /* 1373574738_Flag_of_Italy.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,7 +480,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/appledoc \\\n--project-name \"${PROJECT_NAME}\" \\\n--project-company \"Pacces\" \\\n--company-id \"com.pacces\" \\\n--docset-feed-url \"http://prova.com/%DOCSETATOMFILENAME\" \\\n--docset-package-url \"http://prova.com/%DOCSETPACKAGEFILENAME\" \\\n--output \"~/help\" \\\n--logformat xcode \\\n--search-undocumented-doc \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--publish-docset \\\n--no-warn-invalid-crossref \\\n--verbose 3 \\\n--ignore \"*.m\" \\\n--ignore \"LoadableCategory.h\" \\\n--index-desc \"${PROJECT_DIR}/readme.markdown\" \\\n\"${PROJECT_DIR}/EPMapExtensions\" || echo \"Failed -- ignoring\"\n";
+			shellScript = "/usr/local/bin/appledoc \\\n--project-name \"${PROJECT_NAME}\" \\\n--project-company \"Pacces\" \\\n--company-id \"com.pacces\" \\\n--docset-feed-url \"${PROJECT_DIR}/%DOCSETATOMFILENAME\" \\\n--docset-package-url \"${PROJECT_DIR}/%DOCSETPACKAGEFILENAME\" \\\n--output \"~/help\" \\\n--logformat xcode \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--create-docset \\\n--install-docset \\\n--no-warn-invalid-crossref \\\n--verbose 3 \\\n--ignore \"*.m\" \\\n--ignore \"LoadableCategory.h\" \\\n--index-desc \"${PROJECT_DIR}/readme.markdown\" \\\n\"${PROJECT_DIR}/EPMapExtensions\" || echo \"Failed -- ignoring\"\n";
 		};
 		84BE5FD91738018F0067CC40 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -483,6 +505,7 @@
 				84BE5F981738005E0067CC40 /* main.m in Sources */,
 				84BE5F9C1738005E0067CC40 /* EPAppDelegate.m in Sources */,
 				84BE5FA51738005E0067CC40 /* EPViewController.m in Sources */,
+				845EC3A3178D9D500020A2B1 /* CustomAnnotationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +520,7 @@
 				84BE600917393C110067CC40 /* EPPointOfInterest.m in Sources */,
 				845619711749748F00CC2D0D /* EPMapViewDecorator.m in Sources */,
 				84A876E61785D47D0045C756 /* EPViewControllerRouter.m in Sources */,
+				845EC3A6178EFCD10020A2B1 /* EPAnnotationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
