@@ -209,6 +209,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		840BC5471790BAB700F181A0 /* Artworks */ = {
+			isa = PBXGroup;
+			children = (
+				845EC3AB178F06870020A2B1 /* 1373574474_map-marker.png */,
+				845EC3AD178F07950020A2B1 /* 1373574738_Flag_of_Italy.png */,
+			);
+			name = Artworks;
+			sourceTree = "<group>";
+		};
 		845E357D178AEE4900A647B7 /* FakeAnnotations */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,9 +278,7 @@
 				845EC3A1178D9D500020A2B1 /* CustomAnnotationView.h */,
 				845EC3A2178D9D500020A2B1 /* CustomAnnotationView.m */,
 				845EC39F178D96040020A2B1 /* CustomAnnotationView.xib */,
-				845EC3AD178F07950020A2B1 /* 1373574738_Flag_of_Italy.png */,
 				84BE5F9A1738005E0067CC40 /* EPAppDelegate.h */,
-				845EC3AB178F06870020A2B1 /* 1373574474_map-marker.png */,
 				84BE5F9B1738005E0067CC40 /* EPAppDelegate.m */,
 				84BE5FA31738005E0067CC40 /* EPViewController.h */,
 				84BE5FA41738005E0067CC40 /* EPViewController.m */,
@@ -284,6 +291,7 @@
 		84BE5F921738005E0067CC40 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				840BC5471790BAB700F181A0 /* Artworks */,
 				84BE5F931738005E0067CC40 /* iOSMapExtension-Info.plist */,
 				84BE5F941738005E0067CC40 /* InfoPlist.strings */,
 				84BE5F971738005E0067CC40 /* main.m */,
