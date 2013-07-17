@@ -3,7 +3,7 @@
 //  iOSMapExtension
 //
 //  Created by epacces on 5/7/13.
-//  Copyright (c) 2013 it.reply. All rights reserved.
+//  Copyright (c) 2013 it.hepakkes. All rights reserved.
 //
 
 #import "EPPointOfInterest.h"
