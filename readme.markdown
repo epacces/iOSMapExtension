@@ -6,7 +6,7 @@ EPMapExtension is an extension library built on the top of [MKMapKit](http://dev
 
 ## Overview
 
-The library architecture is based on the 
+The library architecture is built on the the top of `MKMapKit Framework`. 
 
 ## MapViewDecorator
 	
@@ -14,11 +14,56 @@ MapViewDecorator is an attempt to deal with a considerable amount of customized 
 
 ### Registration of Annotations into MapDecorator
 
-#### Example 1
+In the following way is possible to register the annotationView associated to the annotation
+
     EPMapViewDecorator *decorator = [[EPMapViewDecorator alloc] init];
     [decorator registerAnnotationViewForClass:[AnnotationClass class] annotationView:@"MKPinAnnotationView"];
 
-### Advanced Configurations
+### Configuration and Registration of Annotations through the MapDecorator
+
+    EPMapViewDecorator *decorator = [[EPMapViewDecorator alloc] init];
+    [_mapDecorator registerAnnotationViewForClass:[AnnotationClass class] annotationView:@"MKPinAnnotationView"
+                                      configBlock:^(MKAnnotationView *av, id<MKAnnotation> annotation){
+                                          [av setCanShowCallout:YES];
+                                      }];
+
+
+### Registration & Configuration of Multiple AnnotationViews Relevant to an AnnotationClass
+
+
+    [_mapDecorator registerAnnotationViewForClass:[AnnotationClass class]
+                                 translationBlock:^NSString * (id<MKAnnotation> annotation) {
+                                     if (![[(AnnotationClass *)annotation name] isEqualToString:@"I'm old"])
+                                         return @"YAAnnotationView";
+                                     else
+                                         return @"YAAAnnotationView";
+                                 }];
+    [_mapDecorator setConfigBlockForClass:[AnnotationClass class]
+                                    block:^(MKAnnotationView *av, id<MKAnnotation> annotation){
+                                        if([av class] == [YAAnnotationView class]) {
+                                            [av setCanShowCallout:YES];
+                                        } else {
+                                            [av setCanShowCallout:NO];
+                                        }
+                                    }];
+
+### Registration & Configuration of AnnotationViews for All Annotation Classes
+
+	[_mapDecorator setTranslationBlockForAllClasses:^NSString * (id<MKAnnotation> annotation) {
+	        if (![annotation respondsToSelector:@selector(title)])
+	            return @"YAAnnotationView";
+	        else
+	            return @"YAJesusAnnotationView";
+	    }];
+    
+	[_mapDecorator setConfigBlockForAllClasses: ^(MKAnnotationView *annotationView, id<MKAnnotation> annotation) {
+	    if([annotationView class] == [YAAnnotationView class]) {
+	        [annotationView setCanShowCallout:YES];
+	    } else {
+	        [annotationView setCanShowCallout:NO];
+	    }
+	}];
+
 
 ## Customized MapView 
 	
