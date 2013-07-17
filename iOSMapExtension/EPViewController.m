@@ -56,7 +56,7 @@
 {
     [super viewWillAppear:animated];
     [_mapView setShowsUserLocation:YES];
-    [_mapView setDelegate:_mapViewDelegate];
+    [_mapView setDelegate:self];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
