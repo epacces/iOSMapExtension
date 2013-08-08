@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 it.hepakkes. All rights reserved.
 //
 
-#import "EPMapViewDelegate.h"
-#import "EPMapViewDecorator.h"
+#import "HKMapViewDelegate.h"
+#import "HKMapViewDecorator.h"
 
-@implementation EPMapViewDelegate {
+@implementation HKMapViewDelegate {
     NSMutableDictionary *_navigationBlocks;
 }
 

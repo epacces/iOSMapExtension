@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 it.hepakkes. All rights reserved.
 //
 
-#import "EPAnnotationView.h"
+#import "HKAnnotationView.h"
 
-@interface CustomAnnotationView : EPAnnotationView
+@interface CustomAnnotationView : HKAnnotationView
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 

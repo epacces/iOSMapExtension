@@ -13,7 +13,7 @@
  Annotation Collection class which wraps up a mutable a `NSMutableArray` and contains `MKAnnotation` protocol conform objects
  */
 
-@interface EPAnnotationArray : NSObject <NSFastEnumeration> {
+@interface HKAnnotationArray : NSObject <NSFastEnumeration> {
     NSMutableArray        *_annotationArray;
 }
 
@@ -51,7 +51,6 @@
  @param protocol It's the protocol whose retrieved annotations must adhere to 
 
  @note all the annotations are conforming to `MKAnnotation` protocol by definition
- 
  */
 
 - (NSArray *)annotationsConformsToProtocol:(Protocol *)protocol;
@@ -87,7 +86,7 @@
 
 @end
 
-@interface EPAnnotationArray (EPAnnotationMutableArray)
+@interface HKAnnotationArray (HKAnnotationMutableArray)
 
 ///-------------------------------------------------
 /// @name  Mutating collection
@@ -159,8 +158,7 @@
 - (void)removeAnnotations:(NSArray *)annotations;
 
 /**
- Removes all the annotations from the container 
-
+ Removes all the annotations from the container
  */
 
 - (void)removeAllAnnotations;

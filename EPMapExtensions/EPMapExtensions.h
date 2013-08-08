@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 it.hepakkes. All rights reserved.
 //
 
-#import "EPMapViewDecorator.h"
-#import "EPMapView.h"
-#import "EPUserPosition.h"
-#import "EPAnnotationArray.h"
-#import "EPMapViewDelegate.h"
+#import "HKMapViewDecorator.h"
+#import "HKMapView.h"
+#import "HKUserPosition.h"
+#import "HKAnnotationArray.h"
+#import "HKMapViewDelegate.h"

@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 it.hepakkes. All rights reserved.
 //
 
-#import "EPPointOfInterest.h"
+#import "HKPointOfInterest.h"
 
-@implementation EPPointOfInterest
+@implementation HKPointOfInterest
 
 - (id)initWithCoordinate:(CLLocationCoordinate2D)coordinate
 {
@@ -20,14 +20,14 @@
 
 - (id)copyWithZone:(NSZone *)zone
 {
-    EPPointOfInterest *newPOI = [[[self class] allocWithZone:zone] init];
+    HKPointOfInterest *newPOI = [[[self class] allocWithZone:zone] init];
     newPOI->_coordinate = _coordinate;
     return newPOI;
 }
 
 @end
 
-@implementation EPPointOfInterest (EPDraggablePointOfInterest)
+@implementation HKPointOfInterest (EPDraggablePointOfInterest)
 
 - (void)setCoordinate:(CLLocationCoordinate2D)newCoordinate
 {

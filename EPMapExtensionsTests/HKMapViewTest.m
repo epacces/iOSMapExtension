@@ -6,16 +6,16 @@
 //  Copyright (c) 2013 it.hepakkes. All rights reserved.
 //
 
-#import "EPMapViewTest.h"
-#import "EPMapView.h"
+#import "HKMapViewTest.h"
+#import "HKMapView.h"
 #import "utils.h"
 #import <QuartzCore/QuartzCore.h>
 
-#import "EPTestAnnotation.h"
-#import "EPPointOfInterest.h"
+#import "HKTestAnnotation.h"
+#import "HKPointOfInterest.h"
 
-@implementation EPMapViewTest {
-    EPMapView *_mapView;
+@implementation HKMapViewTest {
+    HKMapView *_mapView;
     MKMapView *_innerMapView;
     NSArray *_testAnnotations;
     NSArray *_poiAnnotations;
@@ -23,16 +23,16 @@
 
 - (void)setUp
 {
-    _mapView = [[EPMapView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
+    _mapView = [[HKMapView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
     _innerMapView = [[MKMapView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
     _testAnnotations = @[
-                         [[EPTestAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(45.11, 7.67)
+                         [[HKTestAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(45.11, 7.67)
                                                     addressDictionary:nil],
-                         [[EPTestAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(45.08, 7.67)
+                         [[HKTestAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(45.08, 7.67)
                                                     addressDictionary:nil],
                          ];
     _poiAnnotations = @[
-                        [[EPPointOfInterest alloc] initWithCoordinate:CLLocationCoordinate2DMake(46.12, 8.98)],
+                        [[HKPointOfInterest alloc] initWithCoordinate:CLLocationCoordinate2DMake(46.12, 8.98)],
                         ];
 }
 
@@ -43,7 +43,7 @@
 
 - (void)testMapViewInializationWithMap
 {
-    EPMapView *mapView = [[EPMapView alloc] initWithMapView:_innerMapView];
+    HKMapView *mapView = [[HKMapView alloc] initWithMapView:_innerMapView];
     STAssertTrue(CGRectEqualToRect(mapView.frame, CGRectMake(0, 0, 320, 480)), @"mapView's frame should be {0, 0, 320, 480}");
 }
 
@@ -76,7 +76,7 @@
     
     MKCoordinateRegion expectedCenteredRegion = MKCoordinateRegionMake(CLLocationCoordinate2DMake((45.11 + 45.08) / 2, 7.67),
                                                                        MKCoordinateSpanMake(45.11 - 45.08, 0));
-    MKCoordinateRegion centeredRegion = [_mapView centeredRegionForAnnotationConformingToProtocol:@protocol(EPAnnotation)];
+    MKCoordinateRegion centeredRegion = [_mapView centeredRegionForAnnotationConformingToProtocol:@protocol(HKAnnotation)];
     
     STAssertTrue(EPCoordinateRegionIsEqual(centeredRegion, expectedCenteredRegion), @"centered region should be centered around expectedCenteredRegion");
 }
@@ -101,7 +101,7 @@
     
     MKCoordinateRegion expectedCenteredRegion = MKCoordinateRegionMake(CLLocationCoordinate2DMake((45.11 + 45.08) / 2, 7.67),
                                                                        MKCoordinateSpanMake(45.11 - 45.08, 0));
-    MKCoordinateRegion centeredRegion = [_mapView centeredRegionForAnnotationOfKindOfClass:[EPTestAnnotation class]];
+    MKCoordinateRegion centeredRegion = [_mapView centeredRegionForAnnotationOfKindOfClass:[HKTestAnnotation class]];
     
     STAssertTrue(EPCoordinateRegionIsEqual(centeredRegion, expectedCenteredRegion), @"centered region should be centered around expectedCenteredRegion");
 }
@@ -137,7 +137,7 @@
     
     [_mapView setRegion:[_mapView centeredRegion]];
     
-    STAssertTrue([_mapView visibleAnnotationsConformingToProtocol:@protocol(EPAnnotation)] == 2,
+    STAssertTrue([_mapView visibleAnnotationsConformingToProtocol:@protocol(HKAnnotation)] == 2,
                  @"the visibleAnnotation within the visible mapView region should be 2");
 }
 
@@ -180,7 +180,7 @@
     [_mapView addAnnotation:_testAnnotations[1]];
     [_mapView addAnnotation:_poiAnnotations[0]];
 
-    [_mapView removeAnnotationsConformingToProtocol:@protocol(EPAnnotation)];
+    [_mapView removeAnnotationsConformingToProtocol:@protocol(HKAnnotation)];
     
     STAssertTrue([[_mapView annotations] count] == 1, @"mapView should contain only one annotation");
     
@@ -192,7 +192,7 @@
     [_mapView addAnnotation:_testAnnotations[1]];
     [_mapView addAnnotation:_poiAnnotations[0]];
     
-    [_mapView removeAnnotationsConformingToProtocols:@[@protocol(EPAnnotation)]];
+    [_mapView removeAnnotationsConformingToProtocols:@[@protocol(HKAnnotation)]];
     
     STAssertTrue([[_mapView annotations] count] == 1, @"mapView should contain only one annotation");
 }
@@ -203,7 +203,7 @@
     [_mapView addAnnotation:_testAnnotations[1]];
     [_mapView addAnnotation:_poiAnnotations[0]];
     
-    [_mapView removeAnnotationsOfKindOfClass:[EPTestAnnotation class]];
+    [_mapView removeAnnotationsOfKindOfClass:[HKTestAnnotation class]];
     
     STAssertTrue([[_mapView annotations] count] == 1, @"mapView should contain only one annotation");
     STAssertTrue([[_mapView annotations][0] isKindOfClass:[EPPointOfInterest class]], @"should contain only EPPointOfInterest class");
@@ -215,7 +215,7 @@
     [_mapView addAnnotation:_testAnnotations[1]];
     [_mapView addAnnotation:_poiAnnotations[0]];
     
-    [_mapView removeAnnotationsOfKindOfClasses:@[[EPTestAnnotation class]]];
+    [_mapView removeAnnotationsOfKindOfClasses:@[[HKTestAnnotation class]]];
     
     STAssertTrue([[_mapView annotations] count] == 1, @"mapView should contain only one annotation");
     STAssertTrue([[_mapView annotations][0] isKindOfClass:[EPPointOfInterest class]], @"should contain only EPPointOfInterest class");

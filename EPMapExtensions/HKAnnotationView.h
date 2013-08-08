@@ -8,7 +8,7 @@
 
 #import <MapKit/MapKit.h>
 
-@interface EPAnnotationView : MKAnnotationView
+@interface HKAnnotationView : MKAnnotationView
 
 @property (nonatomic, readonly) UIView *nibLoadedView;
 

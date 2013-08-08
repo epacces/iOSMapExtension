@@ -7,21 +7,21 @@
 //
 
 
-#import "EPMapViewDecorator.h"
+#import "HKMapViewDecorator.h"
 
-@interface EPMapViewDecorator () <MKMapViewDelegate>
+@interface HKMapViewDecorator () <MKMapViewDelegate>
 
-- (NSString *)EP_reuseIdentifierForAnnotation:(id<MKAnnotation>)annotation;
-- (Class)EP_annotationViewClassFromAnnotation:(id<MKAnnotation>)annotation;
-- (void)EP_configureAnnotationView:(MKAnnotationView *)annotationView;
-- (BOOL)EP_isNoneRegistered;
+- (NSString *)HK_reuseIdentifierForAnnotation:(id<MKAnnotation>)annotation;
+- (Class)HK_annotationViewClassFromAnnotation:(id<MKAnnotation>)annotation;
+- (void)HK_configureAnnotationView:(MKAnnotationView *)annotationView;
+- (BOOL)HK_isNoneRegistered;
 
 typedef  NSString* (^TranslationBlockType)(id<MKAnnotation>);
 typedef  void (^ConfigurationBlockType)(MKAnnotationView *, id<MKAnnotation>);
 
 @end
 
-@implementation EPMapViewDecorator
+@implementation HKMapViewDecorator
 
 - (id)init
 {
@@ -90,20 +90,20 @@ typedef  void (^ConfigurationBlockType)(MKAnnotationView *, id<MKAnnotation>);
    
     if ([annotation class] == [MKUserLocation class]) return _userLocationAnnotationView;
     
-    if ([self EP_isNoneRegistered])
+    if ([self HK_isNoneRegistered])
         return _defaultAnnotationView;
     
     MKAnnotationView* annotationView;
-    NSString *reuseIdentifier = [self EP_reuseIdentifierForAnnotation:annotation];
+    NSString *reuseIdentifier = [self HK_reuseIdentifierForAnnotation:annotation];
     
     if (!reuseIdentifier) return _defaultAnnotationView;
     
     if( !(annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:reuseIdentifier]) ) {
-        Class c = [self EP_annotationViewClassFromAnnotation:annotation];
+        Class c = [self HK_annotationViewClassFromAnnotation:annotation];
         annotationView = [[c alloc] initWithAnnotation:annotation reuseIdentifier:reuseIdentifier];
     }
     annotationView.annotation = annotation;
-    [self EP_configureAnnotationView:annotationView];
+    [self HK_configureAnnotationView:annotationView];
     
     return annotationView;
 }
@@ -111,7 +111,7 @@ typedef  void (^ConfigurationBlockType)(MKAnnotationView *, id<MKAnnotation>);
 
 #pragma mark - Private Methods
 
-- (NSString *)EP_reuseIdentifierForAnnotation:(id<MKAnnotation>)annotation
+- (NSString *)HK_reuseIdentifierForAnnotation:(id<MKAnnotation>)annotation
 {
     if (_translationBlockForAllClasses && _translationBlockForAllClasses(annotation))
         return _translationBlockForAllClasses(annotation);
@@ -124,9 +124,9 @@ typedef  void (^ConfigurationBlockType)(MKAnnotationView *, id<MKAnnotation>);
         return  NSStringFromClass(_annotationViewForClass[annotationViewClass]);
 }
 
-- (Class)EP_annotationViewClassFromAnnotation:(id<MKAnnotation>)annotation
+- (Class)HK_annotationViewClassFromAnnotation:(id<MKAnnotation>)annotation
 {
-    Class annotationViewClass = NSClassFromString([self EP_reuseIdentifierForAnnotation:annotation]);
+    Class annotationViewClass = NSClassFromString([self HK_reuseIdentifierForAnnotation:annotation]);
     
     if (! [annotationViewClass isSubclassOfClass:[MKAnnotationView class]] )
         [[NSException exceptionWithName:NSInvalidArgumentException
@@ -136,7 +136,7 @@ typedef  void (^ConfigurationBlockType)(MKAnnotationView *, id<MKAnnotation>);
     return annotationViewClass;
 }
 
-- (void)EP_configureAnnotationView:(MKAnnotationView *)annotationView
+- (void)HK_configureAnnotationView:(MKAnnotationView *)annotationView
 {
     if ( _configBlockForAnnotationView[ NSStringFromClass([annotationView.annotation class])] )
         ( (ConfigurationBlockType)_configBlockForAnnotationView[ NSStringFromClass([annotationView.annotation class]) ] )(annotationView, annotationView.annotation);
@@ -144,7 +144,7 @@ typedef  void (^ConfigurationBlockType)(MKAnnotationView *, id<MKAnnotation>);
         _configBlockForAllClasses(annotationView, annotationView.annotation);
 }
 
-- (BOOL)EP_isNoneRegistered
+- (BOOL)HK_isNoneRegistered
 {
     return (![_annotationViewForClass count] && ![_translationBlockForClass count] && !_translationBlockForAllClasses);
 }

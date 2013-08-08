@@ -15,7 +15,7 @@
  `EPMapViewDecoratorProtocol` encompasses a subset of `MKMapViewDelegate` MKMapKit protocol.
  */
 
-@protocol EPMapViewDecoratorProtocol <NSObject>
+@protocol HKMapViewDecoratorProtocol <NSObject>
   @required
 /**
  @param mapView The map view on which annotations are displayed
@@ -30,7 +30,7 @@
  `EPMapViewDecorator` deals with the graphical representation of the map annotations. Basically it's designed to map annotation points over `MKMapView` to a set of customized annotation views.
  */
 
-@interface EPMapViewDecorator : NSObject <EPMapViewDecoratorProtocol> {
+@interface HKMapViewDecorator : NSObject <HKMapViewDecoratorProtocol> {
   @private
     NSMutableDictionary     *_annotationViewForClass;
     NSMutableDictionary     *_configBlockForAnnotationView;

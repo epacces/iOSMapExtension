@@ -6,22 +6,22 @@
 //  Copyright (c) 2013 it.hepakkes. All rights reserved.
 //
 
-#import "EPAnnotationArrayTest.h"
-#import "EPAnnotationArray.h"
-#import "EPPointOfInterest.h"
-#import "EPTestAnnotation.h"
+#import "HKAnnotationArrayTest.h"
+#import "HKAnnotationArray.h"
+#import "HKPointOfInterest.h"
+#import "HKTestAnnotation.h"
 
 @implementation EPAnnotationArrayTest {
-    EPAnnotationArray   *_annotationArray;
-    EPPointOfInterest   *_poi;
-    EPTestAnnotation    *_testAnnotation;
+    HKAnnotationArray   *_annotationArray;
+    HKPointOfInterest   *_poi;
+    HKTestAnnotation    *_testAnnotation;
 }
 
 - (void)setUp
 {
-    _annotationArray = [[EPAnnotationArray alloc] init];
-    _poi = [[EPPointOfInterest alloc] initWithCoordinate:CLLocationCoordinate2DMake(22, 22)];
-    _testAnnotation = [[EPTestAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(22, 24)
+    _annotationArray = [[HKAnnotationArray alloc] init];
+    _poi = [[HKPointOfInterest alloc] initWithCoordinate:CLLocationCoordinate2DMake(22, 22)];
+    _testAnnotation = [[HKTestAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(22, 24)
                                                                   addressDictionary:nil];
 }
 
@@ -29,7 +29,7 @@
 {
     [_annotationArray addAnnotation:_poi];
     STAssertTrue([_annotationArray count] == 1, @"annotation array count shold be equal to 1");
-    EPPointOfInterest *poi = [_annotationArray allAnnotations][0];
+    HKPointOfInterest *poi = [_annotationArray allAnnotations][0];
     STAssertTrue(poi.coordinate.latitude == 22 && poi.coordinate.longitude == 22, @"the array should contain annotation just added");
 }
 
@@ -48,7 +48,7 @@
     NSArray *annotations = [NSArray arrayWithObjects:_poi, _poi, _poi, nil];
     [_annotationArray addAnnotations:annotations];
     STAssertTrue([_annotationArray count] == 3, @"annotation collection should contain three elements");
-    EPPointOfInterest *poi = [_annotationArray allAnnotations][1];
+    HKPointOfInterest *poi = [_annotationArray allAnnotations][1];
     STAssertTrue(poi.coordinate.longitude == 22 && poi.coordinate.longitude == 22, @"collection should contain annotation just added");
 }
 
@@ -60,9 +60,9 @@
 - (void)testMutability
 {
     [_annotationArray addAnnotation:_poi];
-    EPPointOfInterest *poi = [_annotationArray allAnnotations][0];
+    HKPointOfInterest *poi = [_annotationArray allAnnotations][0];
     [poi setCoordinate:CLLocationCoordinate2DMake(1, 2)];
-    EPPointOfInterest *poi2 = [_annotationArray allAnnotations][0];
+    HKPointOfInterest *poi2 = [_annotationArray allAnnotations][0];
     STAssertTrue(poi2.coordinate.longitude != poi.coordinate.longitude && poi2.coordinate.latitude != poi.coordinate.latitude,
                  @"coordinates should be different");
 }
@@ -123,35 +123,35 @@
 - (void)testRemoveAnnotationConformingToProtocols
 {
     [_annotationArray addAnnotations:@[_poi, _testAnnotation]];
-    [_annotationArray removeAnnotationsConformsToProtocols:@[@protocol(MKAnnotation), @protocol(EPAnnotation)]];
+    [_annotationArray removeAnnotationsConformsToProtocols:@[@protocol(MKAnnotation), @protocol(HKAnnotation)]];
     STAssertTrue([_annotationArray count] == 0, @"annotation array should be empty");
 }
 
 - (void)testRemoveAnnotations
 {
     [_annotationArray addAnnotations:@[_poi, _testAnnotation]];
-    [_annotationArray removeAnnotationsConformsToProtocols:@[@protocol(EPAnnotation)]];
+    [_annotationArray removeAnnotationsConformsToProtocols:@[@protocol(HKAnnotation)]];
     STAssertTrue([_annotationArray count] == 1, @"annotation array should contain 1 element");
 }
 
 - (void)testGetAnnotationOfKindOfClass
 {
     [_annotationArray addAnnotations:@[_poi, _testAnnotation]];
-    NSArray * res = [_annotationArray annotationsOfKindOfClass:[EPTestAnnotation class]];
+    NSArray * res = [_annotationArray annotationsOfKindOfClass:[HKTestAnnotation class]];
     STAssertTrue([res count] == 1 && [res[0] isKindOfClass:[EPTestAnnotation class]], @"annotation array should contain one obj of kind EPTestAnnotation");
 }
 
 - (void)testGetAnnotationsOfKindOfClasses
 {
     [_annotationArray addAnnotations:@[_poi, _testAnnotation]];
-    NSArray *res = [_annotationArray annotationsOfKindOfClasses:@[[EPTestAnnotation class],[EPPointOfInterest class]]];
+    NSArray *res = [_annotationArray annotationsOfKindOfClasses:@[[HKTestAnnotation class],[HKPointOfInterest class]]];
     STAssertTrue([res count] == 2, @"annotation array should contain 2 objs");
 }
 
 - (void)testGetAnnotationsConformingToProtocol
 {
     [_annotationArray addAnnotations:@[_poi, _testAnnotation]];
-    NSArray *res = [_annotationArray annotationsConformsToProtocol:@protocol(EPAnnotation)];
+    NSArray *res = [_annotationArray annotationsConformsToProtocol:@protocol(HKAnnotation)];
     STAssertTrue([res count] == 1 && [res[0] conformsToProtocol:@protocol(EPAnnotation)], @"should contain one object conforming to protocol EPAnnotation");
 }
 
@@ -166,15 +166,15 @@
 - (void)testRemoveAnnotationsOfKindOfClass
 {
     [_annotationArray addAnnotations:@[_poi, _testAnnotation]];
-    [_annotationArray removeAnnotationsOfKindOfClass:[EPTestAnnotation class]];
-    EPTestAnnotation *testAnnotation = [_annotationArray allAnnotations][0];
+    [_annotationArray removeAnnotationsOfKindOfClass:[HKTestAnnotation class]];
+    HKTestAnnotation *testAnnotation = [_annotationArray allAnnotations][0];
     STAssertTrue([_annotationArray count] == 1 && _testAnnotation.coordinate.latitude == testAnnotation.coordinate.latitude, @"annotation array should contain only EPTestAnnotation class");
 }
 
 - (void)testRemoveAnnotationsOfKindOfClasses
 {
     [_annotationArray addAnnotations:@[_poi, _testAnnotation]];
-    [_annotationArray removeAnnotationsOfKindOfClasses:@[[EPTestAnnotation class], [EPPointOfInterest class]]];
+    [_annotationArray removeAnnotationsOfKindOfClasses:@[[HKTestAnnotation class], [HKPointOfInterest class]]];
     STAssertTrue([_annotationArray count] == 0, @"annotation array should be empty");
 }
 
@@ -182,7 +182,7 @@
 {
     [_annotationArray addAnnotations:@[_poi, _testAnnotation]];
     NSArray *result = [_annotationArray annotationsWithinRange:2000 center:CLLocationCoordinate2DMake(22, 22)];
-    EPPointOfInterest *poi = result[0];
+    HKPointOfInterest *poi = result[0];
     STAssertTrue([result count] == 1 && _poi.coordinate.latitude == poi.coordinate.latitude, @"should contain one poi");
 }
 

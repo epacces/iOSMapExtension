@@ -1,13 +1,13 @@
 //
-//  EPMapViewTest.h
+//  EPUserPositionTest.h
 //  iOSMapExtension
 //
-//  Created by epacces on 7/8/13.
+//  Created by epacces on 7/5/13.
 //  Copyright (c) 2013 it.hepakkes. All rights reserved.
 //
 
 #import <SenTestingKit/SenTestingKit.h>
 
-@interface EPMapViewTest : SenTestCase
+@interface HKUserPositionTest : SenTestCase
 
 @end

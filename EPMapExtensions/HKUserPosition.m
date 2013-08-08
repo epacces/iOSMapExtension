@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 it.hepakkes. All rights reserved.
 //
 
-#import "EPUserPosition.h"
+#import "HKUserPosition.h"
 
 const CLLocationDistance TSMinimumDefaultThresholdToUpdateUserPosition = 100.f;
 
@@ -20,7 +20,7 @@ static inline BOOL isValidLocation(CLLocation *location)
     return location.horizontalAccuracy >= 0 && CLLocationCoordinate2DIsValid(location.coordinate);
 }
 
-@implementation EPUserPosition
+@implementation HKUserPosition
 
 - (id)initWithUserPosition:(CLLocation *)userLocation
 {

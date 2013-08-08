@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 it.hepakkes. All rights reserved.
 //
 
-#import "EPAnnotationArray.h"
+#import "HKAnnotationArray.h"
 
-@implementation EPAnnotationArray
+@implementation HKAnnotationArray
 
 #pragma mark - Obj Alloc/Dealloc 
 

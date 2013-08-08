@@ -12,7 +12,7 @@
  `EPMapView` inherits from `MKMapView` and adds some services to it such as, e.g., getting a centered region with respect to annotations.
  */
 
-@interface EPMapView : MKMapView
+@interface HKMapView : MKMapView
 
 ///---------------------------------------------
 /// @name Creating maps

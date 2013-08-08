@@ -6,18 +6,18 @@
 //  Copyright (c) 2013 it.hepakkes. All rights reserved.
 //
 
-#import "EPMapView.h"
-#import "EPAnnotationArray.h"
+#import "HKMapView.h"
+#import "HKAnnotationArray.h"
 
 #define SET_MIN(X, Y) X = ((Y) < (X)) ? (Y) : (X)
 #define SET_MAX(X, Y) X = ((Y) < (X)) ? (X) : (Y)
 
 
-@interface EPPrivateAnnotationArray : EPAnnotationArray
+@interface EPPrivateAnnotationArray : HKAnnotationArray
 
 @end
 
-@implementation EPMapView {
+@implementation HKMapView {
     EPPrivateAnnotationArray     *_annotationArray;
 }
 

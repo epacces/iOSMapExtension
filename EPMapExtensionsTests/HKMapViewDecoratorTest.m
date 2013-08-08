@@ -6,15 +6,15 @@
 //  Copyright (c) 2013 it.hepakkes. All rights reserved.
 //
 
-#import "EPMapViewDecoratorTest.h"
-#import "EPMapViewDecorator.h"
+#import "HKMapViewDecoratorTest.h"
+#import "HKMapViewDecorator.h"
 #import <CoreLocation/CoreLocation.h>
-#import "EPPointOfInterest.h"
+#import "HKPointOfInterest.h"
 #import "YAAnnotationView.h"
 #import "utils.h"
-#import "EPMapView.h"
+#import "HKMapView.h"
 
-@interface AnnotationClass : EPPointOfInterest
+@interface AnnotationClass : HKPointOfInterest
 
 @property (copy, nonatomic) NSString *name;
 @property (nonatomic, readonly, copy) NSString *title;
@@ -36,22 +36,22 @@
 @end
 
 
-@implementation EPMapViewDecoratorTest {
-    EPMapViewDecorator *_mapDecorator;
-    EPMapView          *_mapView;
+@implementation HKMapViewDecoratorTest {
+    HKMapViewDecorator *_mapDecorator;
+    HKMapView          *_mapView;
     AnnotationClass    *_annotation;
     NSMutableArray            *_pois;
 }
 
 - (void)setUp
 {
-    _mapDecorator = [[EPMapViewDecorator alloc] init];
-    _mapView = [[EPMapView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
+    _mapDecorator = [[HKMapViewDecorator alloc] init];
+    _mapView = [[HKMapView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
     
     _annotation = [AnnotationClass new];
     _pois = [[NSMutableArray alloc] initWithCapacity:10];
     for (int i = 0; i < 10; i++) {
-        EPPointOfInterest *poi = [[EPPointOfInterest alloc] initWithCoordinate:EPRandomLocationCoordinateMake()];
+        HKPointOfInterest *poi = [[HKPointOfInterest alloc] initWithCoordinate:EPRandomLocationCoordinateMake()];
         [_pois addObject:poi];
     }
     [_mapView addAnnotations:_pois];

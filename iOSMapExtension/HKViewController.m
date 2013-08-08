@@ -6,19 +6,19 @@
 //  Copyright (c) 2013 it.hepakkes. All rights reserved.
 //
 
-#import "EPViewController.h"
+#import "HKViewController.h"
 #import <MapKit/MapKit.h>
 #import "EPMapExtensions.h"
 #import "CustomAnnotationView.h"
 
-@interface EPViewController () <MKMapViewDelegate>
+@interface HKViewController () <MKMapViewDelegate>
 
 @end
 
-@implementation EPViewController {
-    EPMapView *_mapView;
-    EPMapViewDecorator *_mapDecorator;
-    EPMapViewDelegate *_mapViewDelegate;
+@implementation HKViewController {
+    HKMapView *_mapView;
+    HKMapViewDecorator *_mapDecorator;
+    HKMapViewDelegate *_mapViewDelegate;
 }
 
 - (void)viewDidLoad
@@ -26,9 +26,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 
-    _mapView = [[EPMapView alloc] initWithMapView:[[MKMapView alloc] initWithFrame:self.view.bounds]];
+    _mapView = [[HKMapView alloc] initWithMapView:[[MKMapView alloc] initWithFrame:self.view.bounds]];
     [self.view addSubview:_mapView];
-    _mapDecorator = [[EPMapViewDecorator alloc] init];
+    _mapDecorator = [[HKMapViewDecorator alloc] init];
 
     [_mapDecorator setTranslationBlockForAllClasses:^NSString *(id<MKAnnotation> annotation) {
         if ([annotation isKindOfClass:[MKUserLocation class]]) {
@@ -48,7 +48,7 @@
                                             addressDictionary:nil];
     
     [_mapView addAnnotations:@[pl, pl1]];
-    _mapViewDelegate = [[EPMapViewDelegate alloc] init];
+    _mapViewDelegate = [[HKMapViewDelegate alloc] init];
     [_mapViewDelegate setMapViewDecorator:_mapDecorator];
 }
 

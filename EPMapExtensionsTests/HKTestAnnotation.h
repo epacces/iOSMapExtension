@@ -8,13 +8,13 @@
 
 #import <MapKit/MapKit.h>
 
-@protocol EPAnnotation
+@protocol HKAnnotation
 
 @property (nonatomic, copy)  NSString *telephoneNumber;
 
 @end
 
-@interface EPTestAnnotation : MKPlacemark <EPAnnotation>
+@interface HKTestAnnotation : MKPlacemark <HKAnnotation>
 
 @property (nonatomic, copy)  NSString *telephoneNumber;
 

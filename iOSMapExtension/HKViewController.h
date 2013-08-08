@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class EPMapViewDelegate;
+@class HKMapViewDelegate;
 @class MKMapView;
 @class EPAnnotationArray;
 
-@interface EPViewController : UIViewController
+@interface HKViewController : UIViewController
 
-@property (nonatomic, strong) EPMapViewDelegate *mapViewDelegate;
+@property (nonatomic, strong) HKMapViewDelegate *mapViewDelegate;
 
 @end

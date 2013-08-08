@@ -6,19 +6,19 @@
 //  Copyright (c) 2013 it.hepakkes. All rights reserved.
 //
 
-#import "EPUserPositionTest.h"
-#import "EPUserPosition.h"
+#import "HKUserPositionTest.h"
+#import "HKUserPosition.h"
 
-@implementation EPUserPositionTest {
+@implementation HKUserPositionTest {
     CLLocation     *_simulatedUserLocation;
-    EPUserPosition *_simulatedUserPosition;
+    HKUserPosition *_simulatedUserPosition;
 }
 
 
 - (void)testInitWithValidUserPosition
 {
     _simulatedUserLocation = [[CLLocation alloc] initWithLatitude:45.11 longitude:7.67];
-    _simulatedUserPosition = [[EPUserPosition alloc] initWithUserPosition:_simulatedUserLocation];
+    _simulatedUserPosition = [[HKUserPosition alloc] initWithUserPosition:_simulatedUserLocation];
     
     //get coordinates
     CLLocationCoordinate2D coord1 = _simulatedUserLocation.coordinate;
@@ -31,7 +31,7 @@
 - (void)testInitWithInvalidUserPosition
 {
     _simulatedUserLocation = [[CLLocation alloc] initWithLatitude:12323.11 longitude:212812.67];
-    _simulatedUserPosition = [[EPUserPosition alloc] initWithUserPosition:_simulatedUserLocation];
+    _simulatedUserPosition = [[HKUserPosition alloc] initWithUserPosition:_simulatedUserLocation];
     
     //get coordinates
     CLLocationCoordinate2D coord1 = _simulatedUserLocation.coordinate;
@@ -44,7 +44,7 @@
 - (void)testUpdateUserPositionWithValidPosition
 {
     _simulatedUserLocation = [[CLLocation alloc] initWithLatitude:12323.11 longitude:212812.67];
-    _simulatedUserPosition = [[EPUserPosition alloc] initWithUserPosition:_simulatedUserLocation];
+    _simulatedUserPosition = [[HKUserPosition alloc] initWithUserPosition:_simulatedUserLocation];
     
     [_simulatedUserPosition updatePosition:[[CLLocation alloc] initWithLatitude:45.11 longitude:7.67]];
     
@@ -56,7 +56,7 @@
 - (void)testUpdateUserPositionWithInvalidPosition
 {
     _simulatedUserLocation = [[CLLocation alloc] initWithLatitude:45.11 longitude:7.67];
-    _simulatedUserPosition = [[EPUserPosition alloc] initWithUserPosition:_simulatedUserLocation];
+    _simulatedUserPosition = [[HKUserPosition alloc] initWithUserPosition:_simulatedUserLocation];
     
     [_simulatedUserPosition updatePosition:[[CLLocation alloc] initWithLatitude:1232432.4343 longitude:-212331.3]];
     
@@ -68,7 +68,7 @@
 - (void)testUpdateUserPositionWithValidPositionBelowThreshold
 {
     _simulatedUserLocation = [[CLLocation alloc] initWithLatitude:45.11 longitude:7.67];
-    _simulatedUserPosition = [[EPUserPosition alloc] initWithUserPosition:_simulatedUserLocation];
+    _simulatedUserPosition = [[HKUserPosition alloc] initWithUserPosition:_simulatedUserLocation];
     
     _simulatedUserPosition.minThresholdToUpdatePosition = 2000.0;
     
@@ -81,7 +81,7 @@
 - (void)testUpdateUserPositionWithValidPositionBeyondThreshold
 {
     _simulatedUserLocation = [[CLLocation alloc] initWithLatitude:45.11 longitude:7.67];
-    _simulatedUserPosition = [[EPUserPosition alloc] initWithUserPosition:_simulatedUserLocation];
+    _simulatedUserPosition = [[HKUserPosition alloc] initWithUserPosition:_simulatedUserLocation];
     
     _simulatedUserPosition.minThresholdToUpdatePosition = 2000.0;
     

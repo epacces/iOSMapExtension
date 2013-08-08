@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 it.hepakkes. All rights reserved.
 //
 
-#import "EPAnnotationView.h"
+#import "HKAnnotationView.h"
 
-@implementation EPAnnotationView {
+@implementation HKAnnotationView {
     UIView      *_loadedView;
 }
 

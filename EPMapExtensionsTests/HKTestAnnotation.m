@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 it.hepakkes. All rights reserved.
 //
 
-#import "EPTestAnnotation.h"
+#import "HKTestAnnotation.h"
 
-@implementation EPTestAnnotation
+@implementation HKTestAnnotation
 
 - (NSString *)telephoneNumber
 {

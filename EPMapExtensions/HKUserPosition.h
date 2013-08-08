@@ -13,7 +13,7 @@
  `EPUserPosition` represent the user location
  */
 
-@interface EPUserPosition : NSObject {
+@interface HKUserPosition : NSObject {
     CLLocation          *_userPosition;
 }
 

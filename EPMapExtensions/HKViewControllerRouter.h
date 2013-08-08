@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface EPViewControllerRouter : NSObject
+@interface HKViewControllerRouter : NSObject
 
 @end

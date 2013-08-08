@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 it.hepakkes. All rights reserved.
 //
 
-#import "EPViewControllerRouter.h"
+#import "HKViewControllerRouter.h"
 
-@implementation EPViewControllerRouter
+@implementation HKViewControllerRouter
 
 @end

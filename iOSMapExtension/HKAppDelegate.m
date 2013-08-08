@@ -6,17 +6,17 @@
 //  Copyright (c) 2013 it.hepakkes. All rights reserved.
 //
 
-#import "EPAppDelegate.h"
+#import "HKAppDelegate.h"
 
-#import "EPViewController.h"
+#import "HKViewController.h"
 
-@implementation EPAppDelegate
+@implementation HKAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[EPViewController alloc] initWithNibName:@"EPViewController" bundle:nil];
+    self.viewController = [[HKViewController alloc] initWithNibName:@"HKViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;

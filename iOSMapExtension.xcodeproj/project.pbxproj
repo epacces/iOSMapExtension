@@ -22,16 +22,16 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		4882F2D0176FB00000E9F1A7 /* EPTestAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4882F2CF176FAEC700E9F1A7 /* EPTestAnnotation.m */; };
-		48DBE5AC1749856C0014BE48 /* EPAnnotationArrayTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 48DBE5AB1749856C0014BE48 /* EPAnnotationArrayTest.m */; };
-		845619711749748F00CC2D0D /* EPMapViewDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 845619701749748F00CC2D0D /* EPMapViewDecorator.m */; };
-		845E3576178732A800A647B7 /* EPUserPositionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 845E3575178732A800A647B7 /* EPUserPositionTest.m */; };
-		845E3579178AE37D00A647B7 /* EPMapViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 845E3578178AE37D00A647B7 /* EPMapViewTest.m */; };
+		4882F2D0176FB00000E9F1A7 /* HKTestAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4882F2CF176FAEC700E9F1A7 /* HKTestAnnotation.m */; };
+		48DBE5AC1749856C0014BE48 /* HKAnnotationArrayTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 48DBE5AB1749856C0014BE48 /* HKAnnotationArrayTest.m */; };
+		845619711749748F00CC2D0D /* HKMapViewDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 845619701749748F00CC2D0D /* HKMapViewDecorator.m */; };
+		845E3576178732A800A647B7 /* HKUserPositionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 845E3575178732A800A647B7 /* HKUserPositionTest.m */; };
+		845E3579178AE37D00A647B7 /* HKMapViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 845E3578178AE37D00A647B7 /* HKMapViewTest.m */; };
 		845E357B178AEB7E00A647B7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845E357A178AEB7E00A647B7 /* QuartzCore.framework */; };
 		845E357C178AEBFD00A647B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5F8F1738005E0067CC40 /* CoreGraphics.framework */; };
 		845EC3A0178D96040020A2B1 /* CustomAnnotationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845EC39F178D96040020A2B1 /* CustomAnnotationView.xib */; };
 		845EC3A3178D9D500020A2B1 /* CustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 845EC3A2178D9D500020A2B1 /* CustomAnnotationView.m */; };
-		845EC3A6178EFCD10020A2B1 /* EPAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 845EC3A5178EFCD10020A2B1 /* EPAnnotationView.m */; };
+		845EC3A6178EFCD10020A2B1 /* HKAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 845EC3A5178EFCD10020A2B1 /* HKAnnotationView.m */; };
 		845EC3AC178F06880020A2B1 /* 1373574474_map-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 845EC3AB178F06870020A2B1 /* 1373574474_map-marker.png */; };
 		845EC3AE178F07950020A2B1 /* 1373574738_Flag_of_Italy.png in Resources */ = {isa = PBXBuildFile; fileRef = 845EC3AD178F07950020A2B1 /* 1373574738_Flag_of_Italy.png */; };
 		848EB05217464444009639D0 /* YAAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 848EB05117464444009639D0 /* YAAnnotationView.m */; };
@@ -39,33 +39,33 @@
 		84A876E117856F160045C756 /* libEPMapExtensions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5FCD1738018E0067CC40 /* libEPMapExtensions.a */; };
 		84A876E217856F440045C756 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE6000173817140067CC40 /* MapKit.framework */; };
 		84A876E317856F4C0045C756 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE60041738F7ED0067CC40 /* CoreLocation.framework */; };
-		84A876E61785D47D0045C756 /* EPViewControllerRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A876E51785D47D0045C756 /* EPViewControllerRouter.m */; };
+		84A876E61785D47D0045C756 /* HKViewControllerRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A876E51785D47D0045C756 /* HKViewControllerRouter.m */; };
 		84BE5F8C1738005E0067CC40 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5F8B1738005E0067CC40 /* UIKit.framework */; };
 		84BE5F901738005E0067CC40 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5F8F1738005E0067CC40 /* CoreGraphics.framework */; };
 		84BE5F961738005E0067CC40 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84BE5F941738005E0067CC40 /* InfoPlist.strings */; };
 		84BE5F981738005E0067CC40 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BE5F971738005E0067CC40 /* main.m */; };
-		84BE5F9C1738005E0067CC40 /* EPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BE5F9B1738005E0067CC40 /* EPAppDelegate.m */; };
 		84BE5F9E1738005E0067CC40 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 84BE5F9D1738005E0067CC40 /* Default.png */; };
 		84BE5FA01738005E0067CC40 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84BE5F9F1738005E0067CC40 /* Default@2x.png */; };
 		84BE5FA21738005E0067CC40 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84BE5FA11738005E0067CC40 /* Default-568h@2x.png */; };
-		84BE5FA51738005E0067CC40 /* EPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BE5FA41738005E0067CC40 /* EPViewController.m */; };
-		84BE5FA81738005E0067CC40 /* EPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84BE5FA61738005E0067CC40 /* EPViewController.xib */; };
+		84BE5FA51738005E0067CC40 /* HKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BE5FA41738005E0067CC40 /* HKViewController.m */; };
+		84BE5FA81738005E0067CC40 /* HKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84BE5FA61738005E0067CC40 /* HKViewController.xib */; };
 		84BE5FCE1738018E0067CC40 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5F8D1738005E0067CC40 /* Foundation.framework */; };
 		84BE5FD31738018E0067CC40 /* EPMapExtensions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84BE5FD21738018E0067CC40 /* EPMapExtensions.h */; };
 		84BE5FDC1738018F0067CC40 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5FAF1738005E0067CC40 /* SenTestingKit.framework */; };
 		84BE5FDD1738018F0067CC40 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5F8B1738005E0067CC40 /* UIKit.framework */; };
 		84BE5FDE1738018F0067CC40 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5F8D1738005E0067CC40 /* Foundation.framework */; };
 		84BE5FE71738018F0067CC40 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84BE5FE51738018F0067CC40 /* InfoPlist.strings */; };
-		84BE5FF3173801D90067CC40 /* EPUserPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BE5FF2173801D80067CC40 /* EPUserPosition.m */; };
-		84BE5FF6173802B00067CC40 /* EPMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BE5FF5173802AF0067CC40 /* EPMapView.m */; };
-		84BE5FF9173806CA0067CC40 /* EPAnnotationArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BE5FF8173806C80067CC40 /* EPAnnotationArray.m */; };
-		84BE5FFC173809250067CC40 /* EPMapViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BE5FFB173809230067CC40 /* EPMapViewDelegate.m */; };
-		84BE5FFF17380C7B0067CC40 /* EPMapViewDecoratorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BE5FFE17380C7B0067CC40 /* EPMapViewDecoratorTest.m */; };
+		84BE5FF3173801D90067CC40 /* HKUserPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BE5FF2173801D80067CC40 /* HKUserPosition.m */; };
+		84BE5FF6173802B00067CC40 /* HKMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BE5FF5173802AF0067CC40 /* HKMapView.m */; };
+		84BE5FF9173806CA0067CC40 /* HKAnnotationArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BE5FF8173806C80067CC40 /* HKAnnotationArray.m */; };
+		84BE5FFC173809250067CC40 /* HKMapViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BE5FFB173809230067CC40 /* HKMapViewDelegate.m */; };
+		84BE5FFF17380C7B0067CC40 /* HKMapViewDecoratorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BE5FFE17380C7B0067CC40 /* HKMapViewDecoratorTest.m */; };
 		84BE6001173817150067CC40 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE6000173817140067CC40 /* MapKit.framework */; };
 		84BE60021738172F0067CC40 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE6000173817140067CC40 /* MapKit.framework */; };
 		84BE60031738F7920067CC40 /* libEPMapExtensions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5FCD1738018E0067CC40 /* libEPMapExtensions.a */; };
 		84BE60051738F7EE0067CC40 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE60041738F7ED0067CC40 /* CoreLocation.framework */; };
-		84BE600917393C110067CC40 /* EPPointOfInterest.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BE600817393C100067CC40 /* EPPointOfInterest.m */; };
+		84BE600917393C110067CC40 /* HKPointOfInterest.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BE600817393C100067CC40 /* HKPointOfInterest.m */; };
+		84F8A5B517B3C75600CB8812 /* HKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F8A5B417B3C75600CB8812 /* HKAppDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,29 +106,29 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4882F2CE176FAEC700E9F1A7 /* EPTestAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPTestAnnotation.h; sourceTree = "<group>"; };
-		4882F2CF176FAEC700E9F1A7 /* EPTestAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPTestAnnotation.m; sourceTree = "<group>"; };
-		48DBE5AA1749856C0014BE48 /* EPAnnotationArrayTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPAnnotationArrayTest.h; sourceTree = "<group>"; };
-		48DBE5AB1749856C0014BE48 /* EPAnnotationArrayTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPAnnotationArrayTest.m; sourceTree = "<group>"; };
-		8456196F1749748F00CC2D0D /* EPMapViewDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPMapViewDecorator.h; sourceTree = "<group>"; };
-		845619701749748F00CC2D0D /* EPMapViewDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPMapViewDecorator.m; sourceTree = "<group>"; };
-		845E3574178732A800A647B7 /* EPUserPositionTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPUserPositionTest.h; sourceTree = "<group>"; };
-		845E3575178732A800A647B7 /* EPUserPositionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPUserPositionTest.m; sourceTree = "<group>"; };
-		845E3577178AE37D00A647B7 /* EPMapViewTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPMapViewTest.h; sourceTree = "<group>"; };
-		845E3578178AE37D00A647B7 /* EPMapViewTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPMapViewTest.m; sourceTree = "<group>"; };
+		4882F2CE176FAEC700E9F1A7 /* HKTestAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HKTestAnnotation.h; sourceTree = "<group>"; };
+		4882F2CF176FAEC700E9F1A7 /* HKTestAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HKTestAnnotation.m; sourceTree = "<group>"; };
+		48DBE5AA1749856C0014BE48 /* HKAnnotationArrayTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKAnnotationArrayTest.h; sourceTree = "<group>"; };
+		48DBE5AB1749856C0014BE48 /* HKAnnotationArrayTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKAnnotationArrayTest.m; sourceTree = "<group>"; };
+		8456196F1749748F00CC2D0D /* HKMapViewDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKMapViewDecorator.h; sourceTree = "<group>"; };
+		845619701749748F00CC2D0D /* HKMapViewDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKMapViewDecorator.m; sourceTree = "<group>"; };
+		845E3574178732A800A647B7 /* HKUserPositionTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKUserPositionTest.h; sourceTree = "<group>"; };
+		845E3575178732A800A647B7 /* HKUserPositionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKUserPositionTest.m; sourceTree = "<group>"; };
+		845E3577178AE37D00A647B7 /* HKMapViewTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKMapViewTest.h; sourceTree = "<group>"; };
+		845E3578178AE37D00A647B7 /* HKMapViewTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKMapViewTest.m; sourceTree = "<group>"; };
 		845E357A178AEB7E00A647B7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		845E357F178AEEDF00A647B7 /* utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
 		845EC39F178D96040020A2B1 /* CustomAnnotationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomAnnotationView.xib; sourceTree = "<group>"; };
 		845EC3A1178D9D500020A2B1 /* CustomAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotationView.h; sourceTree = "<group>"; };
 		845EC3A2178D9D500020A2B1 /* CustomAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotationView.m; sourceTree = "<group>"; };
-		845EC3A4178EFCD00020A2B1 /* EPAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPAnnotationView.h; sourceTree = "<group>"; };
-		845EC3A5178EFCD10020A2B1 /* EPAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPAnnotationView.m; sourceTree = "<group>"; };
+		845EC3A4178EFCD00020A2B1 /* HKAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKAnnotationView.h; sourceTree = "<group>"; };
+		845EC3A5178EFCD10020A2B1 /* HKAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKAnnotationView.m; sourceTree = "<group>"; };
 		845EC3AB178F06870020A2B1 /* 1373574474_map-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1373574474_map-marker.png"; sourceTree = "<group>"; };
 		845EC3AD178F07950020A2B1 /* 1373574738_Flag_of_Italy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1373574738_Flag_of_Italy.png; sourceTree = "<group>"; };
 		848EB05017464444009639D0 /* YAAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAAnnotationView.h; sourceTree = "<group>"; };
 		848EB05117464444009639D0 /* YAAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YAAnnotationView.m; sourceTree = "<group>"; };
-		84A876E41785D47C0045C756 /* EPViewControllerRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPViewControllerRouter.h; sourceTree = "<group>"; };
-		84A876E51785D47D0045C756 /* EPViewControllerRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPViewControllerRouter.m; sourceTree = "<group>"; };
+		84A876E41785D47C0045C756 /* HKViewControllerRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKViewControllerRouter.h; sourceTree = "<group>"; };
+		84A876E51785D47D0045C756 /* HKViewControllerRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKViewControllerRouter.m; sourceTree = "<group>"; };
 		84BE5F881738005E0067CC40 /* iOSMapExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSMapExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BE5F8B1738005E0067CC40 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		84BE5F8D1738005E0067CC40 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -137,14 +137,12 @@
 		84BE5F951738005E0067CC40 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84BE5F971738005E0067CC40 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84BE5F991738005E0067CC40 /* iOSMapExtension-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSMapExtension-Prefix.pch"; sourceTree = "<group>"; };
-		84BE5F9A1738005E0067CC40 /* EPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPAppDelegate.h; sourceTree = "<group>"; };
-		84BE5F9B1738005E0067CC40 /* EPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPAppDelegate.m; sourceTree = "<group>"; };
 		84BE5F9D1738005E0067CC40 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		84BE5F9F1738005E0067CC40 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		84BE5FA11738005E0067CC40 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		84BE5FA31738005E0067CC40 /* EPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPViewController.h; sourceTree = "<group>"; };
-		84BE5FA41738005E0067CC40 /* EPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPViewController.m; sourceTree = "<group>"; };
-		84BE5FA71738005E0067CC40 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EPViewController.xib; sourceTree = "<group>"; };
+		84BE5FA31738005E0067CC40 /* HKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HKViewController.h; sourceTree = "<group>"; };
+		84BE5FA41738005E0067CC40 /* HKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HKViewController.m; sourceTree = "<group>"; };
+		84BE5FA71738005E0067CC40 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HKViewController.xib; sourceTree = "<group>"; };
 		84BE5FAF1738005E0067CC40 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		84BE5FCD1738018E0067CC40 /* libEPMapExtensions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEPMapExtensions.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BE5FD11738018E0067CC40 /* EPMapExtensions-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EPMapExtensions-Prefix.pch"; sourceTree = "<group>"; };
@@ -152,20 +150,22 @@
 		84BE5FDB1738018F0067CC40 /* EPMapExtensionsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EPMapExtensionsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BE5FE41738018F0067CC40 /* EPMapExtensionsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EPMapExtensionsTests-Info.plist"; sourceTree = "<group>"; };
 		84BE5FE61738018F0067CC40 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		84BE5FF1173801D70067CC40 /* EPUserPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPUserPosition.h; sourceTree = "<group>"; };
-		84BE5FF2173801D80067CC40 /* EPUserPosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPUserPosition.m; sourceTree = "<group>"; };
-		84BE5FF4173802AE0067CC40 /* EPMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPMapView.h; sourceTree = "<group>"; };
-		84BE5FF5173802AF0067CC40 /* EPMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPMapView.m; sourceTree = "<group>"; };
-		84BE5FF7173806C80067CC40 /* EPAnnotationArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPAnnotationArray.h; sourceTree = "<group>"; };
-		84BE5FF8173806C80067CC40 /* EPAnnotationArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPAnnotationArray.m; sourceTree = "<group>"; };
-		84BE5FFA173809220067CC40 /* EPMapViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPMapViewDelegate.h; sourceTree = "<group>"; };
-		84BE5FFB173809230067CC40 /* EPMapViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPMapViewDelegate.m; sourceTree = "<group>"; };
-		84BE5FFD17380C7B0067CC40 /* EPMapViewDecoratorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPMapViewDecoratorTest.h; sourceTree = "<group>"; };
-		84BE5FFE17380C7B0067CC40 /* EPMapViewDecoratorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPMapViewDecoratorTest.m; sourceTree = "<group>"; };
+		84BE5FF1173801D70067CC40 /* HKUserPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKUserPosition.h; sourceTree = "<group>"; };
+		84BE5FF2173801D80067CC40 /* HKUserPosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKUserPosition.m; sourceTree = "<group>"; };
+		84BE5FF4173802AE0067CC40 /* HKMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKMapView.h; sourceTree = "<group>"; };
+		84BE5FF5173802AF0067CC40 /* HKMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKMapView.m; sourceTree = "<group>"; };
+		84BE5FF7173806C80067CC40 /* HKAnnotationArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKAnnotationArray.h; sourceTree = "<group>"; };
+		84BE5FF8173806C80067CC40 /* HKAnnotationArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKAnnotationArray.m; sourceTree = "<group>"; };
+		84BE5FFA173809220067CC40 /* HKMapViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKMapViewDelegate.h; sourceTree = "<group>"; };
+		84BE5FFB173809230067CC40 /* HKMapViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKMapViewDelegate.m; sourceTree = "<group>"; };
+		84BE5FFD17380C7B0067CC40 /* HKMapViewDecoratorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKMapViewDecoratorTest.h; sourceTree = "<group>"; };
+		84BE5FFE17380C7B0067CC40 /* HKMapViewDecoratorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKMapViewDecoratorTest.m; sourceTree = "<group>"; };
 		84BE6000173817140067CC40 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		84BE60041738F7ED0067CC40 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		84BE600717393C0F0067CC40 /* EPPointOfInterest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPPointOfInterest.h; sourceTree = "<group>"; };
-		84BE600817393C100067CC40 /* EPPointOfInterest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPPointOfInterest.m; sourceTree = "<group>"; };
+		84BE600717393C0F0067CC40 /* HKPointOfInterest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKPointOfInterest.h; sourceTree = "<group>"; };
+		84BE600817393C100067CC40 /* HKPointOfInterest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKPointOfInterest.m; sourceTree = "<group>"; };
+		84F8A5B317B3C75600CB8812 /* HKAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKAppDelegate.h; sourceTree = "<group>"; };
+		84F8A5B417B3C75600CB8812 /* HKAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKAppDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,8 +221,8 @@
 		845E357D178AEE4900A647B7 /* FakeAnnotations */ = {
 			isa = PBXGroup;
 			children = (
-				4882F2CE176FAEC700E9F1A7 /* EPTestAnnotation.h */,
-				4882F2CF176FAEC700E9F1A7 /* EPTestAnnotation.m */,
+				4882F2CE176FAEC700E9F1A7 /* HKTestAnnotation.h */,
+				4882F2CF176FAEC700E9F1A7 /* HKTestAnnotation.m */,
 				848EB05017464444009639D0 /* YAAnnotationView.h */,
 				848EB05117464444009639D0 /* YAAnnotationView.m */,
 			);
@@ -275,14 +275,14 @@
 		84BE5F911738005E0067CC40 /* iOSMapExtension */ = {
 			isa = PBXGroup;
 			children = (
+				84F8A5B317B3C75600CB8812 /* HKAppDelegate.h */,
+				84F8A5B417B3C75600CB8812 /* HKAppDelegate.m */,
 				845EC3A1178D9D500020A2B1 /* CustomAnnotationView.h */,
 				845EC3A2178D9D500020A2B1 /* CustomAnnotationView.m */,
 				845EC39F178D96040020A2B1 /* CustomAnnotationView.xib */,
-				84BE5F9A1738005E0067CC40 /* EPAppDelegate.h */,
-				84BE5F9B1738005E0067CC40 /* EPAppDelegate.m */,
-				84BE5FA31738005E0067CC40 /* EPViewController.h */,
-				84BE5FA41738005E0067CC40 /* EPViewController.m */,
-				84BE5FA61738005E0067CC40 /* EPViewController.xib */,
+				84BE5FA31738005E0067CC40 /* HKViewController.h */,
+				84BE5FA41738005E0067CC40 /* HKViewController.m */,
+				84BE5FA61738005E0067CC40 /* HKViewController.xib */,
 				84BE5F921738005E0067CC40 /* Supporting Files */,
 			);
 			path = iOSMapExtension;
@@ -306,22 +306,22 @@
 		84BE5FCF1738018E0067CC40 /* EPMapExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				8456196F1749748F00CC2D0D /* EPMapViewDecorator.h */,
-				845619701749748F00CC2D0D /* EPMapViewDecorator.m */,
-				84BE5FF4173802AE0067CC40 /* EPMapView.h */,
-				84BE5FF5173802AF0067CC40 /* EPMapView.m */,
-				845EC3A4178EFCD00020A2B1 /* EPAnnotationView.h */,
-				845EC3A5178EFCD10020A2B1 /* EPAnnotationView.m */,
-				84BE600717393C0F0067CC40 /* EPPointOfInterest.h */,
-				84BE600817393C100067CC40 /* EPPointOfInterest.m */,
-				84BE5FF1173801D70067CC40 /* EPUserPosition.h */,
-				84BE5FF2173801D80067CC40 /* EPUserPosition.m */,
-				84BE5FF7173806C80067CC40 /* EPAnnotationArray.h */,
-				84BE5FF8173806C80067CC40 /* EPAnnotationArray.m */,
-				84BE5FFA173809220067CC40 /* EPMapViewDelegate.h */,
-				84BE5FFB173809230067CC40 /* EPMapViewDelegate.m */,
-				84A876E41785D47C0045C756 /* EPViewControllerRouter.h */,
-				84A876E51785D47D0045C756 /* EPViewControllerRouter.m */,
+				8456196F1749748F00CC2D0D /* HKMapViewDecorator.h */,
+				845619701749748F00CC2D0D /* HKMapViewDecorator.m */,
+				84BE5FF4173802AE0067CC40 /* HKMapView.h */,
+				84BE5FF5173802AF0067CC40 /* HKMapView.m */,
+				845EC3A4178EFCD00020A2B1 /* HKAnnotationView.h */,
+				845EC3A5178EFCD10020A2B1 /* HKAnnotationView.m */,
+				84BE600717393C0F0067CC40 /* HKPointOfInterest.h */,
+				84BE600817393C100067CC40 /* HKPointOfInterest.m */,
+				84BE5FF1173801D70067CC40 /* HKUserPosition.h */,
+				84BE5FF2173801D80067CC40 /* HKUserPosition.m */,
+				84BE5FF7173806C80067CC40 /* HKAnnotationArray.h */,
+				84BE5FF8173806C80067CC40 /* HKAnnotationArray.m */,
+				84BE5FFA173809220067CC40 /* HKMapViewDelegate.h */,
+				84BE5FFB173809230067CC40 /* HKMapViewDelegate.m */,
+				84A876E41785D47C0045C756 /* HKViewControllerRouter.h */,
+				84A876E51785D47D0045C756 /* HKViewControllerRouter.m */,
 				84BE5FD21738018E0067CC40 /* EPMapExtensions.h */,
 				84BE5FD01738018E0067CC40 /* Supporting Files */,
 			);
@@ -342,14 +342,14 @@
 				845E357E178AEEAC00A647B7 /* Utilities */,
 				84BE5FE31738018F0067CC40 /* Supporting Files */,
 				845E357D178AEE4900A647B7 /* FakeAnnotations */,
-				48DBE5AA1749856C0014BE48 /* EPAnnotationArrayTest.h */,
-				48DBE5AB1749856C0014BE48 /* EPAnnotationArrayTest.m */,
-				84BE5FFD17380C7B0067CC40 /* EPMapViewDecoratorTest.h */,
-				84BE5FFE17380C7B0067CC40 /* EPMapViewDecoratorTest.m */,
-				845E3574178732A800A647B7 /* EPUserPositionTest.h */,
-				845E3575178732A800A647B7 /* EPUserPositionTest.m */,
-				845E3577178AE37D00A647B7 /* EPMapViewTest.h */,
-				845E3578178AE37D00A647B7 /* EPMapViewTest.m */,
+				48DBE5AA1749856C0014BE48 /* HKAnnotationArrayTest.h */,
+				48DBE5AB1749856C0014BE48 /* HKAnnotationArrayTest.m */,
+				84BE5FFD17380C7B0067CC40 /* HKMapViewDecoratorTest.h */,
+				84BE5FFE17380C7B0067CC40 /* HKMapViewDecoratorTest.m */,
+				845E3574178732A800A647B7 /* HKUserPositionTest.h */,
+				845E3575178732A800A647B7 /* HKUserPositionTest.m */,
+				845E3577178AE37D00A647B7 /* HKMapViewTest.h */,
+				845E3578178AE37D00A647B7 /* HKMapViewTest.m */,
 			);
 			path = EPMapExtensionsTests;
 			sourceTree = "<group>";
@@ -459,7 +459,7 @@
 				84BE5F9E1738005E0067CC40 /* Default.png in Resources */,
 				84BE5FA01738005E0067CC40 /* Default@2x.png in Resources */,
 				84BE5FA21738005E0067CC40 /* Default-568h@2x.png in Resources */,
-				84BE5FA81738005E0067CC40 /* EPViewController.xib in Resources */,
+				84BE5FA81738005E0067CC40 /* HKViewController.xib in Resources */,
 				845EC3A0178D96040020A2B1 /* CustomAnnotationView.xib in Resources */,
 				845EC3AC178F06880020A2B1 /* 1373574474_map-marker.png in Resources */,
 				845EC3AE178F07950020A2B1 /* 1373574738_Flag_of_Italy.png in Resources */,
@@ -511,9 +511,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				84BE5F981738005E0067CC40 /* main.m in Sources */,
-				84BE5F9C1738005E0067CC40 /* EPAppDelegate.m in Sources */,
-				84BE5FA51738005E0067CC40 /* EPViewController.m in Sources */,
+				84BE5FA51738005E0067CC40 /* HKViewController.m in Sources */,
 				845EC3A3178D9D500020A2B1 /* CustomAnnotationView.m in Sources */,
+				84F8A5B517B3C75600CB8812 /* HKAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,14 +521,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84BE5FF3173801D90067CC40 /* EPUserPosition.m in Sources */,
-				84BE5FF6173802B00067CC40 /* EPMapView.m in Sources */,
-				84BE5FF9173806CA0067CC40 /* EPAnnotationArray.m in Sources */,
-				84BE5FFC173809250067CC40 /* EPMapViewDelegate.m in Sources */,
-				84BE600917393C110067CC40 /* EPPointOfInterest.m in Sources */,
-				845619711749748F00CC2D0D /* EPMapViewDecorator.m in Sources */,
-				84A876E61785D47D0045C756 /* EPViewControllerRouter.m in Sources */,
-				845EC3A6178EFCD10020A2B1 /* EPAnnotationView.m in Sources */,
+				84BE5FF3173801D90067CC40 /* HKUserPosition.m in Sources */,
+				84BE5FF6173802B00067CC40 /* HKMapView.m in Sources */,
+				84BE5FF9173806CA0067CC40 /* HKAnnotationArray.m in Sources */,
+				84BE5FFC173809250067CC40 /* HKMapViewDelegate.m in Sources */,
+				84BE600917393C110067CC40 /* HKPointOfInterest.m in Sources */,
+				845619711749748F00CC2D0D /* HKMapViewDecorator.m in Sources */,
+				84A876E61785D47D0045C756 /* HKViewControllerRouter.m in Sources */,
+				845EC3A6178EFCD10020A2B1 /* HKAnnotationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,12 +536,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84BE5FFF17380C7B0067CC40 /* EPMapViewDecoratorTest.m in Sources */,
-				4882F2D0176FB00000E9F1A7 /* EPTestAnnotation.m in Sources */,
+				84BE5FFF17380C7B0067CC40 /* HKMapViewDecoratorTest.m in Sources */,
+				4882F2D0176FB00000E9F1A7 /* HKTestAnnotation.m in Sources */,
 				848EB05217464444009639D0 /* YAAnnotationView.m in Sources */,
-				48DBE5AC1749856C0014BE48 /* EPAnnotationArrayTest.m in Sources */,
-				845E3576178732A800A647B7 /* EPUserPositionTest.m in Sources */,
-				845E3579178AE37D00A647B7 /* EPMapViewTest.m in Sources */,
+				48DBE5AC1749856C0014BE48 /* HKAnnotationArrayTest.m in Sources */,
+				845E3576178732A800A647B7 /* HKUserPositionTest.m in Sources */,
+				845E3579178AE37D00A647B7 /* HKMapViewTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,12 +574,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		84BE5FA61738005E0067CC40 /* EPViewController.xib */ = {
+		84BE5FA61738005E0067CC40 /* HKViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				84BE5FA71738005E0067CC40 /* en */,
 			);
-			name = EPViewController.xib;
+			name = HKViewController.xib;
 			sourceTree = "<group>";
 		};
 		84BE5FE51738018F0067CC40 /* InfoPlist.strings */ = {

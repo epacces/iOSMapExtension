@@ -13,7 +13,7 @@
  `EPPointOfInterest` represent an annotation object responding to `MKAnnotation` protocol
  */
 
-@interface EPPointOfInterest : NSObject <MKAnnotation, NSCopying>
+@interface HKPointOfInterest : NSObject <MKAnnotation, NSCopying>
 
 ///-----------------------------------------------------
 /// @name Creation
@@ -34,7 +34,7 @@
 @end
 
 
-@interface EPPointOfInterest (EPDraggablePointOfInterest)
+@interface HKPointOfInterest (HKDraggablePointOfInterest)
 
 - (void)setCoordinate:(CLLocationCoordinate2D)newCoordinate;
 

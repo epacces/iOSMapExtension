@@ -10,7 +10,7 @@
 
 @class EPViewController;
 
-@interface EPAppDelegate : UIResponder <UIApplicationDelegate>
+@interface HKAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
