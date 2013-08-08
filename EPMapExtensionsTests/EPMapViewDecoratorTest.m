@@ -12,6 +12,7 @@
 #import "EPPointOfInterest.h"
 #import "YAAnnotationView.h"
 #import "utils.h"
+#import "EPMapView.h"
 
 @interface AnnotationClass : EPPointOfInterest
 
@@ -37,7 +38,7 @@
 
 @implementation EPMapViewDecoratorTest {
     EPMapViewDecorator *_mapDecorator;
-    MKMapView          *_mapView;
+    EPMapView          *_mapView;
     AnnotationClass    *_annotation;
     NSMutableArray            *_pois;
 }
@@ -45,13 +46,15 @@
 - (void)setUp
 {
     _mapDecorator = [[EPMapViewDecorator alloc] init];
-    _mapView = [[MKMapView alloc] init];
+    _mapView = [[EPMapView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
     
     _annotation = [AnnotationClass new];
-    _pois = [[NSMutableArray alloc] initWithCapacity:5];
-    for (int i = 0; i < 5; i++) {
-        [_pois addObject:[[EPPointOfInterest alloc] initWithCoordinate:EPRandomLocationCoordinateMake()]];
+    _pois = [[NSMutableArray alloc] initWithCapacity:10];
+    for (int i = 0; i < 10; i++) {
+        EPPointOfInterest *poi = [[EPPointOfInterest alloc] initWithCoordinate:EPRandomLocationCoordinateMake()];
+        [_pois addObject:poi];
     }
+    [_mapView addAnnotations:_pois];
 }
 
 

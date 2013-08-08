@@ -109,6 +109,8 @@
     [_annotationArray addAnnotation:_poi];
     [_annotationArray addAnnotations:@[_poi, _poi]];
     [_annotationArray removeAllAnnotations];
+    
+    STAssertTrue([_annotationArray count] == 0, @"annotation array should be empty");
 }
 
 - (void)testRemoveAnnotationConformingToProtocol

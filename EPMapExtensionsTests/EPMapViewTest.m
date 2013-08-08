@@ -165,4 +165,60 @@
                  @"the visibleAnnotation within the visible mapView region should be 3");
 }
 
+- (void)testMapRemoveAllAnnotations
+{
+    [_mapView addAnnotation:_testAnnotations[0]];
+    [_mapView addAnnotation:_testAnnotations[1]];
+    [_mapView addAnnotation:_poiAnnotations[0]];
+
+    STAssertTrue([[_mapView annotations] count], @"annotation count should be 0");
+}
+
+- (void)testMapRemoveAnnotationsConformingToProtocol
+{
+    [_mapView addAnnotation:_testAnnotations[0]];
+    [_mapView addAnnotation:_testAnnotations[1]];
+    [_mapView addAnnotation:_poiAnnotations[0]];
+
+    [_mapView removeAnnotationsConformingToProtocol:@protocol(EPAnnotation)];
+    
+    STAssertTrue([[_mapView annotations] count] == 1, @"mapView should contain only one annotation");
+    
+}
+
+- (void)testMapRemoveAnnotationsConformingToProtocols
+{
+    [_mapView addAnnotation:_testAnnotations[0]];
+    [_mapView addAnnotation:_testAnnotations[1]];
+    [_mapView addAnnotation:_poiAnnotations[0]];
+    
+    [_mapView removeAnnotationsConformingToProtocols:@[@protocol(EPAnnotation)]];
+    
+    STAssertTrue([[_mapView annotations] count] == 1, @"mapView should contain only one annotation");
+}
+
+- (void)testMapRemoveAnnotationsOfKindOfClass
+{
+    [_mapView addAnnotation:_testAnnotations[0]];
+    [_mapView addAnnotation:_testAnnotations[1]];
+    [_mapView addAnnotation:_poiAnnotations[0]];
+    
+    [_mapView removeAnnotationsOfKindOfClass:[EPTestAnnotation class]];
+    
+    STAssertTrue([[_mapView annotations] count] == 1, @"mapView should contain only one annotation");
+    STAssertTrue([[_mapView annotations][0] isKindOfClass:[EPPointOfInterest class]], @"should contain only EPPointOfInterest class");
+}
+
+- (void)testMapRemoveAnnotationsOfKindOfClasses
+{
+    [_mapView addAnnotation:_testAnnotations[0]];
+    [_mapView addAnnotation:_testAnnotations[1]];
+    [_mapView addAnnotation:_poiAnnotations[0]];
+    
+    [_mapView removeAnnotationsOfKindOfClasses:@[[EPTestAnnotation class]]];
+    
+    STAssertTrue([[_mapView annotations] count] == 1, @"mapView should contain only one annotation");
+    STAssertTrue([[_mapView annotations][0] isKindOfClass:[EPPointOfInterest class]], @"should contain only EPPointOfInterest class");
+}
+
 @end

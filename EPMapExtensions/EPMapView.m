@@ -13,8 +13,12 @@
 #define SET_MAX(X, Y) X = ((Y) < (X)) ? (X) : (Y)
 
 
+@interface EPPrivateAnnotationArray : EPAnnotationArray
+
+@end
+
 @implementation EPMapView {
-    EPAnnotationArray     *_annotationArray;
+    EPPrivateAnnotationArray     *_annotationArray;
 }
 
 #pragma mark - Obj alloc/init/dealloc
@@ -22,7 +26,7 @@
 - (id)initWithMapView:(MKMapView *)mapView
 {
     if (self = [super initWithFrame:mapView.frame]) {
-        _annotationArray = [[EPAnnotationArray alloc] init];
+        _annotationArray = [[EPPrivateAnnotationArray alloc] init];
         [_annotationArray addAnnotations:[mapView annotations]];
     }
     return self;
@@ -31,7 +35,7 @@
 - (id)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
-        _annotationArray = [[EPAnnotationArray alloc] init];
+        _annotationArray = [[EPPrivateAnnotationArray alloc] init];
     }
     return self;
 }
@@ -64,10 +68,34 @@
 
 - (void)removeAllAnnotations
 {
-    [super removeAnnotations:[_annotationArray allAnnotations]];
+    [super removeAnnotations:[self annotations]];
     [_annotationArray removeAllAnnotations];
 }
 
+
+- (void)removeAnnotationsConformingToProtocol:(Protocol *)protocol
+{
+    [super removeAnnotations:[_annotationArray annotationsConformsToProtocol:protocol]];
+    [_annotationArray removeAnnotationsConformsToProtocol:protocol];
+}
+
+- (void)removeAnnotationsConformingToProtocols:(NSArray *)protocols
+{
+    [super removeAnnotations:[_annotationArray annotationsConformsToProtocols:protocols]];
+    [_annotationArray removeAnnotationsConformsToProtocols:protocols];
+}
+
+- (void)removeAnnotationsOfKindOfClass:(Class<MKAnnotation>)cls
+{
+    [super removeAnnotations:[_annotationArray annotationsOfKindOfClass:cls]];
+    [_annotationArray removeAnnotationsOfKindOfClass:cls];
+}
+
+- (void)removeAnnotationsOfKindOfClasses:(NSArray *)array
+{
+    [super removeAnnotations:[_annotationArray annotationsOfKindOfClasses:array]];
+    [_annotationArray removeAnnotationsOfKindOfClasses:array];
+}
 
 #pragma mark - Calculations of centered regions
 
@@ -176,6 +204,16 @@
         counter += [self visibleAnnotationsOfKindOfClass:cls];
     }
     return counter;
+}
+
+@end
+
+
+@implementation EPPrivateAnnotationArray
+
+- (NSArray *)allAnnotations
+{
+    return [_annotationArray copy];
 }
 
 @end

@@ -78,6 +78,9 @@ In fact, it enables
 
 ## User Position
 
+This class is an helper class to update the user position only within a certain range (it's the minThresholdToUpdatePosition property). It also checks if a valid position is given.
+
 ## Annotation Array
 
-  
+This is an annotation array data structure built on top of the `NSArray` class. It adds some useful features to get, remove, add annotations responding to a particular protocol or class. 
+

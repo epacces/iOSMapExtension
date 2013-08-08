@@ -13,7 +13,9 @@
 
 @class EPUserPosition;
 
-@interface EPMapViewDelegate : NSObject <MKMapViewDelegate>
+@interface EPMapViewDelegate : NSObject <MKMapViewDelegate> {
+    id<EPMapViewDecoratorProtocol>  _mapViewDecorator;
+}
 
 @property (nonatomic, strong)  id<EPMapViewDecoratorProtocol> mapViewDecorator;
 

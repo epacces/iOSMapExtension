@@ -142,8 +142,6 @@ typedef  void (^ConfigurationBlockType)(MKAnnotationView *, id<MKAnnotation>);
         ( (ConfigurationBlockType)_configBlockForAnnotationView[ NSStringFromClass([annotationView.annotation class]) ] )(annotationView, annotationView.annotation);
     if (_configBlockForAllClasses)
         _configBlockForAllClasses(annotationView, annotationView.annotation);
-    
-    
 }
 
 - (BOOL)EP_isNoneRegistered

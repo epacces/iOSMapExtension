@@ -126,4 +126,34 @@
 
 - (void)removeAllAnnotations;
 
+///---------------------------------------------
+/// @name Remove/Filter annotation
+///---------------------------------------------
+
+
+/**
+ Removes all the annotations conforming to a given protocol from the map
+ */
+
+- (void)removeAnnotationsConformingToProtocol:(Protocol *)protocol;
+
+/**
+ Removes all the annotations conforming to one of the given array of protocols from the map
+ */
+
+- (void)removeAnnotationsConformingToProtocols:(NSArray *)protocols;
+
+/**
+ Removes all the annotations of a given kind of class from the map
+ */
+
+- (void)removeAnnotationsOfKindOfClass:(Class<MKAnnotation>)cls;
+
+/**
+ Removes all the annotations belonging to one of a given array of classes from the map
+ */
+
+- (void)removeAnnotationsOfKindOfClasses:(NSArray *)array;
+
+
 @end
