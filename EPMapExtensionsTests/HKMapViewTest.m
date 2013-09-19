@@ -206,7 +206,7 @@
     [_mapView removeAnnotationsOfKindOfClass:[HKTestAnnotation class]];
     
     STAssertTrue([[_mapView annotations] count] == 1, @"mapView should contain only one annotation");
-    STAssertTrue([[_mapView annotations][0] isKindOfClass:[EPPointOfInterest class]], @"should contain only EPPointOfInterest class");
+    STAssertTrue([[_mapView annotations][0] isKindOfClass:[HKPointOfInterest class]], @"should contain only EPPointOfInterest class");
 }
 
 - (void)testMapRemoveAnnotationsOfKindOfClasses
@@ -218,7 +218,7 @@
     [_mapView removeAnnotationsOfKindOfClasses:@[[HKTestAnnotation class]]];
     
     STAssertTrue([[_mapView annotations] count] == 1, @"mapView should contain only one annotation");
-    STAssertTrue([[_mapView annotations][0] isKindOfClass:[EPPointOfInterest class]], @"should contain only EPPointOfInterest class");
+    STAssertTrue([[_mapView annotations][0] isKindOfClass:[HKPointOfInterest class]], @"should contain only EPPointOfInterest class");
 }
 
 @end

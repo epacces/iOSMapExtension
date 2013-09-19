@@ -11,7 +11,7 @@
 #import "HKPointOfInterest.h"
 #import "HKTestAnnotation.h"
 
-@implementation EPAnnotationArrayTest {
+@implementation HKAnnotationArrayTest {
     HKAnnotationArray   *_annotationArray;
     HKPointOfInterest   *_poi;
     HKTestAnnotation    *_testAnnotation;
@@ -138,7 +138,7 @@
 {
     [_annotationArray addAnnotations:@[_poi, _testAnnotation]];
     NSArray * res = [_annotationArray annotationsOfKindOfClass:[HKTestAnnotation class]];
-    STAssertTrue([res count] == 1 && [res[0] isKindOfClass:[EPTestAnnotation class]], @"annotation array should contain one obj of kind EPTestAnnotation");
+    STAssertTrue([res count] == 1 && [res[0] isKindOfClass:[HKTestAnnotation class]], @"annotation array should contain one obj of kind EPTestAnnotation");
 }
 
 - (void)testGetAnnotationsOfKindOfClasses
@@ -152,7 +152,7 @@
 {
     [_annotationArray addAnnotations:@[_poi, _testAnnotation]];
     NSArray *res = [_annotationArray annotationsConformsToProtocol:@protocol(HKAnnotation)];
-    STAssertTrue([res count] == 1 && [res[0] conformsToProtocol:@protocol(EPAnnotation)], @"should contain one object conforming to protocol EPAnnotation");
+    STAssertTrue([res count] == 1 && [res[0] conformsToProtocol:@protocol(HKAnnotation)], @"should contain one object conforming to protocol EPAnnotation");
 }
 
 - (void)testGetAnnotationsConformingToProtocols
