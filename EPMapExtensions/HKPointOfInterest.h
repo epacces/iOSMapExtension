@@ -10,7 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 
 /**
- `EPPointOfInterest` represent an annotation object responding to `MKAnnotation` protocol
+ `HKPointOfInterest` represent an annotation object responding to `MKAnnotation` protocol
  */
 
 @interface HKPointOfInterest : NSObject <MKAnnotation, NSCopying>
@@ -29,7 +29,7 @@
  Coordinate of the point of interest
  */
 
-@property (readonly) CLLocationCoordinate2D coordinate;
+@property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
 
 @end
 

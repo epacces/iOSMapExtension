@@ -8,6 +8,12 @@
 
 #import "HKAnnotationArray.h"
 
+@interface  HKAnnotationArray ()
+
+void checkAnnotationsCompliance(NSArray *annotations, Protocol *p);
+
+@end
+
 @implementation HKAnnotationArray
 
 #pragma mark - Obj Alloc/Dealloc 
@@ -23,6 +29,7 @@
 - (id)initWithAnnotationArray:(NSArray *)annotations
 {
     if (self = [super init]) {
+        checkAnnotationsCompliance(annotations, @protocol(MKAnnotation));
         _annotationArray = [[NSMutableArray alloc] initWithArray:annotations];
     }
     return self;
@@ -33,19 +40,17 @@
 
 - (void)addAnnotations:(NSArray *)annotations
 {
-    for (id annotation in annotations)
-        if (! [annotation conformsToProtocol:@protocol(MKAnnotation)])
-            [NSException raise:NSInternalInconsistencyException format:@"annotations should contains only objs conforms to MKAnnotation protocol"];
-    
+    checkAnnotationsCompliance(annotations, @protocol(MKAnnotation));
     [_annotationArray addObjectsFromArray:annotations];
 }
 
 - (void)addAnnotation:(id <MKAnnotation>)annotation
 {
-    if ( ! [annotation conformsToProtocol:@protocol(MKAnnotation)] )
+    if ( ! [annotation conformsToProtocol:@protocol(MKAnnotation)] ) {
         [NSException raise:NSInternalInconsistencyException format:@"annotation should respond to MKAnnotation protocol"];
-    else
+    } else {
         [_annotationArray addObject:annotation];
+    }
 }
 
 - (NSArray *)allAnnotations
@@ -91,16 +96,15 @@
 
 - (void)removeAnnotation:(id<MKAnnotation>)annotation
 {
-    if ( ! [annotation conformsToProtocol:@protocol(MKAnnotation)] )
+    if ( ! [annotation conformsToProtocol:@protocol(MKAnnotation)] ) {
         [NSException raise:NSInternalInconsistencyException format:@"annotation should respond to MKAnnotation protocol"];
+    }
     [_annotationArray removeObject:annotation];
 }
 
 - (void)removeAnnotations:(NSArray *)annotations
 {
-    for (id annotation in annotations)
-        if (! [annotation conformsToProtocol:@protocol(MKAnnotation)])
-            [NSException raise:NSInternalInconsistencyException format:@"annotations should contains only objs conforms to MKAnnotation protocol"];
+    checkAnnotationsCompliance(annotations, @protocol(MKAnnotation));
     [_annotationArray removeObjectsInArray:annotations];
 }
 
@@ -163,6 +167,16 @@
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(__unsafe_unretained id [])buffer count:(NSUInteger)len
 {
     return [_annotationArray countByEnumeratingWithState:state objects:buffer count:len];
+}
+
+#pragma mark - Private / Helper methods 
+
+void checkAnnotationsCompliance(NSArray *annotations, Protocol *p) {
+    for (id annotation in annotations) {
+        if (! [annotation conformsToProtocol:p]) {
+            [NSException raise:NSInternalInconsistencyException format:@"annotations should contains only objs conforms to MKAnnotation protocol"];
+        }
+    }
 }
 
 @end

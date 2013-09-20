@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class EPViewController;
+@class HKViewController;
 
 @interface HKAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) EPViewController *viewController;
+@property (strong, nonatomic) HKViewController *viewController;
 
 @end

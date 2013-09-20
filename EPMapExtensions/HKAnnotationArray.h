@@ -23,6 +23,7 @@
 
 /** 
  @param annotations Annotation array which contains objects conforming to `MKAnnotation` protocol
+ @exception raises exception when any element of the annotation collection is not responding to `MKAnnotation` protocol
  */
 
 - (id)initWithAnnotationArray:(NSArray *)annotations;

@@ -25,6 +25,26 @@
                                                                   addressDictionary:nil];
 }
 
+- (void)testInitWithAnnotationsConformingToMKAnnotationProtocol
+{
+    _annotationArray = [[HKAnnotationArray alloc] initWithAnnotationArray:@[_poi, _poi]];
+    STAssertTrue([_annotationArray count] == 2, @"annotation array obj should contain 2 pois");
+}
+
+- (void)testInitWithAnnotationsNotConformingToMKAnnotationProtocol
+{
+    STAssertThrows((_annotationArray = [[HKAnnotationArray alloc] initWithAnnotationArray:@[_poi, @"test"]]),
+                   @"should raise exception");
+    STAssertTrue([_annotationArray count] == 0, @"annotation array should be nil");
+}
+
+- (void)testWithNilAnnoatationsCollection
+{
+    _annotationArray = [[HKAnnotationArray alloc] initWithAnnotationArray:nil];
+    STAssertTrue(_annotationArray != nil, @"annotation array should have been allocated");
+    STAssertTrue([_annotationArray count] == 0, @"annotation array should contain 0 elements");
+}
+
 - (void)testAddAnnotationConformToProtocol
 {
     [_annotationArray addAnnotation:_poi];
