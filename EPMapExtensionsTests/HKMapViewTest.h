@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 it.hepakkes. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface HKMapViewTest : SenTestCase
+@interface HKMapViewTest : XCTestCase
 
 @end

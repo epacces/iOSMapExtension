@@ -24,8 +24,8 @@
     CLLocationCoordinate2D coord1 = _simulatedUserLocation.coordinate;
     CLLocationCoordinate2D coord2 = _simulatedUserPosition.coordinate;
     
-    STAssertEquals(coord1.latitude, coord2.latitude, @"latitudes should be equal");
-    STAssertEquals(coord1.longitude, coord2.longitude, @"latitudes should be equal");
+    XCTAssertEqual(coord1.latitude, coord2.latitude, @"latitudes should be equal");
+    XCTAssertEqual(coord1.longitude, coord2.longitude, @"latitudes should be equal");
 }
 
 - (void)testInitWithInvalidUserPosition
@@ -37,8 +37,8 @@
     CLLocationCoordinate2D coord1 = _simulatedUserLocation.coordinate;
     CLLocationCoordinate2D coord2 = _simulatedUserPosition.coordinate;
     
-    STAssertTrue(coord1.latitude != coord2.latitude && coord1.longitude != coord2.longitude, @"latitudes and longitudes should be different");
-    STAssertTrue(coord2.latitude == 0 && coord2.longitude == 0, @"latitudes & longitude should be zero");
+    XCTAssertTrue(coord1.latitude != coord2.latitude && coord1.longitude != coord2.longitude, @"latitudes and longitudes should be different");
+    XCTAssertTrue(coord2.latitude == 0 && coord2.longitude == 0, @"latitudes & longitude should be zero");
 }
 
 - (void)testUpdateUserPositionWithValidPosition
@@ -48,7 +48,7 @@
     
     [_simulatedUserPosition updatePosition:[[CLLocation alloc] initWithLatitude:45.11 longitude:7.67]];
     
-    STAssertTrue(_simulatedUserPosition.coordinate.longitude == 7.67 && _simulatedUserPosition.coordinate.latitude == 45.11,
+    XCTAssertTrue(_simulatedUserPosition.coordinate.longitude == 7.67 && _simulatedUserPosition.coordinate.latitude == 45.11,
                  @"latitude should be 45.11 and logitude should be 7.67");
 
 }
@@ -60,7 +60,7 @@
     
     [_simulatedUserPosition updatePosition:[[CLLocation alloc] initWithLatitude:1232432.4343 longitude:-212331.3]];
     
-    STAssertTrue(_simulatedUserPosition.coordinate.longitude == 7.67 && _simulatedUserPosition.coordinate.latitude == 45.11,
+    XCTAssertTrue(_simulatedUserPosition.coordinate.longitude == 7.67 && _simulatedUserPosition.coordinate.latitude == 45.11,
                  @"latitude should be 45.11 and logitude should be 7.67");
     
 }
@@ -74,7 +74,7 @@
     
     [_simulatedUserPosition updatePosition:[[CLLocation alloc] initWithLatitude:45.1112 longitude:7.67014]];
     
-    STAssertTrue(_simulatedUserPosition.coordinate.longitude == 7.67 && _simulatedUserPosition.coordinate.latitude == 45.11,
+    XCTAssertTrue(_simulatedUserPosition.coordinate.longitude == 7.67 && _simulatedUserPosition.coordinate.latitude == 45.11,
                  @"latitude should be 45.11 and logitude should be 7.67");
 }
 
@@ -87,7 +87,7 @@
     
     [_simulatedUserPosition updatePosition:[[CLLocation alloc] initWithLatitude:45.1812 longitude:7.67014]];
     
-    STAssertTrue(_simulatedUserPosition.coordinate.longitude == 7.67014 && _simulatedUserPosition.coordinate.latitude == 45.1812,
+    XCTAssertTrue(_simulatedUserPosition.coordinate.longitude == 7.67014 && _simulatedUserPosition.coordinate.latitude == 45.1812,
                  @"latitude should be 45.11 and logitude should be 7.67");
 }
 

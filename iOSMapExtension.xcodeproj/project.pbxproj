@@ -51,7 +51,6 @@
 		84BE5FA81738005E0067CC40 /* HKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84BE5FA61738005E0067CC40 /* HKViewController.xib */; };
 		84BE5FCE1738018E0067CC40 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5F8D1738005E0067CC40 /* Foundation.framework */; };
 		84BE5FD31738018E0067CC40 /* EPMapExtensions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84BE5FD21738018E0067CC40 /* EPMapExtensions.h */; };
-		84BE5FDC1738018F0067CC40 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5FAF1738005E0067CC40 /* SenTestingKit.framework */; };
 		84BE5FDD1738018F0067CC40 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5F8B1738005E0067CC40 /* UIKit.framework */; };
 		84BE5FDE1738018F0067CC40 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BE5F8D1738005E0067CC40 /* Foundation.framework */; };
 		84BE5FE71738018F0067CC40 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84BE5FE51738018F0067CC40 /* InfoPlist.strings */; };
@@ -143,11 +142,10 @@
 		84BE5FA31738005E0067CC40 /* HKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HKViewController.h; sourceTree = "<group>"; };
 		84BE5FA41738005E0067CC40 /* HKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HKViewController.m; sourceTree = "<group>"; };
 		84BE5FA71738005E0067CC40 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HKViewController.xib; sourceTree = "<group>"; };
-		84BE5FAF1738005E0067CC40 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		84BE5FCD1738018E0067CC40 /* libEPMapExtensions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEPMapExtensions.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BE5FD11738018E0067CC40 /* EPMapExtensions-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EPMapExtensions-Prefix.pch"; sourceTree = "<group>"; };
 		84BE5FD21738018E0067CC40 /* EPMapExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPMapExtensions.h; sourceTree = "<group>"; };
-		84BE5FDB1738018F0067CC40 /* EPMapExtensionsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EPMapExtensionsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84BE5FDB1738018F0067CC40 /* EPMapExtensionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EPMapExtensionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BE5FE41738018F0067CC40 /* EPMapExtensionsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EPMapExtensionsTests-Info.plist"; sourceTree = "<group>"; };
 		84BE5FE61738018F0067CC40 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84BE5FF1173801D70067CC40 /* HKUserPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKUserPosition.h; sourceTree = "<group>"; };
@@ -200,7 +198,6 @@
 				84BE60051738F7EE0067CC40 /* CoreLocation.framework in Frameworks */,
 				84BE60031738F7920067CC40 /* libEPMapExtensions.a in Frameworks */,
 				84BE60021738172F0067CC40 /* MapKit.framework in Frameworks */,
-				84BE5FDC1738018F0067CC40 /* SenTestingKit.framework in Frameworks */,
 				84BE5FDD1738018F0067CC40 /* UIKit.framework in Frameworks */,
 				84BE5FDE1738018F0067CC40 /* Foundation.framework in Frameworks */,
 			);
@@ -253,7 +250,7 @@
 			children = (
 				84BE5F881738005E0067CC40 /* iOSMapExtension.app */,
 				84BE5FCD1738018E0067CC40 /* libEPMapExtensions.a */,
-				84BE5FDB1738018F0067CC40 /* EPMapExtensionsTests.octest */,
+				84BE5FDB1738018F0067CC40 /* EPMapExtensionsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -267,7 +264,6 @@
 				84BE5F8B1738005E0067CC40 /* UIKit.framework */,
 				84BE5F8D1738005E0067CC40 /* Foundation.framework */,
 				84BE5F8F1738005E0067CC40 /* CoreGraphics.framework */,
-				84BE5FAF1738005E0067CC40 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -417,8 +413,8 @@
 			);
 			name = EPMapExtensionsTests;
 			productName = EPMapExtensionsTests;
-			productReference = 84BE5FDB1738018F0067CC40 /* EPMapExtensionsTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = 84BE5FDB1738018F0067CC40 /* EPMapExtensionsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -718,12 +714,12 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EPMapExtensions/EPMapExtensions-Prefix.pch";
 				INFOPLIST_FILE = "EPMapExtensionsTests/EPMapExtensionsTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -734,12 +730,12 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EPMapExtensions/EPMapExtensions-Prefix.pch";
 				INFOPLIST_FILE = "EPMapExtensionsTests/EPMapExtensionsTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};

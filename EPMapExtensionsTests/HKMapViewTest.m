@@ -38,13 +38,13 @@
 
 - (void)testMapViewInitializationWithFrame
 {
-    STAssertTrue(CGRectEqualToRect(_mapView.frame, CGRectMake(0, 0, 320, 480)), @"mapView's frame should be {0, 0, 320, 480}");
+    XCTAssertTrue(CGRectEqualToRect(_mapView.frame, CGRectMake(0, 0, 320, 480)), @"mapView's frame should be {0, 0, 320, 480}");
 }
 
 - (void)testMapViewInializationWithMap
 {
     HKMapView *mapView = [[HKMapView alloc] initWithMapView:_innerMapView];
-    STAssertTrue(CGRectEqualToRect(mapView.frame, CGRectMake(0, 0, 320, 480)), @"mapView's frame should be {0, 0, 320, 480}");
+    XCTAssertTrue(CGRectEqualToRect(mapView.frame, CGRectMake(0, 0, 320, 480)), @"mapView's frame should be {0, 0, 320, 480}");
 }
 
 - (void)testMapViewGetCenteredRegionWithNoAnnotationsInMap
@@ -52,7 +52,7 @@
     MKCoordinateRegion region = [_mapView region];
     MKCoordinateRegion centeredRegion = [_mapView centeredRegion];
     
-    STAssertTrue( EPCoordinateRegionIsEqual(region, centeredRegion), @"centered region should be equal to the mapView visible region");
+    XCTAssertTrue( EPCoordinateRegionIsEqual(region, centeredRegion), @"centered region should be equal to the mapView visible region");
 }
 
 - (void)testMapViewGetCenteredRegionForAllAnnotations
@@ -65,7 +65,7 @@
                                                                        MKCoordinateSpanMake(45.11 - 45.08, 0));
     MKCoordinateRegion centeredRegion = [_mapView centeredRegion];
     
-    STAssertTrue(EPCoordinateRegionIsEqual(centeredRegion, expectedCenteredRegion), @"centered region should be centered around expectedCenteredRegion");
+    XCTAssertTrue(EPCoordinateRegionIsEqual(centeredRegion, expectedCenteredRegion), @"centered region should be centered around expectedCenteredRegion");
 }
 
 - (void)testMapViewGetCenteredRegionForAnnotationConformingToProtocol
@@ -78,7 +78,7 @@
                                                                        MKCoordinateSpanMake(45.11 - 45.08, 0));
     MKCoordinateRegion centeredRegion = [_mapView centeredRegionForAnnotationConformingToProtocol:@protocol(HKAnnotation)];
     
-    STAssertTrue(EPCoordinateRegionIsEqual(centeredRegion, expectedCenteredRegion), @"centered region should be centered around expectedCenteredRegion");
+    XCTAssertTrue(EPCoordinateRegionIsEqual(centeredRegion, expectedCenteredRegion), @"centered region should be centered around expectedCenteredRegion");
 }
 
 - (void)testMapViewGetCenteredRegionForAnnotationConformingProtocolReturningAnEmptyArray
@@ -90,7 +90,7 @@
     MKCoordinateRegion expectedCenteredRegion = [_mapView region];
     MKCoordinateRegion centeredRegion = [_mapView centeredRegionForAnnotationConformingToProtocol:nil];
     
-    STAssertTrue(EPCoordinateRegionIsEqual(centeredRegion, expectedCenteredRegion), @"centered region should be centered around expectedCenteredRegion");
+    XCTAssertTrue(EPCoordinateRegionIsEqual(centeredRegion, expectedCenteredRegion), @"centered region should be centered around expectedCenteredRegion");
 }
 
 - (void)testMapViewGetCenteredRegionForAnnotationOfKindOfClass
@@ -103,7 +103,7 @@
                                                                        MKCoordinateSpanMake(45.11 - 45.08, 0));
     MKCoordinateRegion centeredRegion = [_mapView centeredRegionForAnnotationOfKindOfClass:[HKTestAnnotation class]];
     
-    STAssertTrue(EPCoordinateRegionIsEqual(centeredRegion, expectedCenteredRegion), @"centered region should be centered around expectedCenteredRegion");
+    XCTAssertTrue(EPCoordinateRegionIsEqual(centeredRegion, expectedCenteredRegion), @"centered region should be centered around expectedCenteredRegion");
 }
 
 - (void)testMapViewGetCenteredRegionForAnnotationOfKindOfClassReturningAnEmptyArray
@@ -115,7 +115,7 @@
     MKCoordinateRegion expectedCenteredRegion = [_mapView region];
     MKCoordinateRegion centeredRegion = [_mapView centeredRegionForAnnotationOfKindOfClass:nil];
     
-    STAssertTrue(EPCoordinateRegionIsEqual(centeredRegion, expectedCenteredRegion), @"centered region should be centered around expectedCenteredRegion");
+    XCTAssertTrue(EPCoordinateRegionIsEqual(centeredRegion, expectedCenteredRegion), @"centered region should be centered around expectedCenteredRegion");
 }
 
 - (void)testMapViewGetVisibleAnnotation
@@ -126,7 +126,7 @@
     
     [_mapView setRegion:[_mapView centeredRegion]];
     
-    STAssertTrue([_mapView visibleAnnotations] == 3, @"the visibleAnnotation within the visible mapView region should be 3");
+    XCTAssertTrue([_mapView visibleAnnotations] == 3, @"the visibleAnnotation within the visible mapView region should be 3");
 }
 
 - (void)testMapViewGetVisibleAnnotationConformingToProtocol
@@ -137,7 +137,7 @@
     
     [_mapView setRegion:[_mapView centeredRegion]];
     
-    STAssertTrue([_mapView visibleAnnotationsConformingToProtocol:@protocol(HKAnnotation)] == 2,
+    XCTAssertTrue([_mapView visibleAnnotationsConformingToProtocol:@protocol(HKAnnotation)] == 2,
                  @"the visibleAnnotation within the visible mapView region should be 2");
 }
 
@@ -149,7 +149,7 @@
     
     [_mapView setRegion:[_mapView centeredRegion]];
     
-    STAssertTrue([_mapView visibleAnnotationsConformingToProtocol:nil] == 0,
+    XCTAssertTrue([_mapView visibleAnnotationsConformingToProtocol:nil] == 0,
                  @"the visibleAnnotation within the visible mapView region should be 0");
 }
 
@@ -161,7 +161,7 @@
     
     [_mapView setRegion:[_mapView centeredRegion]];
     
-    STAssertTrue([_mapView visibleAnnotationsConformingToProtocol:@protocol(MKAnnotation)] == 3,
+    XCTAssertTrue([_mapView visibleAnnotationsConformingToProtocol:@protocol(MKAnnotation)] == 3,
                  @"the visibleAnnotation within the visible mapView region should be 3");
 }
 
@@ -171,7 +171,7 @@
     [_mapView addAnnotation:_testAnnotations[1]];
     [_mapView addAnnotation:_poiAnnotations[0]];
 
-    STAssertTrue([[_mapView annotations] count], @"annotation count should be 0");
+    XCTAssertTrue([[_mapView annotations] count], @"annotation count should be 0");
 }
 
 - (void)testMapRemoveAnnotationsConformingToProtocol
@@ -182,7 +182,7 @@
 
     [_mapView removeAnnotationsConformingToProtocol:@protocol(HKAnnotation)];
     
-    STAssertTrue([[_mapView annotations] count] == 1, @"mapView should contain only one annotation");
+    XCTAssertTrue([[_mapView annotations] count] == 1, @"mapView should contain only one annotation");
     
 }
 
@@ -194,7 +194,7 @@
     
     [_mapView removeAnnotationsConformingToProtocols:@[@protocol(HKAnnotation)]];
     
-    STAssertTrue([[_mapView annotations] count] == 1, @"mapView should contain only one annotation");
+    XCTAssertTrue([[_mapView annotations] count] == 1, @"mapView should contain only one annotation");
 }
 
 - (void)testMapRemoveAnnotationsOfKindOfClass
@@ -205,8 +205,8 @@
     
     [_mapView removeAnnotationsOfKindOfClass:[HKTestAnnotation class]];
     
-    STAssertTrue([[_mapView annotations] count] == 1, @"mapView should contain only one annotation");
-    STAssertTrue([[_mapView annotations][0] isKindOfClass:[HKPointOfInterest class]], @"should contain only EPPointOfInterest class");
+    XCTAssertTrue([[_mapView annotations] count] == 1, @"mapView should contain only one annotation");
+    XCTAssertTrue([[_mapView annotations][0] isKindOfClass:[HKPointOfInterest class]], @"should contain only EPPointOfInterest class");
 }
 
 - (void)testMapRemoveAnnotationsOfKindOfClasses
@@ -217,8 +217,8 @@
     
     [_mapView removeAnnotationsOfKindOfClasses:@[[HKTestAnnotation class]]];
     
-    STAssertTrue([[_mapView annotations] count] == 1, @"mapView should contain only one annotation");
-    STAssertTrue([[_mapView annotations][0] isKindOfClass:[HKPointOfInterest class]], @"should contain only EPPointOfInterest class");
+    XCTAssertTrue([[_mapView annotations] count] == 1, @"mapView should contain only one annotation");
+    XCTAssertTrue([[_mapView annotations][0] isKindOfClass:[HKPointOfInterest class]], @"should contain only EPPointOfInterest class");
 }
 
 @end

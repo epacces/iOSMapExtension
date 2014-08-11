@@ -61,7 +61,7 @@
 - (void)testMapViewDecoratorRegisterNonExistentAnnotationForClass
 {
     [_mapView addAnnotation:_annotation];
-    STAssertThrows([_mapDecorator registerAnnotationViewForClass:[AnnotationClass class] annotationView:@"MKPinPoint"],
+    XCTAssertThrows([_mapDecorator registerAnnotationViewForClass:[AnnotationClass class] annotationView:@"MKPinPoint"],
                    @"should throw exception");
 }
 
@@ -69,7 +69,7 @@
 {
     [_mapView addAnnotation:_annotation];
     [_mapDecorator registerAnnotationViewForClass:[AnnotationClass class] annotationView:@"MKPinAnnotationView"];
-    STAssertEquals([[_mapDecorator mapView:_mapView viewForAnnotation:_annotation] class], [MKPinAnnotationView class],
+    XCTAssertEqual([[_mapDecorator mapView:_mapView viewForAnnotation:_annotation] class], [MKPinAnnotationView class],
                    @"Annotation class should be pinpoint");
 }
 
@@ -80,7 +80,7 @@
                                           [av setCanShowCallout:YES];
                                       }];
     MKPinAnnotationView *pinAV = (MKPinAnnotationView *)[_mapDecorator mapView:_mapView viewForAnnotation:_annotation];
-    STAssertTrue([pinAV canShowCallout], @"annotation should show callout");
+    XCTAssertTrue([pinAV canShowCallout], @"annotation should show callout");
 }
 
 - (void)testRegisterAnnotationViewForClassWithTraslationBlock
@@ -93,11 +93,11 @@
                                      else
                                          return @"YAJesusAnnotationView";
                                  }];
-    STAssertEquals([[_mapDecorator mapView:_mapView viewForAnnotation:_annotation] class], [YAAnnotationView class],
+    XCTAssertEqual([[_mapDecorator mapView:_mapView viewForAnnotation:_annotation] class], [YAAnnotationView class],
                    @"Annotation class should be YAAnotationView");
     
     [_annotation setName:@"Jesus"];
-    STAssertEquals([[_mapDecorator mapView:_mapView viewForAnnotation:_annotation] class], [YAJesusAnnotationView class],
+    XCTAssertEqual([[_mapDecorator mapView:_mapView viewForAnnotation:_annotation] class], [YAJesusAnnotationView class],
                    @"Annotation class should be YAJesusAnnotationView");
     
 }
@@ -112,11 +112,11 @@
                                      else
                                          return @"YZ";
                                  }];
-    STAssertEquals([[_mapDecorator mapView:_mapView viewForAnnotation:_annotation] class], [YAAnnotationView class],
+    XCTAssertEqual([[_mapDecorator mapView:_mapView viewForAnnotation:_annotation] class], [YAAnnotationView class],
                    @"Annotation class should be YAAnotationView");
     
     [_annotation setName:@"Jesus"];
-    STAssertThrows([_mapDecorator mapView:_mapView viewForAnnotation:_annotation], @"should raise exception");
+    XCTAssertThrows([_mapDecorator mapView:_mapView viewForAnnotation:_annotation], @"should raise exception");
 
 }
 
@@ -131,11 +131,11 @@
                                      else
                                          return nil;
                                          }];
-    STAssertEquals([[_mapDecorator mapView:_mapView viewForAnnotation:_annotation] class], [YAAnnotationView class],
+    XCTAssertEqual([[_mapDecorator mapView:_mapView viewForAnnotation:_annotation] class], [YAAnnotationView class],
                    @"Annotation class should be YAAnotationView");
     
     [_annotation setName:@"Jesus"];
-    STAssertEquals([[_mapDecorator mapView:_mapView viewForAnnotation:_annotation] class], [MKPinAnnotationView class],
+    XCTAssertEqual([[_mapDecorator mapView:_mapView viewForAnnotation:_annotation] class], [MKPinAnnotationView class],
                    @"Annotation class should be MKPinAnnotationView");
 }
 
@@ -159,18 +159,18 @@
                                         }
                                     }];
     
-    STAssertEquals([[_mapDecorator mapView:_mapView viewForAnnotation:_annotation] class], [YAAnnotationView class],
+    XCTAssertEqual([[_mapDecorator mapView:_mapView viewForAnnotation:_annotation] class], [YAAnnotationView class],
                    @"Annotation class should be YAAnotationView");
     YAAnnotationView *av = (YAAnnotationView *)[_mapDecorator mapView:_mapView viewForAnnotation:_annotation];
-    STAssertTrue([av canShowCallout], @"annotation view should show callout");
+    XCTAssertTrue([av canShowCallout], @"annotation view should show callout");
     
     [_annotation setName:@"Jesus"];
-    STAssertEquals([[_mapDecorator mapView:_mapView viewForAnnotation:_annotation] class], [YAJesusAnnotationView class],
+    XCTAssertEqual([[_mapDecorator mapView:_mapView viewForAnnotation:_annotation] class], [YAJesusAnnotationView class],
                    @"Annotation class should be YAAnotationView");
     YAJesusAnnotationView *jav = (YAJesusAnnotationView *)[_mapDecorator mapView:_mapView viewForAnnotation:_annotation];
-    STAssertFalse([jav canShowCallout], @"annotation view should not show callout");
+    XCTAssertFalse([jav canShowCallout], @"annotation view should not show callout");
 
-    STAssertEquals((NSObject *)[_mapDecorator mapView:_mapView viewForAnnotation:_pois[2]], (NSObject *)nil, @"Annotation class should be nil");
+    XCTAssertEqual((NSObject *)[_mapDecorator mapView:_mapView viewForAnnotation:_pois[2]], (NSObject *)nil, @"Annotation class should be nil");
 
 }
 
@@ -192,15 +192,15 @@
         }
     }];
     
-    STAssertEquals([[_mapDecorator mapView:_mapView viewForAnnotation:_pois[2]] class], [YAAnnotationView class],
+    XCTAssertEqual([[_mapDecorator mapView:_mapView viewForAnnotation:_pois[2]] class], [YAAnnotationView class],
                    @"Annotation class should be YAAnotationView");
     YAAnnotationView *av = (YAAnnotationView *)[_mapDecorator mapView:_mapView viewForAnnotation:_pois[2]];
-    STAssertTrue([av canShowCallout], @"annotation view should show callout");
+    XCTAssertTrue([av canShowCallout], @"annotation view should show callout");
     
-    STAssertEquals([[_mapDecorator mapView:_mapView viewForAnnotation:_annotation] class], [YAJesusAnnotationView class],
+    XCTAssertEqual([[_mapDecorator mapView:_mapView viewForAnnotation:_annotation] class], [YAJesusAnnotationView class],
                    @"Annotation class should be YAAnotationView");
     YAJesusAnnotationView *jav = (YAJesusAnnotationView *)[_mapDecorator mapView:_mapView viewForAnnotation:_annotation];
-    STAssertFalse([jav canShowCallout], @"annotation view should not show callout");
+    XCTAssertFalse([jav canShowCallout], @"annotation view should not show callout");
 }
 
 
