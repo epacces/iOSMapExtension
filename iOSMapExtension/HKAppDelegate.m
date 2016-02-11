@@ -19,6 +19,8 @@
     self.viewController = [[HKViewController alloc] initWithNibName:@"HKViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
+    //hotfix1
     return YES;
 }
 
